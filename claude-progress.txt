@@ -621,6 +621,106 @@ All chargers include:
 
 ---
 
+## 2025-02-13 - Coding Agent Session (Feature 012)
+**Selected Feature:** 012 - Search functionality for chargers
+
+**Changes Made:**
+- Modified /packages/web/src/app/chargers/page.tsx
+- Added client-side state management with useState
+- Implemented real-time filtering with useMemo
+- Added search UI with clear button
+
+**Search Features:**
+
+1. **Search Input:**
+   - Prominent search box at top of page
+   - Placeholder text with examples: "搜索品牌、功率或型号...（如：Apple、65W、Nano）"
+   - Search icon on left
+   - Clear button (X) on right (only visible when has input)
+   - Full-width responsive design
+   - Focus ring effect (blue-500)
+
+2. **Search Capabilities:**
+   - Brand search: "apple" → 所有 Apple 充电器
+   - Power search: "65w" → 所有 65W 充电器
+   - Model search: "A2133" → 匹配该型号
+   - Display name search: "Nano" → 匹配名称包含 Nano 的产品
+   - Protocol search: "PD" → 匹配支持 PD 的产品
+   - Case-insensitive search (不区分大小写)
+   - Real-time filtering (实时过滤)
+
+3. **Search Logic (useMemo optimization):**
+   - Filters when query.trim() is not empty
+   - Searches across multiple fields:
+     - brand (品牌)
+     - power.maxPower (最大功率)
+     - model (型号)
+     - displayName (显示名称)
+     - protocols (充电协议)
+   - Efficient re-rendering with useMemo dependency on searchQuery
+
+4. **UI Feedback:**
+   - Result count display:
+     - With search: "找到 X 个结果"
+     - Without search: "共 X 款充电器"
+   - Bold blue highlighting for result count
+   - Clear button with hover effect
+   - Accessible label (sr-only for screen readers)
+
+5. **No Results State:**
+   - Friendly message: "没有找到匹配的充电器"
+   - "清除搜索条件" button to reset
+   - Centered layout with spacing
+
+6. **Technical Implementation:**
+   - Client component ('use client' directive)
+   - React hooks: useState, useMemo
+   - Controlled input with value and onChange
+   - Efficient filtering with useMemo
+   - Clean state management with handleClearSearch function
+
+**Search Examples:**
+- "apple" → 2 results (Apple 20W, Apple 30W)
+- "anker" → 3 results (Anker 20W, 65W, 100W)
+- "65" → 4 results (Anker 65W, Huawei 65W, Baseus 65W, plus 67W if searching "6")
+- "pd" → All 10 chargers (all support PD)
+- "gan" → All chargers with isGaN=true (8 out of 10)
+- "nano" → 1 result (Anker Nano 20W)
+
+**Testing Results:**
+- ✅ Search input located on chargers list page (prominent position at top)
+- ✅ Type "Apple" → list filters to show only Apple chargers:
+  - Apple 20W USB-C Power Adapter
+  - Apple 30W USB-C Power Adapter
+- ✅ Type "65W" → results show chargers with 65W power:
+  - Anker 715 65W
+  - Huawei 65W SuperCharge
+  - Baseus 65W 2C1A
+- ✅ Type "20" → shows all 20W chargers (Apple, Anker)
+- ✅ Clear search and verify all chargers show again:
+  - Click X button or "清除搜索条件" button
+  - All 10 chargers displayed
+  - Search input cleared
+- ✅ Real-time filtering working:
+  - Immediate update on each keystroke
+  - No delay in results
+- ✅ Case-insensitive search:
+  - "apple", "Apple", "APPLE" all work
+  - "pd", "PD", "Pd" all work
+
+**Performance Optimizations:**
+- useMemo prevents unnecessary re-filtering on same query
+- Efficient string matching with toLowerCase()
+- Early return when query is empty
+- No unnecessary API calls (client-side filtering)
+
+**Next Features to Work On:**
+- Feature 013: Filter by brand (medium priority)
+- Feature 014: Filter by power output (medium priority)
+- Feature 015: Filter by charging protocol (medium priority)
+
+---
+
 ## Session Log Template
 (后续 Coding Agent 会在此追加进度)
 

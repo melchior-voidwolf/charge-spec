@@ -177,7 +177,8 @@
         "Verify results show 65W chargers",
         "Clear search and verify all chargers show again"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "013",
