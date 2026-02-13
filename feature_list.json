@@ -237,7 +237,8 @@
         "Select 'Brand: A-Z'",
         "Verify chargers are sorted alphabetically by brand"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "017",

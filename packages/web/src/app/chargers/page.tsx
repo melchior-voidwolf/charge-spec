@@ -15,6 +15,8 @@ type FilterState = {
   selectedProtocols: string[];
 };
 
+type SortOption = 'power-desc' | 'power-asc' | 'brand-az' | 'brand-za' | 'default';
+
 export default function ChargersPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState<FilterState>({
@@ -23,6 +25,7 @@ export default function ChargersPage() {
     selectedProtocols: [],
   });
   const [showFilters, setShowFilters] = useState(false);
+  const [sortBy, setSortBy] = useState<SortOption>('default');
 
   // Extract unique values for filters
   const uniqueBrands = useMemo(() => {
@@ -89,8 +92,26 @@ export default function ChargersPage() {
       });
     }
 
+    // Apply sorting
+    if (sortBy !== 'default') {
+      results = [...results].sort((a, b) => {
+        switch (sortBy) {
+          case 'power-desc':
+            return b.power.maxPower - a.power.maxPower;
+          case 'power-asc':
+            return a.power.maxPower - b.power.maxPower;
+          case 'brand-az':
+            return a.brand.localeCompare(b.brand);
+          case 'brand-za':
+            return b.brand.localeCompare(a.brand);
+          default:
+            return 0;
+        }
+      });
+    }
+
     return results;
-  }, [searchQuery, filters]);
+  }, [searchQuery, filters, sortBy]);
 
   const handleClearSearch = () => setSearchQuery('');
 
@@ -167,19 +188,40 @@ export default function ChargersPage() {
             </div>
 
             {/* Filter Toggle & Results Count */}
-            <div className="flex items-center justify-between">
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors text-gray-700 dark:text-gray-300 font-medium"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-                </svg>
-                筛选器
-                {activeFilterCount > 0 && (
-                  <span className="px-2 py-0.5 bg-blue-600 text-white text-xs rounded-full">{activeFilterCount}</span>
-                )}
-              </button>
+            <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors text-gray-700 dark:text-gray-300 font-medium"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                  </svg>
+                  筛选器
+                  {activeFilterCount > 0 && (
+                    <span className="px-2 py-0.5 bg-blue-600 text-white text-xs rounded-full">{activeFilterCount}</span>
+                  )}
+                </button>
+
+                {/* Sort Dropdown */}
+                <div className="flex items-center gap-2">
+                  <label htmlFor="sort" className="text-sm text-gray-600 dark:text-gray-400">
+                    排序:
+                  </label>
+                  <select
+                    id="sort"
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value as SortOption)}
+                    className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-sm text-gray-700 dark:text-gray-300 focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="default">默认</option>
+                    <option value="power-desc">功率: 高到低</option>
+                    <option value="power-asc">功率: 低到高</option>
+                    <option value="brand-az">品牌: A-Z</option>
+                    <option value="brand-za">品牌: Z-A</option>
+                  </select>
+                </div>
+              </div>
 
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {searchQuery || hasActiveFilters ? (
