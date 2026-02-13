@@ -114,7 +114,8 @@
         "Verify ConnectorType enum (USB-C, USB-A, Lightning etc.)",
         "Import types from @charge-spec/web successfully"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "009",
