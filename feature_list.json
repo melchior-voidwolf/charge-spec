@@ -266,7 +266,8 @@
         "Verify og:title and og:description tags",
         "Check charger detail pages have unique titles"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "019",
@@ -280,7 +281,8 @@
         "Check sitemap includes charger pages",
         "Verify sitemap is accessible at /sitemap.xml"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "020",
@@ -295,7 +297,8 @@
         "Verify dark mode preference persists",
         "Toggle back to light mode"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "021",
@@ -309,7 +312,8 @@
         "Verify lazy loading is implemented",
         "Check responsive image sizes"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "022",
@@ -323,7 +327,8 @@
         "Verify proper CORS headers",
         "Test filtering query parameters work"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "023",
@@ -337,7 +342,8 @@
         "Test with invalid ID returns 404",
         "Verify error handling"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "024",
@@ -362,7 +368,8 @@
         "Verify no warnings",
         "Check .eslintrc.json is properly configured"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "026",
@@ -375,7 +382,8 @@
         "Verify files are formatted correctly",
         "Add format script to package.json"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "027",
@@ -389,7 +397,8 @@
         "Verify link back to homepage",
         "Check page maintains site styling"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "028",
