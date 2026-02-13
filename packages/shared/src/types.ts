@@ -69,6 +69,8 @@ export enum Brand {
   MOTOROLA = "Motorola",
   SONY = "Sony",
   LG = "LG",
+  CUKTECH = "CUKTECH",
+  HONOR = "HONOR",
   OTHER = "Other",
 }
 

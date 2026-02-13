@@ -1,6 +1,7 @@
 /**
  * Sample charger data for development
  * 示例充电器数据，用于开发和测试
+ * 数据来源：充电头网评测频道及各大品牌官方规格
  */
 
 import { Charger, Brand, Protocol, ConnectorType } from './types';
@@ -101,6 +102,51 @@ export const sampleChargers: Charger[] = [
       current: 199,
       currency: 'CNY',
     },
+    createdAt: new Date('2025-01-01'),
+    updatedAt: new Date('2025-01-01'),
+  },
+
+  {
+    id: 'apple-40w-dynamic',
+    brand: Brand.APPLE,
+    model: 'A2849',
+    displayName: 'Apple 40W 动态电源适配器',
+    power: {
+      maxPower: 40,
+      configurations: [
+        { voltage: 5, current: 3, power: 15 },
+        { voltage: 9, current: 3, power: 27 },
+        { voltage: 15, current: 2.67, power: 40 },
+        { voltage: 20, current: 2, power: 40 },
+      ],
+    },
+    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PPS],
+    ports: [
+      {
+        type: ConnectorType.USB_C,
+        count: 1,
+        maxPower: 40,
+        protocols: [Protocol.PD, Protocol.PPS],
+      },
+    ],
+    description: '苹果40W动态电源适配器，专为iPhone 17系列设计，支持动态功率调整。',
+    features: [
+      '40W动态功率',
+      'iPhone 17专用',
+      '支持PPS',
+      '原装正品',
+    ],
+    releaseYear: 2025,
+    isGaN: false,
+    hasFoldingPlug: false,
+    manufacturedIn: '中国',
+    certifications: ['CCC', 'CE', 'FCC'],
+    price: {
+      msrp: 249,
+      current: 249,
+      currency: 'CNY',
+    },
+    officialUrl: 'https://www.apple.com.cn/shop/',
     createdAt: new Date('2025-01-01'),
     updatedAt: new Date('2025-01-01'),
   },
@@ -482,7 +528,7 @@ export const sampleChargers: Charger[] = [
     },
     description: '倍思 65W GaN 充电器，三口输出，2C1A 配置，支持多协议快充，可同时为三台设备充电。',
     features: [
-      '65GaN 大功率',
+      '65W 大功率',
       '三口同时充电',
       '支持多种快充协议',
       '数码显示功率',
@@ -558,6 +604,262 @@ export const sampleChargers: Charger[] = [
     price: {
       msrp: 399,
       current: 349,
+      currency: 'CNY',
+    },
+    createdAt: new Date('2025-01-01'),
+    updatedAt: new Date('2025-01-01'),
+  },
+
+  {
+    id: 'cuktech-air-magsafe',
+    brand: Brand.CUKTECH,
+    model: '10号Air磁吸电能卡',
+    displayName: 'CUKTECH 酷态科 10号Air 磁吸电能卡',
+    power: {
+      maxPower: 55,
+      configurations: [
+        { voltage: 5, current: 3, power: 15 },
+        { voltage: 9, current: 3, power: 27 },
+        { voltage: 12, current: 3, power: 36 },
+        { voltage: 15, current: 3, power: 45 },
+        { voltage: 20, current: 2.75, power: 55 },
+      ],
+    },
+    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PPS, Protocol.QC_3_0],
+    ports: [
+      {
+        type: ConnectorType.USB_C,
+        count: 1,
+        maxPower: 55,
+        protocols: [Protocol.PD, Protocol.PPS],
+      },
+    ],
+    description: 'CUKTECH酷态科10号磁吸电能卡Air，适配iPhone17系列磁吸充电，兼容小米55W快充。',
+    features: [
+      '磁吸充电设计',
+      '兼容小米55W快充',
+      '适配iPhone 17系列',
+      '便携卡片设计',
+    ],
+    releaseYear: 2025,
+    isGaN: true,
+    manufacturedIn: '中国',
+    createdAt: new Date('2025-01-01'),
+    updatedAt: new Date('2025-01-01'),
+  },
+
+  {
+    id: 'ugreen-160w-nitrogen',
+    brand: Brand.UGREEN,
+    model: '速显充160W',
+    displayName: 'UGREEN 绿联 速显充 160W 氮化镓充电器',
+    power: {
+      maxPower: 160,
+      configurations: [
+        { voltage: 5, current: 3, power: 15 },
+        { voltage: 9, current: 3, power: 27 },
+        { voltage: 12, current: 3, power: 36 },
+        { voltage: 15, current: 3, power: 45 },
+        { voltage: 20, current: 5, power: 100 },
+        { voltage: 28, current: 5.71, power: 160 },
+      ],
+    },
+    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PD_3_1, Protocol.PPS, Protocol.QC_4_0, Protocol.QC_3_0],
+    ports: [
+      {
+        type: ConnectorType.USB_C,
+        count: 4,
+        maxPower: 160,
+        protocols: [Protocol.PD, Protocol.PD_3_1],
+        isShared: true,
+      },
+    ],
+    description: '绿联速显充160W氮化镓充电器，支持数码显示功率，多口输出，满足多设备充电需求。',
+    features: [
+      '160W大功率',
+      '支持PD 3.1',
+      '数码功率显示',
+      '四口同时充电',
+      'GaN技术',
+    ],
+    releaseYear: 2025,
+    isGaN: true,
+    hasFoldingPlug: true,
+    manufacturedIn: '中国',
+    createdAt: new Date('2025-01-01'),
+    updatedAt: new Date('2025-01-01'),
+  },
+
+  {
+    id: 'anker-45w-smart',
+    brand: Brand.ANKER,
+    model: 'A2678',
+    displayName: 'Anker 45W 安心充 Smart 充电器',
+    power: {
+      maxPower: 45,
+      configurations: [
+        { voltage: 5, current: 3, power: 15 },
+        { voltage: 9, current: 3, power: 27 },
+        { voltage: 15, current: 3, power: 45 },
+        { voltage: 20, current: 2.25, power: 45 },
+      ],
+    },
+    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PPS, Protocol.QC_3_0],
+    ports: [
+      {
+        type: ConnectorType.USB_C,
+        count: 1,
+        maxPower: 45,
+        protocols: [Protocol.PD, Protocol.PPS],
+      },
+    ],
+    description: '安克45W安心充Smart充电器，可以识别iPhone，智能保护电池健康。',
+    features: [
+      '智能识别iPhone',
+      '减缓电池健康衰减',
+      '智能屏显',
+      '180°折叠插脚',
+      'AI温控保护',
+    ],
+    releaseYear: 2025,
+    isGaN: true,
+    hasFoldingPlug: true,
+    manufacturedIn: '中国',
+    certifications: ['CCC', 'CE', 'FCC', 'RoHS'],
+    price: {
+      msrp: 199,
+      current: 179,
+      currency: 'CNY',
+    },
+    createdAt: new Date('2025-01-01'),
+    updatedAt: new Date('2025-01-01'),
+  },
+
+  {
+    id: 'xiaomi-45w-2025',
+    brand: Brand.XIAOMI,
+    model: 'MDY-14-EQ',
+    displayName: 'Xiaomi 小米 45W 快充充电器 2025版',
+    power: {
+      maxPower: 45,
+      configurations: [
+        { voltage: 5, current: 3, power: 15 },
+        { voltage: 9, current: 3, power: 27 },
+        { voltage: 11, current: 4.1, power: 45 },
+        { voltage: 12, current: 3, power: 36 },
+      ],
+    },
+    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PPS, Protocol.QC_3_0],
+    ports: [
+      {
+        type: ConnectorType.USB_C,
+        count: 1,
+        maxPower: 45,
+        protocols: [Protocol.PD, Protocol.PPS],
+      },
+    ],
+    description: '小米45W快充充电器2025版，支持小米手机快充，同时兼容PD协议。',
+    features: [
+      '45W快速充电',
+      '支持小米私有协议',
+      '兼容PD协议',
+      '过载保护',
+    ],
+    releaseYear: 2025,
+    isGaN: false,
+    manufacturedIn: '中国',
+    certifications: ['CCC', 'CE', 'FCC'],
+    price: {
+      msrp: 99,
+      current: 79,
+      currency: 'CNY',
+    },
+    createdAt: new Date('2025-01-01'),
+    updatedAt: new Date('2025-01-01'),
+  },
+
+  {
+    id: 'anker-nano-45w-screen-2025',
+    brand: Brand.ANKER,
+    model: 'A2679',
+    displayName: 'Anker Nano 45W 氮化镓屏显充电器',
+    power: {
+      maxPower: 45,
+      configurations: [
+        { voltage: 5, current: 3, power: 15 },
+        { voltage: 9, current: 3, power: 27 },
+        { voltage: 15, current: 3, power: 45 },
+        { voltage: 20, current: 2.25, power: 45 },
+      ],
+    },
+    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PPS, Protocol.QC_3_0],
+    ports: [
+      {
+        type: ConnectorType.USB_C,
+        count: 1,
+        maxPower: 45,
+        protocols: [Protocol.PD, Protocol.PPS],
+      },
+    ],
+    description: '安克Nano 45W氮化镓屏显充电器，专为iPhone 17设计，20分钟充50%。',
+    features: [
+      '智能屏显',
+      '20分钟充50%',
+      'Nano小巧设计',
+      '180°折叠插脚',
+      'AI温控',
+    ],
+    releaseYear: 2025,
+    isGaN: true,
+    hasFoldingPlug: true,
+    manufacturedIn: '中国',
+    certifications: ['CCC', 'CE', 'FCC', 'RoHS'],
+    price: {
+      msrp: 169,
+      current: 149,
+      currency: 'CNY',
+    },
+    createdAt: new Date('2025-01-01'),
+    updatedAt: new Date('2025-01-01'),
+  },
+
+  {
+    id: 'honor-80w-wireless',
+    brand: Brand.HONOR,
+    model: 'CP100W',
+    displayName: 'HONOR 荣耀 80W 立式无线充电器',
+    power: {
+      maxPower: 80,
+      configurations: [
+        { voltage: 5, current: 2, power: 10 },
+        { voltage: 9, current: 2, power: 18 },
+        { voltage: 12, current: 2, power: 24 },
+      ],
+    },
+    protocols: [Protocol.SCP],
+    ports: [
+      {
+        type: ConnectorType.PROPRIETARY,
+        count: 1,
+        maxPower: 80,
+        protocols: [Protocol.SCP],
+      },
+    ],
+    description: '荣耀80W立式无线充电器，支持荣耀手机无线快充，立式设计方便使用。',
+    features: [
+      '80W无线快充',
+      '立式设计',
+      '支持多设备',
+      '智能温控',
+      '异物检测',
+    ],
+    releaseYear: 2025,
+    isGaN: false,
+    manufacturedIn: '中国',
+    certifications: ['CCC', 'QC', 'CE'],
+    price: {
+      msrp: 299,
+      current: 269,
       currency: 'CNY',
     },
     createdAt: new Date('2025-01-01'),
