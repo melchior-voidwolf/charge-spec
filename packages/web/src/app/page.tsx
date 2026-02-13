@@ -4,14 +4,22 @@ export default function HomePage() {
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <section className="text-center py-16 px-4">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img
+              src="/logo.svg"
+              alt="Charge Spec Logo"
+              className="w-24 h-24"
+            />
+          </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            充电头规格
+            快充查查网
           </h1>
           <p className="text-2xl text-gray-700 dark:text-gray-300 mb-4">
             Charge Spec - 充电器技术规格查询平台
           </p>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            专业的充电头技术规格数据库，支持多品牌、多协议的充电器查询和对比。
+            专业的充电器技术规格数据库，支持多品牌、多协议的充电器查询和对比。
             快速找到您需要的充电器规格信息。
           </p>
         </section>

@@ -8,9 +8,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 // Generate static params for all chargers
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps) {
-  const charger = sampleChargers.find((c) => c.id === params.id);
+  const { id } = await params;
+  const charger = sampleChargers.find((c) => c.id === id);
 
   if (!charger) {
     return {
@@ -31,13 +32,14 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   return {
-    title: `${charger.displayName} - Charge Spec`,
+    title: `${charger.displayName} - Charge Spec (快充查查网)`,
     description: charger.description,
   };
 }
 
-export default function ChargerDetailPage({ params }: PageProps) {
-  const charger = sampleChargers.find((c) => c.id === params.id);
+export default async function ChargerDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const charger = sampleChargers.find((c) => c.id === id);
 
   if (!charger) {
     notFound();

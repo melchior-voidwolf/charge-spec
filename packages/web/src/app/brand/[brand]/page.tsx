@@ -6,12 +6,20 @@ interface BrandPageProps {
   params: Promise<{ brand: string }>;
 }
 
+// Generate static params for all brands
+export async function generateStaticParams() {
+  const brands = Array.from(new Set(sampleChargers.map((c) => c.brand)));
+  return brands.map((brand) => ({
+    brand: encodeURIComponent(brand),
+  }));
+}
+
 export async function generateMetadata({ params }: BrandPageProps) {
   const { brand } = await params;
   const decodedBrand = decodeURIComponent(brand);
 
   return {
-    title: `${decodedBrand} 充电器 - Charge Spec`,
+    title: `${decodedBrand} 充电器 - Charge Spec (快充查查网)`,
     description: `查看 ${decodedBrand} 品牌的所有充电器技术规格`,
   };
 }

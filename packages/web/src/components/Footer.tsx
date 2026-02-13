@@ -6,10 +6,10 @@ export default function Footer() {
           {/* Brand Section */}
           <div>
             <h3 className="text-lg font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              充电头规格
+              Charge Spec
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              专业的充电器技术规格查询平台，帮助您找到最适合的充电设备。
+              快充查查网 - 专业的充电器技术规格查询平台，帮助您找到最适合的充电设备。
             </p>
           </div>
 
@@ -35,14 +35,6 @@ export default function Footer() {
                   充电器列表
                 </a>
               </li>
-              <li>
-                <a
-                  href="/about"
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  关于我们
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -60,7 +52,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            &copy; {new Date().getFullYear()} 充电头规格 (Charge Spec). 保留所有权利.
+            &copy; {new Date().getFullYear()} Charge Spec (快充查查网). 保留所有权利.
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
             本网站数据仅供参考，具体规格请以官方信息为准

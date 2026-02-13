@@ -1,0 +1,16 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景透明 -->
+  <!-- 圆形轮廓（代表“查”） -->
+  <circle cx="64" cy="64" r="58" stroke="#2962FF" stroke-width="6" fill="none"/>
+  <!-- 大号闪电（快充核心符号） -->
+  <path d="
+    M50 40 
+    L70 40 
+    L55 60 
+    L70 60 
+    L50 88 
+    L58 68 
+    L44 68 
+    Z
+  " fill="#00C853"/>
+</svg>

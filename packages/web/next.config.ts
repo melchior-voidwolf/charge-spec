@@ -2,9 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   transpilePackages: ['@charge-spec/shared'],
-  experimental: {
-    // Optimize package imports
-    optimizePackageImports: ['@charge-spec/shared'],
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 

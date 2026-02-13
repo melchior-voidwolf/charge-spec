@@ -8,9 +8,16 @@ export default function Header() {
           {/* Logo/Title */}
           <Link
             href="/"
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            充电头规格
+            <img
+              src="/logo.svg"
+              alt="Charge Spec Logo"
+              className="w-10 h-10"
+            />
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              快充查查网
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -26,12 +33,6 @@ export default function Header() {
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
             >
               充电器列表
-            </Link>
-            <Link
-              href="/about"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
-            >
-              关于我们
             </Link>
           </div>
 
@@ -78,12 +79,6 @@ export default function Header() {
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700"
             >
               充电器列表
-            </Link>
-            <Link
-              href="/about"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700"
-            >
-              关于我们
             </Link>
           </div>
         </div>
