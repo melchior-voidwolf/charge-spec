@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "yarn workspace @charge-spec/web dev",
     "build": "yarn workspace @charge-spec/web build",
-    "build:fix": "yarn workspace @charge-spec/web build && node fix-basepath.js",
+    "build:fix": "yarn workspace @charge-spec/web build && node fix-basepath.js && cp -r packages/web/out .",
     "start": "yarn workspace @charge-spec/web start",
     "lint": "yarn workspaces foreach -p run lint",
     "type-check": "yarn workspaces foreach -p run type-check",
