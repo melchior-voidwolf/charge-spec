@@ -5,8 +5,7 @@
  */
 
 // Export all types
-export * from "./types";
+export * from './types'
 
 // Export sample data
-export * from "./sample-data";
-
+export * from './sample-data'

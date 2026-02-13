@@ -1,39 +1,30 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import { useState } from 'react';
+import Link from 'next/link'
+import { useState } from 'react'
 
 // basePath from next.config.ts
-const BASE_PATH = '/charge-spec';
+const BASE_PATH = '/charge-spec'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+    setIsMenuOpen(false)
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14">
           {/* Logo/Title */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 hover:opacity-70 transition-opacity"
-          >
-            <img
-              src={`${BASE_PATH}/logo.svg`}
-              alt="Charge Spec Logo"
-              className="w-7 h-7"
-            />
-            <span className="text-base font-semibold text-text-primary">
-              快充查查网
-            </span>
+          <Link href="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
+            <img src={`${BASE_PATH}/logo.svg`} alt="Charge Spec Logo" className="w-7 h-7" />
+            <span className="text-base font-semibold text-text-primary">快充查查网</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -113,5 +104,5 @@ export default function Header() {
         )}
       </nav>
     </header>
-  );
+  )
 }

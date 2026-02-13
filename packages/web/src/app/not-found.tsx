@@ -1,18 +1,12 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 export default function NotFound() {
   return (
     <div className="min-h-[calc(100vh-8rem)] flex items-center justify-center">
       <div className="text-center px-4">
-        <h1 className="text-5xl font-bold text-text-primary mb-3">
-          404
-        </h1>
-        <h2 className="text-lg font-semibold text-text-secondary mb-2">
-          页面未找到
-        </h2>
-        <p className="text-[14px] text-text-tertiary mb-6">
-          抱歉，您访问的页面不存在。
-        </p>
+        <h1 className="text-5xl font-bold text-text-primary mb-3">404</h1>
+        <h2 className="text-lg font-semibold text-text-secondary mb-2">页面未找到</h2>
+        <p className="text-[14px] text-text-tertiary mb-6">抱歉，您访问的页面不存在。</p>
         <div className="flex flex-col sm:flex-row gap-2.5 justify-center">
           <Link
             href="/"
@@ -29,5 +23,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  )
 }

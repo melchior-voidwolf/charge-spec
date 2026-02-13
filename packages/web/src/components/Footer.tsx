@@ -5,12 +5,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           {/* Brand */}
           <div>
-            <h3 className="text-[15px] font-semibold text-text-primary">
-              快充查查网
-            </h3>
-            <p className="text-[13px] text-text-tertiary mt-0.5">
-              专业的充电器技术规格查询平台
-            </p>
+            <h3 className="text-[15px] font-semibold text-text-primary">快充查查网</h3>
+            <p className="text-[13px] text-text-tertiary mt-0.5">专业的充电器技术规格查询平台</p>
           </div>
 
           {/* Links */}
@@ -38,5 +34,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

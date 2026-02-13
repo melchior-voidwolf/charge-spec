@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   // GitHub Pages 部署在 /charge-spec 子路径下
@@ -18,6 +18,6 @@ const nextConfig: NextConfig = {
   },
   // 禁用图片优化以避免静态导出问题
   trailingSlash: true,
-};
+}
 
-export default nextConfig;
+export default nextConfig

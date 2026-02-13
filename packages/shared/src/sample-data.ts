@@ -4,7 +4,7 @@
  * 数据来源：充电头网评测频道及各大品牌官方规格
  */
 
-import { Charger, Brand, Protocol, ConnectorType } from './types';
+import { Charger, Brand, Protocol, ConnectorType } from './types'
 
 export const sampleChargers: Charger[] = [
   {
@@ -36,11 +36,7 @@ export const sampleChargers: Charger[] = [
       colors: ['白色'],
     },
     description: 'Apple 原装 20W USB-C 电源适配器，支持快速充电，适用于 iPhone、iPad 和 AirPods。',
-    features: [
-      '支持 PD 快速充电',
-      '原装正品，品质保证',
-      '紧凑设计，方便携带',
-    ],
+    features: ['支持 PD 快速充电', '原装正品，品质保证', '紧凑设计，方便携带'],
     releaseYear: 2020,
     isGaN: false,
     hasFoldingPlug: false,
@@ -86,12 +82,9 @@ export const sampleChargers: Charger[] = [
       weight: 73,
       colors: ['白色'],
     },
-    description: 'Apple 30W USB-C 电源适配器，专为 MacBook Air 设计，同时兼容 iPhone 和 iPad 快速充电。',
-    features: [
-      '支持 30W 快速充电',
-      '兼容 MacBook Air',
-      '多档电压输出',
-    ],
+    description:
+      'Apple 30W USB-C 电源适配器，专为 MacBook Air 设计，同时兼容 iPhone 和 iPad 快速充电。',
+    features: ['支持 30W 快速充电', '兼容 MacBook Air', '多档电压输出'],
     releaseYear: 2018,
     isGaN: false,
     hasFoldingPlug: false,
@@ -130,12 +123,7 @@ export const sampleChargers: Charger[] = [
       },
     ],
     description: '苹果40W动态电源适配器，专为iPhone 17系列设计，支持动态功率调整。',
-    features: [
-      '40W动态功率',
-      'iPhone 17专用',
-      '支持PPS',
-      '原装正品',
-    ],
+    features: ['40W动态功率', 'iPhone 17专用', '支持PPS', '原装正品'],
     releaseYear: 2025,
     isGaN: false,
     hasFoldingPlug: false,
@@ -179,12 +167,9 @@ export const sampleChargers: Charger[] = [
       weight: 39,
       colors: ['白色', '紫色', '蓝色'],
     },
-    description: 'Anker Nano 系列 20W 充电器，体积比原装更小，支持 iPhone 快速充电，30 分钟可充至 50%。',
-    features: [
-      '体积小巧，比 Apple 原装小 45%',
-      '支持 iPhone 快速充电',
-      'AI 智能温控',
-    ],
+    description:
+      'Anker Nano 系列 20W 充电器，体积比原装更小，支持 iPhone 快速充电，30 分钟可充至 50%。',
+    features: ['体积小巧，比 Apple 原装小 45%', '支持 iPhone 快速充电', 'AI 智能温控'],
     releaseYear: 2021,
     isGaN: true,
     hasFoldingPlug: false,
@@ -235,13 +220,9 @@ export const sampleChargers: Charger[] = [
       weight: 109,
       colors: ['白色', '黑色'],
     },
-    description: 'Anker 715 65W 充电器，采用 GaN 技术，体积小巧，可同时为两台设备充电，支持 MacBook Pro。',
-    features: [
-      '65W 大功率，支持笔记本',
-      'GaN 技术体积更小',
-      '双口同时充电',
-      '折叠插脚设计',
-    ],
+    description:
+      'Anker 715 65W 充电器，采用 GaN 技术，体积小巧，可同时为两台设备充电，支持 MacBook Pro。',
+    features: ['65W 大功率，支持笔记本', 'GaN 技术体积更小', '双口同时充电', '折叠插脚设计'],
     releaseYear: 2022,
     isGaN: true,
     hasFoldingPlug: true,
@@ -293,14 +274,9 @@ export const sampleChargers: Charger[] = [
       weight: 156,
       colors: ['白色', '黑色'],
     },
-    description: 'Anker 735 Prime 100W 充电器，支持 PD 3.1 协议，三个充电口，可同时为多台设备充电，支持两台笔记本同时充电。',
-    features: [
-      '100W 大功率',
-      '支持 PD 3.1',
-      '三口同时充电',
-      '折叠插脚设计',
-      '智能功率分配',
-    ],
+    description:
+      'Anker 735 Prime 100W 充电器，支持 PD 3.1 协议，三个充电口，可同时为多台设备充电，支持两台笔记本同时充电。',
+    features: ['100W 大功率', '支持 PD 3.1', '三口同时充电', '折叠插脚设计', '智能功率分配'],
     releaseYear: 2023,
     isGaN: true,
     hasFoldingPlug: true,
@@ -350,14 +326,9 @@ export const sampleChargers: Charger[] = [
       weight: 120,
       colors: ['白色'],
     },
-    description: '小米 67W GaN 充电器，采用 GaN 技术，体积小巧，支持小米手机 67W 快充，同时兼容其他品牌设备。',
-    features: [
-      '67W 快速充电',
-      'GaN 技术',
-      '双口输出',
-      '折叠插脚',
-      '支持小米 67W 私有协议',
-    ],
+    description:
+      '小米 67W GaN 充电器，采用 GaN 技术，体积小巧，支持小米手机 67W 快充，同时兼容其他品牌设备。',
+    features: ['67W 快速充电', 'GaN 技术', '双口输出', '折叠插脚', '支持小米 67W 私有协议'],
     releaseYear: 2022,
     isGaN: true,
     hasFoldingPlug: true,
@@ -409,13 +380,7 @@ export const sampleChargers: Charger[] = [
       colors: ['白色'],
     },
     description: '小米 120W GaN 充电器，超大功率输出，支持小米手机 120W 秒充技术，15 分钟充满。',
-    features: [
-      '120W 超大功率',
-      'GaN 技术',
-      '支持小米 120W 私有协议',
-      '折叠插脚',
-      '智能温控保护',
-    ],
+    features: ['120W 超大功率', 'GaN 技术', '支持小米 120W 私有协议', '折叠插脚', '智能温控保护'],
     releaseYear: 2023,
     isGaN: true,
     hasFoldingPlug: true,
@@ -444,7 +409,14 @@ export const sampleChargers: Charger[] = [
         { voltage: 11, current: 6, power: 66 },
       ],
     },
-    protocols: [Protocol.SCP, Protocol.FCP, Protocol.PD, Protocol.PD_3_0, Protocol.PPS, Protocol.QC_2_0],
+    protocols: [
+      Protocol.SCP,
+      Protocol.FCP,
+      Protocol.PD,
+      Protocol.PD_3_0,
+      Protocol.PPS,
+      Protocol.QC_2_0,
+    ],
     ports: [
       {
         type: ConnectorType.USB_C,
@@ -466,7 +438,8 @@ export const sampleChargers: Charger[] = [
       weight: 138,
       colors: ['白色'],
     },
-    description: '华为 65W SuperCharge 充电器，支持华为 SCP 66W 快充，同时兼容 PD 协议，可为笔记本充电。',
+    description:
+      '华为 65W SuperCharge 充电器，支持华为 SCP 66W 快充，同时兼容 PD 协议，可为笔记本充电。',
     features: [
       '66W 华为 SuperCharge',
       '支持 SCP/FCP 私有协议',
@@ -503,7 +476,15 @@ export const sampleChargers: Charger[] = [
         { voltage: 20, current: 3.25, power: 65 },
       ],
     },
-    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PPS, Protocol.QC_4_0, Protocol.QC_3_0, Protocol.AFC, Protocol.FCP],
+    protocols: [
+      Protocol.PD,
+      Protocol.PD_3_0,
+      Protocol.PPS,
+      Protocol.QC_4_0,
+      Protocol.QC_3_0,
+      Protocol.AFC,
+      Protocol.FCP,
+    ],
     ports: [
       {
         type: ConnectorType.USB_C,
@@ -527,13 +508,7 @@ export const sampleChargers: Charger[] = [
       colors: ['白色', '黑色', '紫色'],
     },
     description: '倍思 65W GaN 充电器，三口输出，2C1A 配置，支持多协议快充，可同时为三台设备充电。',
-    features: [
-      '65W 大功率',
-      '三口同时充电',
-      '支持多种快充协议',
-      '数码显示功率',
-      '折叠插脚',
-    ],
+    features: ['65W 大功率', '三口同时充电', '支持多种快充协议', '数码显示功率', '折叠插脚'],
     releaseYear: 2023,
     isGaN: true,
     hasFoldingPlug: true,
@@ -564,7 +539,14 @@ export const sampleChargers: Charger[] = [
         { voltage: 28, current: 5, power: 140 },
       ],
     },
-    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PD_3_1, Protocol.PPS, Protocol.QC_4_0, Protocol.QC_3_0],
+    protocols: [
+      Protocol.PD,
+      Protocol.PD_3_0,
+      Protocol.PD_3_1,
+      Protocol.PPS,
+      Protocol.QC_4_0,
+      Protocol.QC_3_0,
+    ],
     ports: [
       {
         type: ConnectorType.USB_C,
@@ -587,7 +569,8 @@ export const sampleChargers: Charger[] = [
       weight: 215,
       colors: ['黑色', '白色'],
     },
-    description: '绿联 140W 氮化镓充电器，支持 PD 3.1 协议，28V 输出，可满足 MacBook Pro 16 英寸的充电需求。',
+    description:
+      '绿联 140W 氮化镓充电器，支持 PD 3.1 协议，28V 输出，可满足 MacBook Pro 16 英寸的充电需求。',
     features: [
       '140W 超大功率',
       '支持 PD 3.1 (28V)',
@@ -635,12 +618,7 @@ export const sampleChargers: Charger[] = [
       },
     ],
     description: 'CUKTECH酷态科10号磁吸电能卡Air，适配iPhone17系列磁吸充电，兼容小米55W快充。',
-    features: [
-      '磁吸充电设计',
-      '兼容小米55W快充',
-      '适配iPhone 17系列',
-      '便携卡片设计',
-    ],
+    features: ['磁吸充电设计', '兼容小米55W快充', '适配iPhone 17系列', '便携卡片设计'],
     releaseYear: 2025,
     isGaN: true,
     manufacturedIn: '中国',
@@ -664,7 +642,14 @@ export const sampleChargers: Charger[] = [
         { voltage: 28, current: 5.71, power: 160 },
       ],
     },
-    protocols: [Protocol.PD, Protocol.PD_3_0, Protocol.PD_3_1, Protocol.PPS, Protocol.QC_4_0, Protocol.QC_3_0],
+    protocols: [
+      Protocol.PD,
+      Protocol.PD_3_0,
+      Protocol.PD_3_1,
+      Protocol.PPS,
+      Protocol.QC_4_0,
+      Protocol.QC_3_0,
+    ],
     ports: [
       {
         type: ConnectorType.USB_C,
@@ -675,13 +660,7 @@ export const sampleChargers: Charger[] = [
       },
     ],
     description: '绿联速显充160W氮化镓充电器，支持数码显示功率，多口输出，满足多设备充电需求。',
-    features: [
-      '160W大功率',
-      '支持PD 3.1',
-      '数码功率显示',
-      '四口同时充电',
-      'GaN技术',
-    ],
+    features: ['160W大功率', '支持PD 3.1', '数码功率显示', '四口同时充电', 'GaN技术'],
     releaseYear: 2025,
     isGaN: true,
     hasFoldingPlug: true,
@@ -714,13 +693,7 @@ export const sampleChargers: Charger[] = [
       },
     ],
     description: '安克45W安心充Smart充电器，可以识别iPhone，智能保护电池健康。',
-    features: [
-      '智能识别iPhone',
-      '减缓电池健康衰减',
-      '智能屏显',
-      '180°折叠插脚',
-      'AI温控保护',
-    ],
+    features: ['智能识别iPhone', '减缓电池健康衰减', '智能屏显', '180°折叠插脚', 'AI温控保护'],
     releaseYear: 2025,
     isGaN: true,
     hasFoldingPlug: true,
@@ -759,12 +732,7 @@ export const sampleChargers: Charger[] = [
       },
     ],
     description: '小米45W快充充电器2025版，支持小米手机快充，同时兼容PD协议。',
-    features: [
-      '45W快速充电',
-      '支持小米私有协议',
-      '兼容PD协议',
-      '过载保护',
-    ],
+    features: ['45W快速充电', '支持小米私有协议', '兼容PD协议', '过载保护'],
     releaseYear: 2025,
     isGaN: false,
     manufacturedIn: '中国',
@@ -802,13 +770,7 @@ export const sampleChargers: Charger[] = [
       },
     ],
     description: '安克Nano 45W氮化镓屏显充电器，专为iPhone 17设计，20分钟充50%。',
-    features: [
-      '智能屏显',
-      '20分钟充50%',
-      'Nano小巧设计',
-      '180°折叠插脚',
-      'AI温控',
-    ],
+    features: ['智能屏显', '20分钟充50%', 'Nano小巧设计', '180°折叠插脚', 'AI温控'],
     releaseYear: 2025,
     isGaN: true,
     hasFoldingPlug: true,
@@ -846,13 +808,7 @@ export const sampleChargers: Charger[] = [
       },
     ],
     description: '荣耀80W立式无线充电器，支持荣耀手机无线快充，立式设计方便使用。',
-    features: [
-      '80W无线快充',
-      '立式设计',
-      '支持多设备',
-      '智能温控',
-      '异物检测',
-    ],
+    features: ['80W无线快充', '立式设计', '支持多设备', '智能温控', '异物检测'],
     releaseYear: 2025,
     isGaN: false,
     manufacturedIn: '中国',
@@ -865,4 +821,4 @@ export const sampleChargers: Charger[] = [
     createdAt: new Date('2025-01-01'),
     updatedAt: new Date('2025-01-01'),
   },
-];
+]

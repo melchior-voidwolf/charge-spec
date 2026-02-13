@@ -7,6 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 这是一个充电头规格网站，使用 Yarn Workspaces 管理的 Monorepo 架构。
 
 ### 技术栈
+
 - **Web**: Next.js 15 (App Router) + React 19 + Tailwind CSS
 - **语言**: TypeScript (strict mode)
 - **包管理**: Yarn Workspaces + Plug'n'Play
@@ -37,6 +38,7 @@ charge-spec/
 ## 常用命令
 
 ### 开发相关
+
 ```bash
 # 启动开发服务器 (http://localhost:3000)
 yarn dev
@@ -49,6 +51,7 @@ yarn start
 ```
 
 ### 代码质量
+
 ```bash
 # TypeScript 类型检查
 yarn type-check
@@ -67,6 +70,7 @@ yarn format
 ```
 
 ### 依赖管理
+
 ```bash
 # 安装所有依赖
 yarn install
@@ -81,22 +85,27 @@ cd packages/shared && yarn add -D <package>
 ## 架构要点
 
 ### Monorepo 配置
+
 - 根 `package.json` 配置了 `workspaces: ["packages/*"]`
 - web 包通过 `@charge-spec/shared` 导入共享代码
 - Next.js 配置了 `transpilePackages: ['@charge-spec/shared']` 以优化导入
 
 ### 模块解析重要细节
+
 **shared 包**使用 `moduleResolution: "NodeNext"`：
+
 - 相对导入**必须**包含 `.js` 扩展名
 - 正确: `import { X } from './types.js'`
 - 错误: `import { X } from './types'`
 - 这是因为 NodeNext 模块解析需要显式的文件扩展名
 
 **web 包**使用 `moduleResolution: "bundler"`：
+
 - 不需要在相对导入中添加扩展名
 - 使用路径别名 `@/` 指向 `./src/`
 
 ### 路由结构 (App Router)
+
 - `/` - 首页
 - `/chargers` - 充电器列表页（支持搜索和筛选）
 - `/chargers/[id]` - 充电器详情页
@@ -107,7 +116,9 @@ cd packages/shared && yarn add -D <package>
 - `/not-found` - 自定义 404 页面
 
 ### 数据类型
+
 核心类型定义在 `packages/shared/src/types.ts`：
+
 - `Charger` - 充电器完整数据结构
 - `Brand` - 品牌枚举（Apple, Anker, Xiaomi 等）
 - `Protocol` - 充电协议（PD, QC, AFC, SCP 等）
@@ -118,13 +129,16 @@ cd packages/shared && yarn add -D <package>
 - `SortOption` - 排序选项枚举
 
 ### API 端点行为
+
 `GET /api/chargers` 支持的查询参数：
+
 - `search` - 搜索关键词（品牌、功率、型号）
 - `brand` - 按品牌筛选
 - `minPower` / `maxPower` - 功率范围筛选
 - `protocol` - 按协议筛选
 
 返回格式：
+
 ```json
 {
   "chargers": [...],
@@ -134,12 +148,14 @@ cd packages/shared && yarn add -D <package>
 ```
 
 ### 组件约定
+
 - 使用函数式组件
 - 优先使用 Tailwind 工具类而非内联样式
 - 保持组件小而专一
 - 导出的组件使用 `.tsx` 扩展名
 
 ### Git 提交规范
+
 ```bash
 # 功能开发
 git commit -m "feat: 完成功能 XXX - 功能描述"
@@ -152,6 +168,7 @@ git commit -m "docs: 更新 README"
 ```
 
 ### 开发流程
+
 1. 在 `feature_list.json` 中找到要开发的功能
 2. 创建分支或直接在 main 开发
 3. 编写代码（遵循 TypeScript 和 ESLint 规范）
@@ -164,23 +181,28 @@ git commit -m "docs: 更新 README"
 ## 重要注意事项
 
 ### shared 包导入规则
+
 当在 `packages/shared/src/` 中编写代码时：
+
 - 导入同目录文件必须使用 `.js` 扩展名
 - `from './types.js'` ✅
 - `from './types'` ❌ (会报错 TS2835)
 
 ### Next.js 特性
+
 - 使用 App Router（非 Pages Router）
 - 服务端组件默认为 async
 - 使用 `next/image` 优化图片
 - 使用 `next/link` 进行内部链接
 
 ### 样式系统
+
 - Tailwind CSS 已配置并可用
 - 支持深色模式（通过系统偏好检测）
 - 响应式设计（mobile first）
 
 ### 文件位置参考
+
 - 充电器类型定义：`packages/shared/src/types.ts`
 - 示例数据：`packages/shared/src/sample-data.ts`
 - 主页：`packages/web/src/app/page.tsx`

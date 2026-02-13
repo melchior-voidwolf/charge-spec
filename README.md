@@ -87,6 +87,7 @@ yarn lint
 ### 已实现功能 (28/30)
 
 #### 基础设施
+
 - ✅ Yarn Workspaces monorepo 配置
 - ✅ Next.js 15 开发服务器
 - ✅ TypeScript 编译检查
@@ -95,6 +96,7 @@ yarn lint
 - ✅ Prettier 代码格式化
 
 #### 用户界面
+
 - ✅ 响应式首页
 - ✅ 导航头部组件
 - ✅ 页脚组件
@@ -110,16 +112,19 @@ yarn lint
 - ✅ 深色模式（系统偏好）
 
 #### 数据
+
 - ✅ 完整的充电器类型定义
 - ✅ 10个示例充电器数据
 - ✅ 数据库集成计划（未来）
 
 #### API
+
 - ✅ GET /api/chargers - 获取所有充电器
 - ✅ GET /api/chargers/[id] - 获取单个充电器详情
 - ✅ 支持查询参数筛选
 
 #### SEO
+
 - ✅ 动态页面 metadata
 - ✅ XML Sitemap 生成
 
@@ -127,28 +132,28 @@ yarn lint
 
 ```typescript
 interface Charger {
-  id: string;
-  brand: Brand;
-  model: string;
-  displayName: string;
+  id: string
+  brand: Brand
+  model: string
+  displayName: string
   power: {
-    maxPower: number;
-    ports: PowerOutput[];
-  };
-  protocols: Protocol[];
-  ports: PortConfiguration[];
-  isGaN: boolean;
-  hasFoldingPlug: boolean;
+    maxPower: number
+    ports: PowerOutput[]
+  }
+  protocols: Protocol[]
+  ports: PortConfiguration[]
+  isGaN: boolean
+  hasFoldingPlug: boolean
   dimensions?: {
-    width: number;
-    height: number;
-    depth: number;
-  };
-  weight?: number;
+    width: number
+    height: number
+    depth: number
+  }
+  weight?: number
   price?: {
-    msrp: number;
-    current: number;
-  };
+    msrp: number
+    current: number
+  }
   // ... 更多字段见 packages/shared/src/types.ts
 }
 ```
@@ -160,6 +165,7 @@ interface Charger {
 **端点**: `GET /api/chargers`
 
 **查询参数**:
+
 - `search` (string): 搜索关键词（品牌、功率、型号、协议）
 - `brand` (string): 筛选品牌
 - `minPower` (number): 最小功率
@@ -167,6 +173,7 @@ interface Charger {
 - `protocol` (string): 充电协议
 
 **响应**:
+
 ```json
 {
   "chargers": [...],
@@ -251,24 +258,28 @@ yarn start
 ### 环境变量
 
 （当前无必需环境变量，未来可能添加）
+
 - `NEXT_PUBLIC_API_URL`: API 基础 URL
 - `NEXT_PUBLIC_ANALYTICS_ID`: 分析跟踪 ID
 
 ## 路线图
 
 ### v1.0 (当前)
+
 - 基础充电器展示
 - 搜索和筛选功能
 - 响应式设计
 - API 端点
 
 ### v1.1 (计划)
+
 - 用户收藏功能
 - 对比多个充电器
 - 图片上传和管理
 - 数据库集成
 
 ### v2.0 (未来)
+
 - 用户账户系统
 - 评论和评分
 - React Native 移动应用
