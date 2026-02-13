@@ -40,6 +40,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["charge-spec", "workspace:."],\
           ["eslint", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:9.39.2"],\
+          ["eslint-config-prettier", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:10.1.8"],\
           ["prettier", "npm:3.8.1"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
@@ -286,6 +287,7 @@ const RAW_RUNTIME_STATE =
           ["autoprefixer", "virtual:b9cf912fbce554141b4fe70af360046f9b49f7f2dfe05ead859b52efb63730e95c11de860850dd28d09d16660408a31c28e35edf9d6060f00cac4f5a9900f38e#npm:10.4.24"],\
           ["eslint", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:9.39.2"],\
           ["eslint-config-next", "virtual:b9cf912fbce554141b4fe70af360046f9b49f7f2dfe05ead859b52efb63730e95c11de860850dd28d09d16660408a31c28e35edf9d6060f00cac4f5a9900f38e#npm:15.5.12"],\
+          ["eslint-config-prettier", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:10.1.8"],\
           ["eslint-plugin-react", "virtual:b9cf912fbce554141b4fe70af360046f9b49f7f2dfe05ead859b52efb63730e95c11de860850dd28d09d16660408a31c28e35edf9d6060f00cac4f5a9900f38e#npm:7.37.5"],\
           ["eslint-plugin-react-hooks", "virtual:b9cf912fbce554141b4fe70af360046f9b49f7f2dfe05ead859b52efb63730e95c11de860850dd28d09d16660408a31c28e35edf9d6060f00cac4f5a9900f38e#npm:7.0.1"],\
           ["globals", "npm:17.3.0"],\
@@ -2006,6 +2008,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["charge-spec", "workspace:."],\
           ["eslint", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:9.39.2"],\
+          ["eslint-config-prettier", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:10.1.8"],\
           ["prettier", "npm:3.8.1"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
@@ -2597,6 +2600,28 @@ const RAW_RUNTIME_STATE =
           "@types/typescript",\
           "eslint",\
           "typescript"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["eslint-config-prettier", [\
+      ["npm:10.1.8", {\
+        "packageLocation": "../../.yarn/berry/cache/eslint-config-prettier-npm-10.1.8-c1c834370f-10c0.zip/node_modules/eslint-config-prettier/",\
+        "packageDependencies": [\
+          ["eslint-config-prettier", "npm:10.1.8"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:10.1.8", {\
+        "packageLocation": "./.yarn/__virtual__/eslint-config-prettier-virtual-d9b55bee33/3/.yarn/berry/cache/eslint-config-prettier-npm-10.1.8-c1c834370f-10c0.zip/node_modules/eslint-config-prettier/",\
+        "packageDependencies": [\
+          ["@types/eslint", null],\
+          ["eslint", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:9.39.2"],\
+          ["eslint-config-prettier", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:10.1.8"]\
+        ],\
+        "packagePeers": [\
+          "@types/eslint",\
+          "eslint"\
         ],\
         "linkType": "HARD"\
       }]\

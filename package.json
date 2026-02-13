@@ -12,12 +12,14 @@
     "build": "yarn workspace @charge-spec/web build",
     "build:fix": "yarn workspace @charge-spec/web build && node fix-basepath.js && cp -r packages/web/out .",
     "start": "yarn workspace @charge-spec/web start",
-    "lint": "yarn workspaces foreach -p run lint",
-    "type-check": "yarn workspaces foreach -p run type-check",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\""
+    "lint": "yarn workspaces foreach -Ap run lint",
+    "type-check": "yarn workspaces foreach -Ap run type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\""
   },
   "devDependencies": {
     "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.5.3",
     "typescript": "^5.7.3"
   },

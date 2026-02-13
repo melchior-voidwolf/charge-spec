@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import globals from "globals";
+import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   {
@@ -27,4 +28,6 @@ export default [
       "@typescript-eslint/no-explicit-any": "off",
     },
   },
+  // 关闭与 Prettier 冲突的 ESLint 规则
+  eslintConfigPrettier,
 ];

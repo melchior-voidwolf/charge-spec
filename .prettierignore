@@ -1,0 +1,23 @@
+# 依赖
+node_modules
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
+
+# 构建输出
+.next
+out
+dist
+build
+
+# 缓存
+*.log
+.cache
+
+# 锁定文件
+yarn.lock
+package-lock.json
+
+# 其他
+*.min.js
+*.min.css

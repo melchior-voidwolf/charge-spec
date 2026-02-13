@@ -210,6 +210,7 @@ __metadata:
     autoprefixer: "npm:^10.4.20"
     eslint: "npm:^9.7.0"
     eslint-config-next: "npm:^15.1.6"
+    eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-react: "npm:^7.37.5"
     eslint-plugin-react-hooks: "npm:^7.0.1"
     globals: "npm:^17.3.0"
@@ -1606,6 +1607,7 @@ __metadata:
   resolution: "charge-spec@workspace:."
   dependencies:
     eslint: "npm:^9.18.0"
+    eslint-config-prettier: "npm:^10.1.8"
     prettier: "npm:^3.5.3"
     typescript: "npm:^5.7.3"
   languageName: unknown
@@ -2052,6 +2054,17 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/8aa69f8b9b767fda914ac6902775c13363cbe65c04e3f3c1b2bb6a95705ed0ae8044e625c33cab125cc95799358710acca721da5007649ca780dfdf2b9d1c8be
+  languageName: node
+  linkType: hard
+
+"eslint-config-prettier@npm:^10.1.8":
+  version: 10.1.8
+  resolution: "eslint-config-prettier@npm:10.1.8"
+  peerDependencies:
+    eslint: ">=7.0.0"
+  bin:
+    eslint-config-prettier: bin/cli.js
+  checksum: 10c0/e1bcfadc9eccd526c240056b1e59c5cd26544fe59feb85f38f4f1f116caed96aea0b3b87868e68b3099e55caaac3f2e5b9f58110f85db893e83a332751192682
   languageName: node
   linkType: hard
 
