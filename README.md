@@ -1,12 +1,36 @@
-# Charge Spec - 充电头规格网站
+# Charge Spec - 快充查查网
 
-一个展示各类充电头技术规格的网站，支持多品牌、多协议的充电器查询和对比。
+[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC)](https://tailwindcss.com/)
 
-## 技术栈
+**在线访问**: [https://melchior-voidwolf.github.io/charge-spec/](https://melchior-voidwolf.github.io/charge-spec/)
 
-- **Web**: Next.js 15 + TypeScript + Tailwind CSS + React 19
-- **Mobile**: React Native (后期规划)
-- **包管理**: Yarn Workspaces (Monorepo)
+专业的充电器技术规格数据库，支持多品牌、多协议的充电器查询和对比。
+
+## 项目简介
+
+Charge Spec 是一个专注于充电头技术规格的查询平台，收录了 Apple、Anker、小米、华为、OPPO、vivo、三星、CUKTECH、HONOR 等主流品牌的充电器数据。支持按品牌、功率、充电协议等多维度筛选和搜索。
+
+## 技术架构
+
+### 核心技术栈
+
+| 技术 | 版本 | 用途 |
+|------|------|------|
+| [Next.js](https://nextjs.org/) | 15.1.6 | React 框架，支持 App Router、SSG/SSR |
+| [React](https://react.dev/) | 19.0.0 | UI 组件库 |
+| [TypeScript](https://www.typescriptlang.org/) | 5.7.3 | 类型安全的 JavaScript |
+| [Tailwind CSS](https://tailwindcss.com/) | 3.4.17 | 原子化 CSS 框架 |
+| [Yarn](https://yarnpkg.com/) | 4.5.3 | 包管理器，支持 Workspaces |
+
+### 工程化工具
+
+- **ESLint** - 代码检查 (Flat Config 格式)
+- **Prettier** - 代码格式化
+- **TypeScript** - 严格模式类型检查
+- **PostCSS + Autoprefixer** - CSS 后处理
 
 ## 项目结构
 
@@ -15,29 +39,93 @@ charge-spec/
 ├── packages/
 │   ├── web/                    # Next.js Web 应用
 │   │   ├── src/
-│   │   ├── app/                # Next.js App Router
-│   │   │   ├── chargers/      # 充电器列表和详情页
-│   │   │   ├── brand/         # 品牌页面
-│   │   │   ├── api/           # API 路由
-│   │   │   │   └── chargers/  # 充电器数据 API
-│   │   │   └── components/    # 共享组件
-│   │   ├── public/             # 静态资源
-│   │   └── package.json
-│   ├── shared/                  # 共享类型和工具
-│   │   ├── src/
-│   │   │   ├── types.ts       # 类型定义
-│   │   │   └── sample-data.ts # 示例数据
-│   │   └── package.json
-│   └── mobile/                  # React Native App (未来)
-├── .gitignore
-├── .prettierrc              # Prettier 配置
-├── feature_list.json          # 功能清单
-├── claude-progress.txt       # 开发进度
-├── package.json              # 根 workspace 配置
-└── README.md                # 本文件
+│   │   │   ├── app/           # App Router 路由
+│   │   │   │   ├── page.tsx          # 首页
+│   │   │   │   ├── layout.tsx        # 根布局
+│   │   │   │   ├── not-found.tsx     # 404 页面
+│   │   │   │   ├── sitemap.ts        # SEO 站点地图
+│   │   │   │   ├── chargers/         # 充电器列表页
+│   │   │   │   │   ├── page.tsx
+│   │   │   │   │   └── [id]/         # 充电器详情页
+│   │   │   │   │       └── page.tsx
+│   │   │   │   ├── brand/            # 品牌专页
+│   │   │   │   │   └── [brand]/
+│   │   │   │   │       └── page.tsx
+│   │   │   │   └── api/              # API 路由
+│   │   │   │       └── chargers/
+│   │   │   │           ├── route.ts
+│   │   │   │           └── [id]/
+│   │   │   │               └── route.ts
+│   │   │   └── components/    # React 组件
+│   │   │       ├── Header.tsx
+│   │   │       └── Footer.tsx
+│   │   ├── public/            # 静态资源
+│   │   ├── next.config.ts     # Next.js 配置
+│   │   ├── tailwind.config.ts # Tailwind 配置
+│   │   └── tsconfig.json      # TypeScript 配置
+│   │
+│   └── shared/                 # 共享包
+│       └── src/
+│           ├── types.ts       # 核心类型定义
+│           ├── sample-data.ts # 示例数据
+│           └── index.ts       # 导出入口
+│
+├── .vscode/                    # VSCode 配置
+│   ├── settings.json          # 编辑器设置（自动格式化）
+│   └── extensions.json        # 推荐扩展
+│
+├── eslint.config.mjs          # ESLint 配置
+├── prettier.config.js         # Prettier 配置
+├── fix-basepath.js            # 静态导出路径修复脚本
+└── package.json               # Workspace 根配置
 ```
 
-## 开始开发
+## 核心功能
+
+### 已实现功能
+
+- **充电器列表** - 支持分页、排序（功率/品牌）
+- **多维度筛选** - 品牌、功率范围、充电协议
+- **全文搜索** - 支持品牌、型号、功率关键词
+- **品牌专页** - 按品牌查看所有充电器
+- **详情页面** - 完整的规格参数展示
+- **响应式设计** - 完美适配桌面、平板、手机
+- **SEO 优化** - 动态 sitemap.xml、语义化 HTML
+
+### 支持的充电协议
+
+| 协议类型 | 具体协议 |
+|----------|----------|
+| USB PD | PD 2.0/3.0/3.1, PPS |
+| Qualcomm QC | QC 2.0/3.0/4.0/5 |
+| 华为 | SCP, FCP |
+| OPPO/vivo | VOOC, SuperVOOC, Flash Charge |
+| 三星 | AFC |
+| 其他 | Apple 2.4A, BC 1.2 |
+
+### 数据模型
+
+```typescript
+interface Charger {
+  id: string
+  brand: Brand
+  model: string
+  displayName: string
+  power: {
+    maxPower: number
+    configurations: PowerConfiguration[]
+  }
+  protocols: Protocol[]
+  ports: ConnectorPort[]
+  physicalSpecs?: PhysicalSpecs
+  isGaN?: boolean
+  hasFoldingPlug?: boolean
+  price?: { msrp?: number; current?: number }
+  // ... 更多字段
+}
+```
+
+## 开发指南
 
 ### 环境要求
 
@@ -50,136 +138,57 @@ charge-spec/
 yarn install
 ```
 
-### 启动开发服务器
+### 开发命令
 
 ```bash
+# 启动开发服务器 (http://localhost:3000)
 yarn dev
-```
 
-应用将在 http://localhost:3000 启动。
-
-### 构建生产版本
-
-```bash
+# 构建生产版本
 yarn build
-```
 
-### 运行类型检查
+# 构建并修复静态导出路径（用于 GitHub Pages）
+yarn build:fix
 
-```bash
+# 类型检查
 yarn type-check
-```
 
-### 代码格式化
+# 代码检查
+yarn lint
 
-```bash
+# 代码格式化
 yarn format
 ```
 
-### 代码检查
+### Monorepo 工作流
 
 ```bash
-yarn lint
+# 为 web 包添加依赖
+cd packages/web && yarn add <package>
+
+# 为 shared 包添加依赖
+cd packages/shared && yarn add -D <package>
+
+# 运行所有包的类型检查
+yarn workspaces foreach -Ap run type-check
 ```
 
-## 主要功能
-
-### 已实现功能 (28/30)
-
-#### 基础设施
-
-- ✅ Yarn Workspaces monorepo 配置
-- ✅ Next.js 15 开发服务器
-- ✅ TypeScript 编译检查
-- ✅ Tailwind CSS 样式系统
-- ✅ ESLint 配置
-- ✅ Prettier 代码格式化
-
-#### 用户界面
-
-- ✅ 响应式首页
-- ✅ 导航头部组件
-- ✅ 页脚组件
-- ✅ 充电器列表页面
-- ✅ 充电器详情页面
-- ✅ 搜索功能
-- ✅ 品牌筛选器
-- ✅ 功率筛选器
-- ✅ 协议筛选器
-- ✅ 排序功能（功率、品牌）
-- ✅ 品牌专页
-- ✅ 404 Not Found 页面
-- ✅ 深色模式（系统偏好）
-
-#### 数据
-
-- ✅ 完整的充电器类型定义
-- ✅ 10个示例充电器数据
-- ✅ 数据库集成计划（未来）
-
-#### API
-
-- ✅ GET /api/chargers - 获取所有充电器
-- ✅ GET /api/chargers/[id] - 获取单个充电器详情
-- ✅ 支持查询参数筛选
-
-#### SEO
-
-- ✅ 动态页面 metadata
-- ✅ XML Sitemap 生成
-
-### 充电器数据结构
-
-```typescript
-interface Charger {
-  id: string
-  brand: Brand
-  model: string
-  displayName: string
-  power: {
-    maxPower: number
-    ports: PowerOutput[]
-  }
-  protocols: Protocol[]
-  ports: PortConfiguration[]
-  isGaN: boolean
-  hasFoldingPlug: boolean
-  dimensions?: {
-    width: number
-    height: number
-    depth: number
-  }
-  weight?: number
-  price?: {
-    msrp: number
-    current: number
-  }
-  // ... 更多字段见 packages/shared/src/types.ts
-}
-```
-
-## API 文档
+## API 接口
 
 ### 获取所有充电器
 
-**端点**: `GET /api/chargers`
+```
+GET /api/chargers?search=&brand=&minPower=&maxPower=&protocol=
+```
 
-**查询参数**:
-
-- `search` (string): 搜索关键词（品牌、功率、型号、协议）
-- `brand` (string): 筛选品牌
-- `minPower` (number): 最小功率
-- `maxPower` (number): 最大功率
-- `protocol` (string): 充电协议
-
-**响应**:
+**响应示例：**
 
 ```json
 {
   "chargers": [...],
   "total": 10,
   "filters": {
-    "search": "Apple",
+    "search": null,
     "brand": null,
     "minPower": null,
     "maxPower": null,
@@ -190,112 +199,47 @@ interface Charger {
 
 ### 获取单个充电器
 
-**端点**: `GET /api/chargers/[id]`
-
-**示例**: `/api/chargers/apple-a2653-30w`
-
-**响应**: 单个充电器对象或 404
-
-## 开发规范
-
-### 代码风格
-
-- 使用 TypeScript 编写所有代码
-- 遵循 ESLint 和 Prettier 配置
-- 组件使用函数式组件
-- 使用 Tailwind CSS 工具类进行样式
-- 保持组件小而专一
-
-### Git 提交规范
-
-```bash
-# 功能开发
-git commit -m "feat: 完成功能 XXX - 功能描述"
-
-# Bug 修复
-git commit -m "fix: 修复 XXX 问题的描述"
-
-# 文档更新
-git commit -m "docs: 更新 README"
 ```
-
-### 分支策略
-
-- `main`: 生产代码
-- 功能分支: `feature/功能名称`
-- 修复分支: `fix/问题名称`
-
-## 贡献指南
-
-欢迎贡献！请遵循以下步骤：
-
-1. Fork 本仓库
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'feat: Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 创建 Pull Request
-
-### 代码审查标准
-
-- 所有 TypeScript 错误必须修复
-- ESLint 警告应尽可能解决
-- 新功能需要相应的类型定义
-- UI 更改需要考虑响应式设计
-- API 更新需要考虑向后兼容性
+GET /api/chargers/[id]
+```
 
 ## 部署
 
-### 构建命令
+本项目使用 **GitHub Pages** 部署：
+
+1. 代码推送到 `main` 分支
+2. GitHub Actions 自动执行构建流程
+3. 静态文件部署到 `gh-pages` 分支
+4. 通过 https://melchior-voidwolf.github.io/charge-spec/ 访问
+
+### 本地构建预览
 
 ```bash
-# 构建
-yarn build
-
-# 启动生产服务器
-yarn start
+yarn build:fix
+# 输出目录: packages/web/out
 ```
 
-### 环境变量
+## 代码规范
 
-（当前无必需环境变量，未来可能添加）
+- **TypeScript**: 严格模式，所有代码必须类型安全
+- **ESLint**: 使用 Flat Config 格式，集成 React Hooks 规则
+- **Prettier**: 统一代码风格，保存时自动格式化
+- **Git 提交**: 使用语义化提交信息（feat/fix/docs/style）
 
-- `NEXT_PUBLIC_API_URL`: API 基础 URL
-- `NEXT_PUBLIC_ANALYTICS_ID`: 分析跟踪 ID
+## 浏览器支持
 
-## 路线图
-
-### v1.0 (当前)
-
-- 基础充电器展示
-- 搜索和筛选功能
-- 响应式设计
-- API 端点
-
-### v1.1 (计划)
-
-- 用户收藏功能
-- 对比多个充电器
-- 图片上传和管理
-- 数据库集成
-
-### v2.0 (未来)
-
-- 用户账户系统
-- 评论和评分
-- React Native 移动应用
-- 实时价格跟踪
+- Chrome/Edge 90+
+- Firefox 88+
+- Safari 14+
+- iOS Safari 14+
+- Chrome for Android 90+
 
 ## 许可证
 
-[待添加]
-
-## 联系方式
-
-- 项目主页: [待添加]
-- 问题反馈: [待添加]
-- 邮箱: [待添加]
+MIT
 
 ---
 
-**生成时间**: 2025-02-13
-**版本**: 1.0.0
+**项目链接**: [https://github.com/melchior-voidwolf/charge-spec](https://github.com/melchior-voidwolf/charge-spec)
+
+**在线演示**: [https://melchior-voidwolf.github.io/charge-spec/](https://melchior-voidwolf.github.io/charge-spec/)
