@@ -1,0 +1,26 @@
+{
+  "name": "charge-spec",
+  "version": "1.0.0",
+  "private": true,
+  "description": "充电头规格网站 - Charging Adapter Specs Website",
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.5.3",
+  "scripts": {
+    "dev": "yarn workspace @charge-spec/web dev",
+    "build": "yarn workspace @charge-spec/web build",
+    "start": "yarn workspace @charge-spec/web start",
+    "lint": "yarn workspaces foreach -p run lint",
+    "type-check": "yarn workspaces foreach -p run type-check"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "prettier": "^3.5.3",
+    "eslint": "^9.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=4.0.0"
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "description": "充电头规格网站功能清单 - Charge Spec Website Feature List",
+  "lastUpdated": "2025-02-13",
+  "features": [
+    {
+      "id": "001",
+      "category": "infrastructure",
+      "priority": "high",
+      "description": "Yarn monorepo with workspaces configured correctly",
+      "steps": [
+        "Verify root package.json has workspaces configured",
+        "Verify @charge-spec/web package exists and is accessible",
+        "Verify @charge-spec/shared package exists and is accessible",
+        "Run 'yarn install' successfully",
+        "Run 'yarn workspaces list' to verify all workspaces are detected"
+      ],
+      "passes": false
+    },
+    {
+      "id": "002",
+      "category": "infrastructure",
+      "priority": "high",
+      "description": "Next.js 15 development server starts without errors",
+      "steps": [
+        "Navigate to packages/web directory",
+        "Run 'yarn dev' command",
+        "Verify server starts on http://localhost:3000",
+        "Verify no compilation errors in terminal",
+        "Check browser loads the homepage successfully"
+      ],
+      "passes": false
+    },
+    {
+      "id": "003",
+      "category": "infrastructure",
+      "priority": "high",
+      "description": "TypeScript compilation works correctly",
+      "steps": [
+        "Run 'yarn type-check' from root directory",
+        "Verify no TypeScript errors",
+        "Verify all .ts and .tsx files are checked"
+      ],
+      "passes": false
+    },
+    {
+      "id": "004",
+      "category": "infrastructure",
+      "priority": "medium",
+      "description": "Tailwind CSS styles are applied correctly",
+      "steps": [
+        "Open the homepage in browser",
+        "Verify Tailwind utility classes work (check text styling)",
+        "Verify dark mode support works via system preference",
+        "Check that globals.css is loaded"
+      ],
+      "passes": false
+    },
+    {
+      "id": "005",
+      "category": "ui",
+      "priority": "high",
+      "description": "Homepage displays with basic branding",
+      "steps": [
+        "Navigate to homepage",
+        "Verify '充电头规格' heading is displayed",
+        "Verify subtitle/description text is visible",
+        "Check layout is responsive on mobile viewport"
+      ],
+      "passes": false
+    },
+    {
+      "id": "006",
+      "category": "ui",
+      "priority": "high",
+      "description": "Responsive navigation header component",
+      "steps": [
+        "View the site on desktop viewport",
+        "Verify navigation header is visible at top",
+        "Verify logo/title links to homepage",
+        "View on mobile viewport",
+        "Verify header adapts to mobile layout"
+      ],
+      "passes": false
+    },
+    {
+      "id": "007",
+      "category": "ui",
+      "priority": "high",
+      "description": "Footer component with site information",
+      "steps": [
+        "Scroll to bottom of page",
+        "Verify footer is visible",
+        "Check copyright information is displayed",
+        "Verify responsive layout on mobile"
+      ],
+      "passes": false
+    },
+    {
+      "id": "008",
+      "category": "data",
+      "priority": "high",
+      "description": "Charger data types defined in shared package",
+      "steps": [
+        "Check packages/shared/src/types.ts exists",
+        "Verify Charger interface with brand, model, power properties",
+        "Verify Protocol enum (PD, QC, AFC, SCP etc.)",
+        "Verify ConnectorType enum (USB-C, USB-A, Lightning etc.)",
+        "Import types from @charge-spec/web successfully"
+      ],
+      "passes": false
+    },
+    {
+      "id": "009",
+      "category": "data",
+      "priority": "high",
+      "description": "Sample charger data for development",
+      "steps": [
+        "Create sample data file with 5-10 chargers",
+        "Verify data includes popular brands (Apple, Anker, Xiaomi, Huawei)",
+        "Verify data includes various power ratings (20W, 30W, 65W, etc.)",
+        "Verify data includes protocol information",
+        "Verify data structure matches Charger interface"
+      ],
+      "passes": false
+    },
+    {
+      "id": "010",
+      "category": "ui",
+      "priority": "high",
+      "description": "Charger list page displays all chargers",
+      "steps": [
+        "Navigate to /chargers route",
+        "Verify list of chargers is displayed",
+        "Check each charger card shows brand, model, power",
+        "Verify responsive grid layout",
+        "Verify loading state while data loads"
+      ],
+      "passes": false
+    },
+    {
+      "id": "011",
+      "category": "ui",
+      "priority": "high",
+      "description": "Charger detail page shows full specifications",
+      "steps": [
+        "Click on a charger from list",
+        "Verify detail page loads at /chargers/[id]",
+        "Verify brand and model name are prominent",
+        "Verify power output is clearly displayed",
+        "Verify supported protocols are listed",
+        "Verify connector types are shown",
+        "Verify dimensions and weight if available"
+      ],
+      "passes": false
+    },
+    {
+      "id": "012",
+      "category": "ui",
+      "priority": "high",
+      "description": "Search functionality for chargers",
+      "steps": [
+        "Locate search input on chargers list page",
+        "Type 'Apple' in search box",
+        "Verify list filters to show only Apple chargers",
+        "Type '65W' in search box",
+        "Verify results show 65W chargers",
+        "Clear search and verify all chargers show again"
+      ],
+      "passes": false
+    },
+    {
+      "id": "013",
+      "category": "ui",
+      "priority": "medium",
+      "description": "Filter by brand",
+      "steps": [
+        "Locate brand filter on chargers page",
+        "Select 'Apple' from brand filter",
+        "Verify only Apple chargers are displayed",
+        "Select multiple brands",
+        "Verify chargers from all selected brands show"
+      ],
+      "passes": false
+    },
+    {
+      "id": "014",
+      "category": "ui",
+      "priority": "medium",
+      "description": "Filter by power output",
+      "steps": [
+        "Locate power filter on chargers page",
+        "Select '20W-30W' range",
+        "Verify only chargers in that range display",
+        "Select another range",
+        "Verify filters combine correctly"
+      ],
+      "passes": false
+    },
+    {
+      "id": "015",
+      "category": "ui",
+      "priority": "medium",
+      "description": "Filter by charging protocol",
+      "steps": [
+        "Locate protocol filter on chargers page",
+        "Select 'PD' (Power Delivery)",
+        "Verify only PD chargers are displayed",
+        "Select 'QC' (Quick Charge) as well",
+        "Verify PD or QC chargers are displayed"
+      ],
+      "passes": false
+    },
+    {
+      "id": "016",
+      "category": "ui",
+      "priority": "low",
+      "description": "Sort functionality (by power, by brand, by name)",
+      "steps": [
+        "Locate sort dropdown on chargers page",
+        "Select 'Power: High to Low'",
+        "Verify chargers are sorted by power descending",
+        "Select 'Brand: A-Z'",
+        "Verify chargers are sorted alphabetically by brand"
+      ],
+      "passes": false
+    },
+    {
+      "id": "017",
+      "category": "ui",
+      "priority": "medium",
+      "description": "Brand page shows all chargers from a specific brand",
+      "steps": [
+        "Navigate to /brand/apple",
+        "Verify page shows only Apple chargers",
+        "Verify brand information is displayed",
+        "Check page title includes brand name"
+      ],
+      "passes": false
+    },
+    {
+      "id": "018",
+      "category": "seo",
+      "priority": "medium",
+      "description": "SEO meta tags on all pages",
+      "steps": [
+        "View page source of homepage",
+        "Verify title tag is descriptive",
+        "Verify meta description exists",
+        "Verify og:title and og:description tags",
+        "Check charger detail pages have unique titles"
+      ],
+      "passes": false
+    },
+    {
+      "id": "019",
+      "category": "seo",
+      "priority": "medium",
+      "description": "XML sitemap generation",
+      "steps": [
+        "Build the application",
+        "Verify sitemap.xml is generated",
+        "Check sitemap includes homepage",
+        "Check sitemap includes charger pages",
+        "Verify sitemap is accessible at /sitemap.xml"
+      ],
+      "passes": false
+    },
+    {
+      "id": "020",
+      "category": "ui",
+      "priority": "low",
+      "description": "Dark mode toggle",
+      "steps": [
+        "Locate dark mode toggle button",
+        "Click to toggle to dark mode",
+        "Verify entire site changes to dark theme",
+        "Refresh page",
+        "Verify dark mode preference persists",
+        "Toggle back to light mode"
+      ],
+      "passes": false
+    },
+    {
+      "id": "021",
+      "category": "performance",
+      "priority": "medium",
+      "description": "Image optimization for charger photos",
+      "steps": [
+        "Add placeholder images for chargers",
+        "Verify Next.js Image component is used",
+        "Check images are optimized on build",
+        "Verify lazy loading is implemented",
+        "Check responsive image sizes"
+      ],
+      "passes": false
+    },
+    {
+      "id": "022",
+      "category": "infrastructure",
+      "priority": "medium",
+      "description": "API route for fetching chargers data",
+      "steps": [
+        "Create /api/chargers endpoint",
+        "Make GET request to /api/chargers",
+        "Verify JSON response with all chargers",
+        "Verify proper CORS headers",
+        "Test filtering query parameters work"
+      ],
+      "passes": false
+    },
+    {
+      "id": "023",
+      "category": "infrastructure",
+      "priority": "medium",
+      "description": "API route for single charger details",
+      "steps": [
+        "Create /api/chargers/[id] endpoint",
+        "Make GET request with valid charger ID",
+        "Verify JSON response with charger details",
+        "Test with invalid ID returns 404",
+        "Verify error handling"
+      ],
+      "passes": false
+    },
+    {
+      "id": "024",
+      "category": "data",
+      "priority": "low",
+      "description": "Database integration plan (future)",
+      "steps": [
+        "Document database schema for chargers",
+        "Plan API architecture for database",
+        "Note: Implementation deferred to future phase"
+      ],
+      "passes": true
+    },
+    {
+      "id": "025",
+      "category": "infrastructure",
+      "priority": "medium",
+      "description": "ESLint configuration and clean lint passes",
+      "steps": [
+        "Run 'yarn lint' command",
+        "Verify no linting errors",
+        "Verify no warnings",
+        "Check .eslintrc.json is properly configured"
+      ],
+      "passes": false
+    },
+    {
+      "id": "026",
+      "category": "infrastructure",
+      "priority": "medium",
+      "description": "Prettier configuration for code formatting",
+      "steps": [
+        "Create .prettierrc configuration",
+        "Run prettier on all files",
+        "Verify files are formatted correctly",
+        "Add format script to package.json"
+      ],
+      "passes": false
+    },
+    {
+      "id": "027",
+      "category": "ui",
+      "priority": "low",
+      "description": "404 Not Found page",
+      "steps": [
+        "Navigate to non-existent route /not-found-page",
+        "Verify custom 404 page is displayed",
+        "Verify 'Page Not Found' message",
+        "Verify link back to homepage",
+        "Check page maintains site styling"
+      ],
+      "passes": false
+    },
+    {
+      "id": "028",
+      "category": "testing",
+      "priority": "low",
+      "description": "Playwright end-to-end test setup",
+      "steps": [
+        "Install Playwright dependencies",
+        "Create basic test for homepage load",
+        "Create test for navigation to charger list",
+        "Verify tests can run with 'yarn test'",
+        "Configure Playwright for the project"
+      ],
+      "passes": false
+    },
+    {
+      "id": "029",
+      "category": "mobile",
+      "priority": "low",
+      "description": "React Native app placeholder (future)",
+      "steps": [
+        "Document RN app requirements",
+        "Plan architecture for monorepo integration",
+        "Note: Implementation deferred to future phase"
+      ],
+      "passes": true
+    },
+    {
+      "id": "030",
+      "category": "documentation",
+      "priority": "low",
+      "description": "Developer documentation",
+      "steps": [
+        "Document project structure in README",
+        "Add contribution guidelines",
+        "Document local development setup",
+        "Add API documentation for endpoints"
+      ],
+      "passes": false
+    }
+  ],
+  "notes": [
+    "这是初始功能清单，后续可以根据需求调整",
+    "优先级: high > medium > low",
+    "每个功能完成后，只修改 passes 字段为 true，不要删除或编辑测试",
+    "使用增量方式开发，每次只完成一个功能",
+    "每个 session 结束时提交 git 并更新进度文件"
+  ]
+}
