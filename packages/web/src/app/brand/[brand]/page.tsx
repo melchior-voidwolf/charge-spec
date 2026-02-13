@@ -44,111 +44,99 @@ export default async function BrandPage({ params }: BrandPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-[calc(100vh-8rem)]">
       {/* Header */}
-      <div className="bg-white dark:bg-gray-800 shadow-sm">
+      <div className="border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="mb-4">
-            <Link href="/" className="text-blue-600 dark:text-blue-400 hover:underline">
-              ← 返回首页
-            </Link>
+          {/* Breadcrumb */}
+          <Link
+            href="/"
+            className="inline-flex items-center text-[13px] text-link hover:text-link-hover mb-6 transition-colors"
+          >
+            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            返回首页
+          </Link>
+
+          <div className="flex items-center gap-4">
+            <span className="inline-block px-3 py-1.5 bg-accent-bg text-link text-[13px] font-semibold rounded-md">
+              {decodedBrand}
+            </span>
+            <span className="text-[13px] text-text-tertiary">
+              {brandChargers.length} 款充电器
+            </span>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            {decodedBrand}
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            {brandChargers.length} 款充电器
-          </p>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {brandChargers.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {brandChargers.map((charger) => (
               <Link
                 key={charger.id}
                 href={`/chargers/${charger.id}`}
-                className="group"
+                className="group block p-5 bg-white border border-gray-200 rounded-xl hover:border-link/30 hover:shadow-sm transition-all"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-xl transition-shadow duration-200 overflow-hidden h-full flex flex-col">
-                  {/* Card Header */}
-                  <div className="p-6 flex-1">
-                    {/* Brand Badge */}
-                    <div className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold rounded-full mb-3">
-                      {charger.brand}
-                    </div>
+                {/* Title */}
+                <h3 className="text-[16px] font-semibold text-text-primary mb-1 group-hover:text-link transition-colors">
+                  {charger.displayName}
+                </h3>
 
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      {charger.displayName}
-                    </h3>
+                {/* Model */}
+                <p className="text-[13px] text-text-tertiary mb-4">
+                  {charger.model}
+                </p>
 
-                    {/* Model Number */}
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                      型号: {charger.model}
-                    </p>
+                {/* Power */}
+                <div className="flex items-baseline gap-1 mb-4">
+                  <span className="text-2xl font-bold text-text-primary">
+                    {charger.power.maxPower}
+                  </span>
+                  <span className="text-[14px] text-text-tertiary">W</span>
+                </div>
 
-                    {/* Power Rating */}
-                    <div className="mb-4">
-                      <div className="flex items-baseline">
-                        <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                          {charger.power.maxPower}
-                        </span>
-                        <span className="ml-1 text-lg text-gray-600 dark:text-gray-300">W</span>
-                      </div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                        最大输出功率
-                      </p>
-                    </div>
+                {/* Protocols */}
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {charger.protocols.slice(0, 4).map((protocol) => (
+                    <span
+                      key={protocol}
+                      className="inline-block px-2 py-0.5 bg-sidebar text-text-secondary text-[11px] rounded"
+                    >
+                      {protocol}
+                    </span>
+                  ))}
+                  {charger.protocols.length > 4 && (
+                    <span className="inline-block px-2 py-0.5 bg-sidebar text-text-secondary text-[11px] rounded">
+                      +{charger.protocols.length - 4}
+                    </span>
+                  )}
+                </div>
 
-                    {/* Protocols */}
-                    <div className="mb-4">
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">支持的协议:</p>
-                      <div className="flex flex-wrap gap-1">
-                        {charger.protocols.slice(0, 3).map((protocol) => (
-                          <span
-                            key={protocol}
-                            className="inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
-                          >
-                            {protocol}
-                          </span>
-                        ))}
-                        {charger.protocols.length > 3 && (
-                          <span className="inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
-                            +{charger.protocols.length - 3}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Card Footer */}
-                  <div className="px-6 py-4 bg-gray-50 dark:bg-gray-700 border-t border-gray-100 dark:border-gray-600">
-                    <div className="flex items-center justify-between">
-                      {charger.price && (
-                        <div className="text-lg font-semibold text-gray-900 dark:text-white">
-                          ¥{charger.price.current}
-                          {charger.price.msrp && charger.price.msrp > charger.price.current && (
-                            <span className="ml-2 text-sm text-gray-500 dark:text-gray-400 line-through">
-                              ¥{charger.price.msrp}
-                            </span>
-                          )}
-                        </div>
-                      )}
-                      <div className="text-blue-600 dark:text-blue-400 text-sm font-medium group-hover:underline">
-                        查看详情 →
-                      </div>
-                    </div>
-                  </div>
+                {/* Ports */}
+                <div className="flex items-center gap-3 text-[13px] text-text-secondary pt-4 border-t border-gray-100">
+                  {charger.ports.map((port, index) => (
+                    <span key={index} className="flex items-center gap-1">
+                      <svg className="w-3.5 h-3.5 text-text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                      {port.count}×{port.type.replace('USB-', '')}
+                    </span>
+                  ))}
                 </div>
               </Link>
             ))}
           </div>
         ) : (
-          <div className="text-center py-12">
-            <p className="text-gray-500 dark:text-gray-400">
+          <div className="text-center py-16">
+            <div className="w-12 h-12 mx-auto mb-4 bg-sidebar rounded-full flex items-center justify-center">
+              <svg className="w-6 h-6 text-text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <p className="text-[15px] text-text-tertiary">
               该品牌暂无充电器数据
             </p>
           </div>

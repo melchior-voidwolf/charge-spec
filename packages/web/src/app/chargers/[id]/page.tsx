@@ -46,45 +46,54 @@ export default async function ChargerDetailPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-[calc(100vh-8rem)]">
       {/* Header Section */}
-      <div className="bg-white dark:bg-gray-800 shadow-sm">
+      <div className="border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Breadcrumb */}
           <Link
             href="/chargers"
-            className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-4"
+            className="inline-flex items-center text-[13px] text-link hover:text-link-hover mb-6 transition-colors"
           >
-            ← 返回充电器列表
+            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            返回充电器列表
           </Link>
 
-          {/* Brand Badge */}
-          <div className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold rounded-full mb-4">
-            {charger.brand}
-          </div>
+          <div className="flex items-start justify-between">
+            <div>
+              {/* Brand Badge */}
+              <span className="inline-block px-2.5 py-1 bg-accent-bg text-link text-[12px] font-semibold rounded-md mb-4">
+                {charger.brand}
+              </span>
 
-          {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2">
-            {charger.displayName}
-          </h1>
+              {/* Title */}
+              <h1 className="text-3xl md:text-4xl font-semibold text-text-primary tracking-tight mb-2">
+                {charger.displayName}
+              </h1>
 
-          {/* Model Number */}
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-            型号: {charger.model}
-          </p>
+              {/* Model Number */}
+              <p className="text-[15px] text-text-tertiary">
+                型号：{charger.model}
+              </p>
+            </div>
 
-          {/* Power Rating - Prominent */}
-          <div className="flex items-baseline mb-4">
-            <span className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white">
-              {charger.power.maxPower}
-            </span>
-            <span className="ml-2 text-3xl text-gray-600 dark:text-gray-300">W</span>
-            <span className="ml-4 text-lg text-gray-500 dark:text-gray-400">最大输出功率</span>
+            {/* Power Rating - Prominent */}
+            <div className="text-right">
+              <div className="flex items-baseline justify-end">
+                <span className="text-4xl md:text-5xl font-bold text-text-primary">
+                  {charger.power.maxPower}
+                </span>
+                <span className="ml-1 text-xl text-text-tertiary">W</span>
+              </div>
+              <p className="text-[13px] text-text-tertiary mt-1">最大输出功率</p>
+            </div>
           </div>
 
           {/* Description */}
           {charger.description && (
-            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl">
+            <p className="text-[15px] text-text-secondary max-w-3xl mt-6">
               {charger.description}
             </p>
           )}
@@ -93,25 +102,25 @@ export default async function ChargerDetailPage({ params }: PageProps) {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left Column - Main Details */}
           <div className="lg:col-span-2 space-y-6">
             {/* Power Configurations */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h2 className="text-lg font-semibold text-text-primary mb-4">
                 功率输出配置
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="border-b border-gray-200 dark:border-gray-700">
-                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-3 px-3 text-[13px] font-semibold text-text-secondary">
                         电压 (V)
                       </th>
-                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      <th className="text-left py-3 px-3 text-[13px] font-semibold text-text-secondary">
                         电流 (A)
                       </th>
-                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      <th className="text-left py-3 px-3 text-[13px] font-semibold text-text-secondary">
                         功率 (W)
                       </th>
                     </tr>
@@ -120,15 +129,15 @@ export default async function ChargerDetailPage({ params }: PageProps) {
                     {charger.power.configurations.map((config, index) => (
                       <tr
                         key={index}
-                        className="border-b border-gray-100 dark:border-gray-700 last:border-0"
+                        className="border-b border-gray-100 last:border-0"
                       >
-                        <td className="py-3 px-4 text-gray-900 dark:text-white font-medium">
+                        <td className="py-3 px-3 text-text-primary font-medium text-[14px]">
                           {config.voltage}
                         </td>
-                        <td className="py-3 px-4 text-gray-900 dark:text-white font-medium">
+                        <td className="py-3 px-3 text-text-primary font-medium text-[14px]">
                           {config.current}
                         </td>
-                        <td className="py-3 px-4 text-gray-900 dark:text-white font-bold">
+                        <td className="py-3 px-3 text-text-primary font-semibold text-[14px]">
                           {config.power}
                         </td>
                       </tr>
@@ -139,15 +148,15 @@ export default async function ChargerDetailPage({ params }: PageProps) {
             </div>
 
             {/* Supported Protocols */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h2 className="text-lg font-semibold text-text-primary mb-4">
                 支持的充电协议
               </h2>
               <div className="flex flex-wrap gap-2">
                 {charger.protocols.map((protocol) => (
                   <span
                     key={protocol}
-                    className="inline-block px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-lg text-sm font-medium"
+                    className="inline-block px-3 py-1.5 bg-sidebar text-text-secondary rounded-lg text-[13px] font-medium"
                   >
                     {protocol}
                   </span>
@@ -156,41 +165,41 @@ export default async function ChargerDetailPage({ params }: PageProps) {
             </div>
 
             {/* Connector Ports */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h2 className="text-lg font-semibold text-text-primary mb-4">
                 接口配置
               </h2>
               <div className="space-y-4">
                 {charger.ports.map((port, index) => (
                   <div
                     key={index}
-                    className="border border-gray-200 dark:border-gray-700 rounded-lg p-4"
+                    className="border border-gray-200 rounded-lg p-4"
                   >
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                        <h3 className="text-[15px] font-semibold text-text-primary">
                           {port.count} × {port.type}
                         </h3>
                         {port.maxPower && (
-                          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                            最大功率: {port.maxPower}W
+                          <p className="text-[13px] text-text-tertiary mt-1">
+                            最大功率：{port.maxPower}W
                           </p>
                         )}
                       </div>
                       {port.color && (
-                        <span className="inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
+                        <span className="inline-block px-2 py-1 bg-sidebar text-text-secondary text-[11px] rounded">
                           {port.color}
                         </span>
                       )}
                     </div>
                     {port.protocols && port.protocols.length > 0 && (
                       <div className="mt-3">
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">支持协议:</p>
+                        <p className="text-[12px] text-text-tertiary mb-2">支持协议：</p>
                         <div className="flex flex-wrap gap-1">
                           {port.protocols.map((protocol) => (
                             <span
                               key={protocol}
-                              className="inline-block px-2 py-1 bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
+                              className="inline-block px-2 py-0.5 bg-sidebar text-text-secondary text-[11px] rounded"
                             >
                               {protocol}
                             </span>
@@ -199,7 +208,7 @@ export default async function ChargerDetailPage({ params }: PageProps) {
                       </div>
                     )}
                     {port.isShared && (
-                      <p className="text-xs text-orange-600 dark:text-orange-400 mt-2">
+                      <p className="text-[12px] text-amber-600 mt-2">
                         * 功率共享（多设备同时充电时总功率分配）
                       </p>
                     )}
@@ -210,17 +219,19 @@ export default async function ChargerDetailPage({ params }: PageProps) {
 
             {/* Features */}
             {charger.features && charger.features.length > 0 && (
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h2 className="text-lg font-semibold text-text-primary mb-4">
                   产品特色
                 </h2>
                 <ul className="space-y-2">
                   {charger.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-start text-gray-700 dark:text-gray-300"
+                      className="flex items-start text-text-secondary text-[14px]"
                     >
-                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <svg className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -230,15 +241,15 @@ export default async function ChargerDetailPage({ params }: PageProps) {
 
             {/* Certifications */}
             {charger.certifications && charger.certifications.length > 0 && (
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h2 className="text-lg font-semibold text-text-primary mb-4">
                   认证信息
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {charger.certifications.map((cert) => (
                     <span
                       key={cert}
-                      className="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm"
+                      className="inline-block px-3 py-1.5 bg-sidebar text-text-secondary rounded-lg text-[13px]"
                     >
                       {cert}
                     </span>
@@ -251,33 +262,33 @@ export default async function ChargerDetailPage({ params }: PageProps) {
           {/* Right Column - Sidebar */}
           <div className="space-y-6">
             {/* Quick Info Card */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-[15px] font-semibold text-text-primary mb-4">
                 快速信息
               </h3>
               <div className="space-y-3">
-                <div className="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-700">
-                  <span className="text-gray-600 dark:text-gray-400">发布年份</span>
-                  <span className="font-medium text-gray-900 dark:text-white">
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-[13px] text-text-tertiary">发布年份</span>
+                  <span className="font-medium text-text-primary text-[13px]">
                     {charger.releaseYear || '未知'}
                   </span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-700">
-                  <span className="text-gray-600 dark:text-gray-400">GaN 技术</span>
-                  <span className={`font-medium ${charger.isGaN ? 'text-green-600 dark:text-green-400' : 'text-gray-500'}`}>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-[13px] text-text-tertiary">GaN 技术</span>
+                  <span className={`font-medium text-[13px] ${charger.isGaN ? 'text-green-600' : 'text-text-tertiary'}`}>
                     {charger.isGaN ? '是' : '否'}
                   </span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-700">
-                  <span className="text-gray-600 dark:text-gray-400">折叠插脚</span>
-                  <span className={`font-medium ${charger.hasFoldingPlug ? 'text-green-600 dark:text-green-400' : 'text-gray-500'}`}>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-[13px] text-text-tertiary">折叠插脚</span>
+                  <span className={`font-medium text-[13px] ${charger.hasFoldingPlug ? 'text-green-600' : 'text-text-tertiary'}`}>
                     {charger.hasFoldingPlug ? '是' : '否'}
                   </span>
                 </div>
                 {charger.manufacturedIn && (
                   <div className="flex justify-between items-center py-2">
-                    <span className="text-gray-600 dark:text-gray-400">产地</span>
-                    <span className="font-medium text-gray-900 dark:text-white">
+                    <span className="text-[13px] text-text-tertiary">产地</span>
+                    <span className="font-medium text-text-primary text-[13px]">
                       {charger.manufacturedIn}
                     </span>
                   </div>
@@ -287,35 +298,35 @@ export default async function ChargerDetailPage({ params }: PageProps) {
 
             {/* Physical Specifications */}
             {charger.physicalSpecs && (
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-[15px] font-semibold text-text-primary mb-4">
                   物理规格
                 </h3>
                 <div className="space-y-3">
                   {charger.physicalSpecs.width && charger.physicalSpecs.height && charger.physicalSpecs.depth && (
-                    <div className="py-2 border-b border-gray-100 dark:border-gray-700">
-                      <span className="text-gray-600 dark:text-gray-400 text-sm">尺寸</span>
-                      <p className="font-medium text-gray-900 dark:text-white mt-1">
+                    <div className="py-2 border-b border-gray-100">
+                      <span className="text-[13px] text-text-tertiary">尺寸</span>
+                      <p className="font-medium text-text-primary text-[13px] mt-1">
                         {charger.physicalSpecs.width} × {charger.physicalSpecs.height} × {charger.physicalSpecs.depth} mm
                       </p>
                     </div>
                   )}
                   {charger.physicalSpecs.weight && (
-                    <div className="py-2 border-b border-gray-100 dark:border-gray-700">
-                      <span className="text-gray-600 dark:text-gray-400 text-sm">重量</span>
-                      <p className="font-medium text-gray-900 dark:text-white mt-1">
+                    <div className="py-2 border-b border-gray-100">
+                      <span className="text-[13px] text-text-tertiary">重量</span>
+                      <p className="font-medium text-text-primary text-[13px] mt-1">
                         {charger.physicalSpecs.weight} g
                       </p>
                     </div>
                   )}
                   {charger.physicalSpecs.colors && charger.physicalSpecs.colors.length > 0 && (
                     <div className="py-2">
-                      <span className="text-gray-600 dark:text-gray-400 text-sm">颜色</span>
+                      <span className="text-[13px] text-text-tertiary">颜色</span>
                       <div className="flex flex-wrap gap-2 mt-2">
                         {charger.physicalSpecs.colors.map((color) => (
                           <span
                             key={color}
-                            className="inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
+                            className="inline-block px-2 py-1 bg-sidebar text-text-secondary text-[11px] rounded"
                           >
                             {color}
                           </span>
@@ -328,22 +339,22 @@ export default async function ChargerDetailPage({ params }: PageProps) {
             )}
 
             {/* Price & Purchase */}
-            {charger.price && (
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+            {charger.price?.current && (
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-[15px] font-semibold text-text-primary mb-4">
                   价格信息
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-baseline">
-                    <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                    <span className="text-2xl font-bold text-text-primary">
                       ¥{charger.price.current}
                     </span>
-                    {charger.price.msrp && charger.price.msrp > charger.price.current && (
+                    {charger.price.msrp && charger.price.current && charger.price.msrp > charger.price.current && (
                       <>
-                        <span className="ml-2 text-lg text-gray-500 dark:text-gray-400 line-through">
+                        <span className="ml-2 text-[13px] text-text-tertiary line-through">
                           ¥{charger.price.msrp}
                         </span>
-                        <span className="ml-2 text-sm text-green-600 dark:text-green-400">
+                        <span className="ml-2 text-[11px] text-green-600">
                           {Math.round((1 - charger.price.current / charger.price.msrp) * 100)}% OFF
                         </span>
                       </>
@@ -354,7 +365,7 @@ export default async function ChargerDetailPage({ params }: PageProps) {
                       href={charger.purchaseUrls.official}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                      className="block w-full text-center py-2.5 px-4 bg-link hover:bg-link-hover text-white text-[14px] font-medium rounded-lg transition-colors"
                     >
                       官方购买链接
                     </a>
@@ -364,7 +375,7 @@ export default async function ChargerDetailPage({ params }: PageProps) {
                       href={charger.purchaseUrls.amazon}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full text-center py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-colors"
+                      className="block w-full text-center py-2.5 px-4 bg-sidebar hover:bg-gray-100 text-text-primary text-[14px] font-medium rounded-lg transition-colors"
                     >
                       Amazon 购买
                     </a>
@@ -375,15 +386,15 @@ export default async function ChargerDetailPage({ params }: PageProps) {
 
             {/* Links */}
             {charger.officialUrl && (
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-[15px] font-semibold text-text-primary mb-3">
                   官方链接
                 </h3>
                 <a
                   href={charger.officialUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:underline text-sm break-all"
+                  className="text-[13px] text-link hover:text-link-hover transition-colors break-all"
                 >
                   查看官网产品页面 →
                 </a>
@@ -392,11 +403,11 @@ export default async function ChargerDetailPage({ params }: PageProps) {
 
             {/* Notes */}
             {charger.notes && (
-              <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-yellow-900 dark:text-yellow-200 mb-2">
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                <h4 className="text-[13px] font-semibold text-amber-900 mb-2">
                   备注
                 </h4>
-                <p className="text-sm text-yellow-800 dark:text-yellow-300">
+                <p className="text-[13px] text-amber-800">
                   {charger.notes}
                 </p>
               </div>
