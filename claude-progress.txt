@@ -70,6 +70,29 @@ Categories:
 
 ---
 
+## 2025-02-13 - Coding Agent Session
+**Selected Feature:** 001 - Yarn monorepo with workspaces configured correctly
+
+**Changes Made:**
+- Ran `yarn install` successfully
+- Verified root package.json has workspaces configured
+- Verified @charge-spec/web package exists and is accessible
+- Verified @charge-spec/shared package exists and is accessible
+- Ran `yarn workspaces list` - all workspaces detected
+- Updated feature_list.json: marked feature 001 as complete
+
+**Testing:**
+- All verification steps passed
+- Yarn workspaces list shows: packages/shared, packages/web
+
+**Issues Found:**
+- Minor warning about eslint peer dependency, but not blocking
+
+**Next Feature to Work On:**
+- Feature 002: Next.js 15 development server starts without errors
+
+---
+
 ## Session Log Template
 (后续 Coding Agent 会在此追加进度)
 
