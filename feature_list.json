@@ -251,7 +251,8 @@
         "Verify brand information is displayed",
         "Check page title includes brand name"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "018",
