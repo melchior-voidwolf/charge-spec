@@ -10,7 +10,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Web**: Next.js 15 (App Router) + React 19 + Tailwind CSS
 - **语言**: TypeScript (strict mode)
 - **包管理**: Yarn Workspaces + Plug'n'Play
-- **测试**: Playwright (E2E)
 
 ### 项目结构
 
@@ -65,15 +64,6 @@ yarn lint
 
 # Prettier 格式化
 yarn format
-```
-
-### 测试
-```bash
-# 运行 E2E 测试
-yarn test
-
-# 运行有界面的测试
-yarn test:headed
 ```
 
 ### 依赖管理

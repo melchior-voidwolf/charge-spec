@@ -401,21 +401,6 @@
       "completedAt": "2025-02-13"
     },
     {
-      "id": "028",
-      "category": "testing",
-      "priority": "low",
-      "description": "Playwright end-to-end test setup",
-      "steps": [
-        "Install Playwright dependencies",
-        "Create basic test for homepage load",
-        "Create test for navigation to charger list",
-        "Verify tests can run with 'yarn test'",
-        "Configure Playwright for the project"
-      ],
-      "passes": true,
-      "completedAt": "2025-02-13"
-    },
-    {
       "id": "029",
       "category": "mobile",
       "priority": "low",

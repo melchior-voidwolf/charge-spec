@@ -7,9 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit",
-    "test": "playwright test",
-    "test:headed": "playwright test --headed"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^15.1.6",

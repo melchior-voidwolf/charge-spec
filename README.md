@@ -123,9 +123,6 @@ yarn lint
 - ✅ 动态页面 metadata
 - ✅ XML Sitemap 生成
 
-#### 测试
-- ⏳ Playwright E2E 测试（未来）
-
 ### 充电器数据结构
 
 ```typescript
