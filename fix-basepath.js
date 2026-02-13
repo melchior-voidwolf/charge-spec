@@ -3,7 +3,13 @@ const fs = require('fs');
 const path = require('path');
 
 const BASE_PATH = '/charge-spec';
-const outDir = path.join(__dirname, 'packages', 'web', 'out');
+// Allow running from both root and packages/web directories
+const scriptDir = __dirname;
+const potentialDirs = [
+  path.join(scriptDir, 'packages', 'web', 'out'),
+  path.join(scriptDir, 'out'),
+];
+const outDir = potentialDirs.find(dir => fs.existsSync(dir)) || potentialDirs[0];
 
 // Fix favicon and icon paths in HTML files
 function fixHtmlFiles(dir) {
