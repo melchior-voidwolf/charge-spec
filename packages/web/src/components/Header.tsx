@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+// basePath from next.config.ts
+const BASE_PATH = '/charge-spec';
+
 export default function Header() {
   return (
     <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
@@ -11,7 +14,7 @@ export default function Header() {
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
             <img
-              src="/logo.svg"
+              src={`${BASE_PATH}/logo.svg`}
               alt="Charge Spec Logo"
               className="w-10 h-10"
             />

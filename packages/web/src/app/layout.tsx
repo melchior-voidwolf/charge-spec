@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: "Charge Spec - 快充查查网",
   description: "快充查查网 - 专业的充电器技术规格查询平台，支持多品牌、多协议的充电器查询和对比",
   icons: {
-    icon: "/favicon.svg",
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/favicon.svg", rel: "icon", type: "image/svg+xml" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 

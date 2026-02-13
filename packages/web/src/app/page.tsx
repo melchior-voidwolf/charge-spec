@@ -1,3 +1,6 @@
+// basePath from next.config.ts
+const BASE_PATH = '/charge-spec';
+
 export default function HomePage() {
   return (
     <div className="p-8">
@@ -7,7 +10,7 @@ export default function HomePage() {
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <img
-              src="/logo.svg"
+              src={`${BASE_PATH}/logo.svg`}
               alt="Charge Spec Logo"
               className="w-24 h-24"
             />

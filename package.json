@@ -9,7 +9,7 @@
   "packageManager": "yarn@4.5.3",
   "scripts": {
     "dev": "yarn workspace @charge-spec/web dev",
-    "build": "yarn workspace @charge-spec/web build",
+    "build": "yarn workspace @charge-spec/web build && node fix-basepath.js",
     "start": "yarn workspace @charge-spec/web start",
     "lint": "yarn workspaces foreach -p run lint",
     "type-check": "yarn workspaces foreach -p run type-check",
