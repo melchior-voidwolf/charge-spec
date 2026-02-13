@@ -32,6 +32,73 @@ Charge Spec 是一个专注于充电头技术规格的查询平台，收录了 A
 - **TypeScript** - 严格模式类型检查
 - **PostCSS + Autoprefixer** - CSS 后处理
 
+### 系统架构图
+
+```mermaid
+flowchart TB
+    subgraph Client["客户端"]
+        Browser["浏览器"]
+    end
+
+    subgraph GitHubPages["GitHub Pages"]
+        StaticFiles["静态文件<br/>(HTML/CSS/JS)"]
+    end
+
+    subgraph NextJS["Next.js 应用"]
+        subgraph AppRouter["App Router"]
+            Pages["页面组件<br/>page.tsx"]
+            Layouts["布局组件<br/>layout.tsx"]
+            API["API 路由<br/>route.ts"]
+        end
+
+        subgraph Components["组件层"]
+            Header["Header"]
+            Footer["Footer"]
+        end
+
+        subgraph DataLayer["数据层"]
+            SharedPkg["@charge-spec/shared"]
+            Types["类型定义"]
+            SampleData["示例数据"]
+        end
+    end
+
+    Browser <-->|HTTPS| StaticFiles
+    StaticFiles -->|从| NextJS
+    Pages -->|使用| Layouts
+    Pages -->|包含| Components
+    API -->|返回 JSON| Browser
+    SharedPkg -->|提供| Types
+    SharedPkg -->|提供| SampleData
+```
+
+### Monorepo 依赖关系
+
+```mermaid
+flowchart LR
+    subgraph Workspace["Yarn Workspace"]
+        direction TB
+
+        subgraph Root["根目录"]
+            RootPkg["package.json<br/>工作区配置"]
+        end
+
+        subgraph Packages["packages/"]
+            direction LR
+
+            WebPkg["@charge-spec/web<br/>Next.js 应用"]
+            SharedPkg["@charge-spec/shared<br/>共享代码"]
+        end
+    end
+
+    WebPkg -->|依赖| SharedPkg
+    RootPkg -->|管理| WebPkg
+    RootPkg -->|管理| SharedPkg
+
+    style WebPkg fill:#e1f5fe
+    style SharedPkg fill:#f3e5f5
+```
+
 ## 项目结构
 
 ```
@@ -125,6 +192,36 @@ interface Charger {
 }
 ```
 
+### 页面渲染流程
+
+```mermaid
+sequenceDiagram
+    participant User as 用户
+    participant Browser as 浏览器
+    participant NextJS as Next.js
+    participant Page as 页面组件
+    participant Shared as Shared 包
+
+    User->>Browser: 访问 /chargers
+    Browser->>NextJS: 请求页面
+
+    alt 静态生成 (SSG)
+        NextJS->>Page: 调用页面组件
+        Page->>Shared: 获取充电器数据
+        Shared-->>Page: 返回数据
+        Page-->>NextJS: 返回 HTML
+        NextJS-->>Browser: 返回静态 HTML
+    else 客户端交互
+        Browser->>NextJS: 筛选/排序请求
+        NextJS->>Shared: 处理筛选逻辑
+        Shared-->>NextJS: 返回筛选结果
+        NextJS-->>Browser: 返回 JSON
+        Browser->>Browser: React 更新 DOM
+    end
+
+    Browser-->>User: 显示页面
+```
+
 ## 开发指南
 
 ### 环境要求
@@ -204,6 +301,36 @@ GET /api/chargers/[id]
 ```
 
 ## 部署
+
+### 部署架构
+
+```mermaid
+flowchart LR
+    subgraph Dev["开发环境"]
+        DevCode["源代码<br/>TypeScript/React"]
+    end
+
+    subgraph GitHub["GitHub"]
+        MainBranch["main 分支"]
+        GHActions["GitHub Actions<br/>构建工作流"]
+        GHPagesBranch["gh-pages 分支"]
+    end
+
+    subgraph GHPages["GitHub Pages"]
+        StaticSite["静态网站<br/>HTML/CSS/JS"]
+    end
+
+    DevCode -->|push| MainBranch
+    MainBranch -->|触发| GHActions
+    GHActions -->|构建输出| GHPagesBranch
+    GHPagesBranch -->|托管| StaticSite
+    StaticSite -->|访问| Users["用户浏览器"]
+
+    style GHActions fill:#ffe0b2
+    style StaticSite fill:#c8e6c9
+```
+
+### 部署流程
 
 本项目使用 **GitHub Pages** 部署：
 
