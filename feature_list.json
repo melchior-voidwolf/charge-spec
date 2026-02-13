@@ -85,7 +85,8 @@
         "View on mobile viewport",
         "Verify header adapts to mobile layout"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "007",
@@ -98,7 +99,8 @@
         "Check copyright information is displayed",
         "Verify responsive layout on mobile"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "008",

@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <main className="min-h-screen p-8">
+    <div className="p-8">
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <section className="text-center py-16 px-4">
@@ -62,6 +62,6 @@ export default function HomePage() {
           <p className="mt-2 text-sm">支持品牌：Apple、Anker、小米、华为、OPPO 等</p>
         </section>
       </div>
-    </main>
+    </div>
   );
 }
