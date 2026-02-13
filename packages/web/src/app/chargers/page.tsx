@@ -9,50 +9,118 @@ import { sampleChargers } from '@charge-spec/shared';
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
 
+type FilterState = {
+  selectedBrands: string[];
+  selectedPowerRanges: string[];
+  selectedProtocols: string[];
+};
+
 export default function ChargersPage() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [filters, setFilters] = useState<FilterState>({
+    selectedBrands: [],
+    selectedPowerRanges: [],
+    selectedProtocols: [],
+  });
+  const [showFilters, setShowFilters] = useState(false);
 
-  // Filter chargers based on search query
+  // Extract unique values for filters
+  const uniqueBrands = useMemo(() => {
+    const brands = new Set(sampleChargers.map((c) => c.brand));
+    return Array.from(brands).sort();
+  }, []);
+
+  const uniqueProtocols = useMemo(() => {
+    const protocols = new Set<string>();
+    sampleChargers.forEach((charger) => {
+      charger.protocols.forEach((p) => protocols.add(p));
+    });
+    return Array.from(protocols).sort();
+  }, []);
+
+  const powerRanges = [
+    { label: '20W - 30W', min: 20, max: 30 },
+    { label: '31W - 65W', min: 31, max: 65 },
+    { label: '66W - 100W', min: 66, max: 100 },
+    { label: '100W+', min: 100, max: Infinity },
+  ];
+
+  // Filter chargers based on search query and filters
   const filteredChargers = useMemo(() => {
-    if (!searchQuery.trim()) {
-      return sampleChargers;
+    let results = sampleChargers;
+
+    // Apply search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      results = results.filter((charger) => {
+        if (charger.brand.toLowerCase().includes(query)) return true;
+        if (charger.power.maxPower.toString().includes(query)) return true;
+        if (charger.model.toLowerCase().includes(query)) return true;
+        if (charger.displayName.toLowerCase().includes(query)) return true;
+        if (charger.protocols.some((p) => p.toLowerCase().includes(query))) return true;
+        return false;
+      });
     }
 
-    const query = searchQuery.toLowerCase();
+    // Apply brand filter
+    if (filters.selectedBrands.length > 0) {
+      results = results.filter((charger) =>
+        filters.selectedBrands.includes(charger.brand as string)
+      );
+    }
 
-    return sampleChargers.filter((charger) => {
-      // Search by brand
-      if (charger.brand.toLowerCase().includes(query)) {
-        return true;
-      }
+    // Apply power range filter
+    if (filters.selectedPowerRanges.length > 0) {
+      results = results.filter((charger) => {
+        return filters.selectedPowerRanges.some((rangeLabel) => {
+          const range = powerRanges.find((r) => r.label === rangeLabel);
+          if (!range) return false;
+          return charger.power.maxPower >= range.min && charger.power.maxPower <= range.max;
+        });
+      });
+    }
 
-      // Search by power rating
-      if (charger.power.maxPower.toString().includes(query)) {
-        return true;
-      }
+    // Apply protocol filter
+    if (filters.selectedProtocols.length > 0) {
+      results = results.filter((charger) => {
+        return filters.selectedProtocols.some((selectedProtocol) =>
+          charger.protocols.some((p) => p === selectedProtocol)
+        );
+      });
+    }
 
-      // Search by model
-      if (charger.model.toLowerCase().includes(query)) {
-        return true;
-      }
+    return results;
+  }, [searchQuery, filters]);
 
-      // Search by display name
-      if (charger.displayName.toLowerCase().includes(query)) {
-        return true;
-      }
+  const handleClearSearch = () => setSearchQuery('');
 
-      // Search by protocols
-      if (charger.protocols.some((p) => p.toLowerCase().includes(query))) {
-        return true;
-      }
-
-      return false;
+  const handleClearFilters = () => {
+    setFilters({
+      selectedBrands: [],
+      selectedPowerRanges: [],
+      selectedProtocols: [],
     });
-  }, [searchQuery]);
-
-  const handleClearSearch = () => {
-    setSearchQuery('');
   };
+
+  const toggleFilter = (type: keyof FilterState, value: string) => {
+    setFilters((prev) => {
+      const currentArray = prev[type];
+      const newArray = currentArray.includes(value)
+        ? currentArray.filter((item) => item !== value)
+        : [...currentArray, value];
+      return { ...prev, [type]: newArray };
+    });
+  };
+
+  const hasActiveFilters =
+    filters.selectedBrands.length > 0 ||
+    filters.selectedPowerRanges.length > 0 ||
+    filters.selectedProtocols.length > 0;
+
+  const activeFilterCount =
+    filters.selectedBrands.length +
+    filters.selectedPowerRanges.length +
+    filters.selectedProtocols.length;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -70,13 +138,12 @@ export default function ChargersPage() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Search Bar */}
-        <div className="mb-8 bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-            <div className="flex-1 w-full sm:w-auto">
-              <label htmlFor="search" className="sr-only">
-                搜索充电器
-              </label>
+        {/* Search Bar & Filters */}
+        <div className="mb-6 bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+          <div className="flex flex-col gap-4">
+            {/* Search Input */}
+            <div>
+              <label htmlFor="search" className="sr-only">搜索充电器</label>
               <div className="relative">
                 <input
                   id="search"
@@ -86,55 +153,117 @@ export default function ChargersPage() {
                   placeholder="搜索品牌、功率或型号...（如：Apple、65W、Nano）"
                   className="w-full px-4 py-3 pl-10 pr-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                 />
-                {/* Search Icon */}
-                <svg
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
+                <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-                {/* Clear Button */}
                 {searchQuery && (
-                  <button
-                    onClick={handleClearSearch}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                    aria-label="清除搜索"
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
+                  <button onClick={handleClearSearch} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" aria-label="清除搜索">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 )}
               </div>
-              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                {searchQuery ? (
-                  <>
-                    找到 <span className="font-bold text-blue-600 dark:text-blue-400">{filteredChargers.length}</span> 个结果
-                  </>
+            </div>
+
+            {/* Filter Toggle & Results Count */}
+            <div className="flex items-center justify-between">
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors text-gray-700 dark:text-gray-300 font-medium"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                </svg>
+                筛选器
+                {activeFilterCount > 0 && (
+                  <span className="px-2 py-0.5 bg-blue-600 text-white text-xs rounded-full">{activeFilterCount}</span>
+                )}
+              </button>
+
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {searchQuery || hasActiveFilters ? (
+                  <>找到 <span className="font-bold text-blue-600 dark:text-blue-400">{filteredChargers.length}</span> 个结果</>
                 ) : (
-                  <>
-                    共 <span className="font-bold text-gray-900 dark:text-white">{sampleChargers.length}</span> 款充电器
-                  </>
+                  <>共 <span className="font-bold text-gray-900 dark:text-white">{sampleChargers.length}</span> 款充电器</>
                 )}
               </p>
             </div>
+
+            {/* Filters Panel */}
+            {showFilters && (
+              <div className="pt-4 border-t border-gray-200 dark:border-gray-600">
+                {/* Brand Filter */}
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">品牌</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {uniqueBrands.map((brand) => (
+                      <button
+                        key={brand}
+                        onClick={() => toggleFilter('selectedBrands', brand)}
+                        className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                          filters.selectedBrands.includes(brand)
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                        }`}
+                      >
+                        {brand}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Power Range Filter */}
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">功率范围</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {powerRanges.map((range) => (
+                      <button
+                        key={range.label}
+                        onClick={() => toggleFilter('selectedPowerRanges', range.label)}
+                        className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                          filters.selectedPowerRanges.includes(range.label)
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                        }`}
+                      >
+                        {range.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Protocol Filter */}
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">充电协议</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {uniqueProtocols.map((protocol) => (
+                      <button
+                        key={protocol}
+                        onClick={() => toggleFilter('selectedProtocols', protocol)}
+                        className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                          filters.selectedProtocols.includes(protocol)
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                        }`}
+                      >
+                        {protocol}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Clear Filters Button */}
+                {hasActiveFilters && (
+                  <button
+                    onClick={handleClearFilters}
+                    className="w-full px-4 py-2 bg-red-100 dark:bg-red-900/30 hover:bg-red-200 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 font-medium rounded-lg transition-colors"
+                  >
+                    清除所有筛选
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
@@ -257,10 +386,13 @@ export default function ChargersPage() {
               没有找到匹配的充电器
             </p>
             <button
-              onClick={handleClearSearch}
+              onClick={() => {
+                setSearchQuery('');
+                handleClearFilters();
+              }}
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
             >
-              清除搜索条件
+              清除所有条件
             </button>
           </div>
         )}

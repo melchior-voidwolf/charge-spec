@@ -192,7 +192,8 @@
         "Select multiple brands",
         "Verify chargers from all selected brands show"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "014",
@@ -206,7 +207,8 @@
         "Select another range",
         "Verify filters combine correctly"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "015",
@@ -220,7 +222,8 @@
         "Select 'QC' (Quick Charge) as well",
         "Verify PD or QC chargers are displayed"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "016",
