@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 // basePath from next.config.ts
 const BASE_PATH = '/charge-spec';
 
@@ -61,9 +63,12 @@ export default function HomePage() {
             <p className="text-lg mb-8 opacity-90">
               浏览我们丰富的充电器数据库，找到最适合您的充电设备
             </p>
-            <div className="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
+            <Link
+              href="/chargers"
+              className="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+            >
               查看所有充电器
-            </div>
+            </Link>
           </div>
         </section>
 
