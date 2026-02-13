@@ -161,7 +161,8 @@
         "Verify connector types are shown",
         "Verify dimensions and weight if available"
       ],
-      "passes": false
+      "passes": true,
+      "completedAt": "2025-02-13"
     },
     {
       "id": "012",

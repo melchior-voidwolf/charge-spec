@@ -502,6 +502,125 @@ All chargers include:
 
 ---
 
+## 2025-02-13 - Coding Agent Session (Feature 011)
+**Selected Feature:** 011 - Charger detail page shows full specifications
+
+**Changes Made:**
+- Created /packages/web/src/app/chargers/[id]/page.tsx (dynamic route)
+- Implemented comprehensive detail page with full specifications
+- Added SEO metadata generation
+- Implemented static params generation for all chargers
+
+**Page Features:**
+
+1. **Header Section:**
+   - Breadcrumb navigation with "← 返回充电器列表" link
+   - Brand badge (prominent blue pill)
+   - Large title (4xl on mobile, 5xl on desktop)
+   - Model number
+   - Power rating in extra-large font (5xl-6xl)
+   - Product description
+
+2. **Main Content (Left Column - 2/3 width):**
+
+   a. **Power Configurations Table:**
+   - Clean table with voltage, current, power columns
+   - All configurations from charger.power.configurations
+   - Responsive overflow scrolling
+
+   b. **Supported Protocols:**
+   - Blue badges for each protocol
+   - Flexible wrap layout
+   - All protocols displayed prominently
+
+   c. **Connector Ports:**
+   - Individual cards for each port type
+   - Shows count, type, max power
+   - Lists supported protocols per port
+   - Color indicator (if available)
+   - Power sharing warning (if applicable)
+
+   d. **Product Features:**
+   - Checklist style with checkmarks
+   - All features from charger.features array
+
+   e. **Certifications:**
+   - Certification badges
+   - Gray rounded tags
+
+3. **Sidebar (Right Column - 1/3 width):**
+
+   a. **Quick Info Card:**
+   - Release year
+   - GaN technology indicator (green if yes)
+   - Folding plug indicator (green if yes)
+   - Manufacturing country
+
+   b. **Physical Specifications:**
+   - Dimensions (width × height × depth)
+   - Weight in grams
+   - Available color options
+
+   c. **Price & Purchase:**
+   - Current price (large font)
+   - MSRP with strikethrough
+   - Discount percentage calculation
+   - Official purchase button (blue)
+   - Amazon purchase button (orange)
+
+   d. **Official Link:**
+   - Link to manufacturer product page
+
+   e. **Notes (if available):**
+   - Yellow warning box
+   - Additional information
+
+4. **Technical Features:**
+   - Dynamic routing with [id] parameter
+   - Static site generation (generateStaticParams)
+   - SEO metadata generation (generateMetadata)
+   - 404 handling with notFound()
+   - Type-safe with TypeScript
+   - Responsive layout (lg:grid-cols-3)
+   - Full dark mode support
+
+5. **Design Elements:**
+   - Gradient background
+   - White/dark cards with shadows
+   - Consistent spacing and padding
+   - Color-coded badges
+   - Hover effects on buttons
+   - Mobile-first responsive design
+
+**Testing Results:**
+- ✅ Clickable links from list page to /chargers/[id]
+- ✅ Detail page loads at dynamic route /chargers/[id]
+- ✅ Brand and model prominently displayed:
+  - Brand badge at top
+  - 4xl-5xl title
+  - Model number below title
+- ✅ Power output clearly displayed:
+  - 5xl-6xl font for max power
+  - Complete configuration table with V/A/W columns
+- ✅ Supported protocols listed:
+  - Blue badges in dedicated section
+  - All protocols shown
+- ✅ Connector types shown:
+  - Individual cards per port
+  - Detailed configuration (count, type, power, protocols)
+  - Color indicators
+  - Power sharing warnings
+- ✅ Dimensions and weight displayed:
+  - Physical specs card in sidebar
+  - Width × Height × Depth
+  - Weight in grams
+  - Color options
+
+**Next Features to Work On:**
+- Feature 012: Search functionality for chargers
+
+---
+
 ## Session Log Template
 (后续 Coding Agent 会在此追加进度)
 
