@@ -5,8 +5,8 @@
  */
 
 // Export all types
-export * from "./types";
+export * from "./types.js";
 
 // Export sample data
-export * from "./sample-data";
+export * from "./sample-data.js";
 

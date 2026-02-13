@@ -3,7 +3,7 @@
  * 示例充电器数据，用于开发和测试
  */
 
-import { Charger, Brand, Protocol, ConnectorType } from './types';
+import { Charger, Brand, Protocol, ConnectorType } from './types.js';
 
 export const sampleChargers: Charger[] = [
   {
