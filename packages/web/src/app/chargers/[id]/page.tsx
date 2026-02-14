@@ -39,5 +39,8 @@ export default async function ChargerDetailPage({ params }: PageProps) {
     notFound()
   }
 
-  return <ChargerDetailContent charger={charger} />
+  // 序列化处理，移除 Buffer 字段
+  const serializedCharger = JSON.parse(JSON.stringify(charger))
+
+  return <ChargerDetailContent charger={serializedCharger} />
 }
