@@ -4,14 +4,13 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC)](https://tailwindcss.com/)
-
-**在线访问**: [https://melchior-voidwolf.github.io/charge-spec/](https://melchior-voidwolf.github.io/charge-spec/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248)](https://www.mongodb.com/)
 
 专业的充电器技术规格数据库，支持多品牌、多协议的充电器查询和对比。
 
 ## 项目简介
 
-Charge Spec 是一个专注于充电头技术规格的查询平台，收录了 Apple、Anker、小米、华为、OPPO、vivo、三星、CUKTECH、HONOR 等主流品牌的充电器数据。支持按品牌、功率、充电协议等多维度筛选和搜索。
+Charge Spec 是一个专注于充电头技术规格的查询平台，收录了 Apple、Anker、小米、华为、OPPO、vivo、三星、CUKTECH、HONOR 等主流品牌的充电器数据（当前收录 **124+** 款充电器）。支持按品牌、功率、充电协议等多维度筛选和搜索。
 
 ## 技术架构
 
@@ -19,11 +18,12 @@ Charge Spec 是一个专注于充电头技术规格的查询平台，收录了 A
 
 | 技术 | 版本 | 用途 |
 |------|------|------|
-| [Next.js](https://nextjs.org/) | 15.1.6 | React 框架，支持 App Router、SSG/SSR |
+| [Next.js](https://nextjs.org/) | 15.1.6 | React 框架，支持 App Router、SSR |
 | [React](https://react.dev/) | 19.0.0 | UI 组件库 |
 | [TypeScript](https://www.typescriptlang.org/) | 5.7.3 | 类型安全的 JavaScript |
 | [Tailwind CSS](https://tailwindcss.com/) | 3.4.17 | 原子化 CSS 框架 |
-| [Yarn](https://yarnpkg.com/) | 4.5.3 | 包管理器，支持 Workspaces |
+| [npm](https://www.npmjs.com/) | 10.0.0 | 包管理器，支持 Workspaces |
+| [MongoDB](https://www.mongodb.com/) | Atlas | 云数据库（存储充电器数据）|
 
 ### 工程化工具
 
@@ -40,11 +40,9 @@ flowchart TB
         Browser["浏览器"]
     end
 
-    subgraph GitHubPages["GitHub Pages"]
-        StaticFiles["静态文件<br/>(HTML/CSS/JS)"]
-    end
+    subgraph Vercel["Vercel 平台"]
+        NextJS["Next.js 应用<br/>SSR/SSG"]
 
-    subgraph NextJS["Next.js 应用"]
         subgraph AppRouter["App Router"]
             Pages["页面组件<br/>page.tsx"]
             Layouts["布局组件<br/>layout.tsx"]
@@ -55,28 +53,24 @@ flowchart TB
             Header["Header"]
             Footer["Footer"]
         end
-
-        subgraph DataLayer["数据层"]
-            SharedPkg["@charge-spec/shared"]
-            Types["类型定义"]
-            SampleData["示例数据"]
-        end
     end
 
-    Browser <-->|HTTPS| StaticFiles
-    StaticFiles -->|从| NextJS
+    subgraph Database["数据层"]
+        MongoDB["MongoDB Atlas<br/>云数据库"]
+    end
+
+    Browser <-->|HTTPS| NextJS
     Pages -->|使用| Layouts
     Pages -->|包含| Components
+    API -->|查询| MongoDB
     API -->|返回 JSON| Browser
-    SharedPkg -->|提供| Types
-    SharedPkg -->|提供| SampleData
 ```
 
 ### Monorepo 依赖关系
 
 ```mermaid
 flowchart LR
-    subgraph Workspace["Yarn Workspace"]
+    subgraph Workspace["npm Workspace"]
         direction TB
 
         subgraph Root["根目录"]
@@ -113,8 +107,10 @@ charge-spec/
 │   │   │   │   ├── sitemap.ts        # SEO 站点地图
 │   │   │   │   ├── chargers/         # 充电器列表页
 │   │   │   │   │   ├── page.tsx
+│   │   │   │   │   ├── ChargersClient.tsx
 │   │   │   │   │   └── [id]/         # 充电器详情页
-│   │   │   │   │       └── page.tsx
+│   │   │   │   │       ├── page.tsx
+│   │   │   │   │       └── ChargerDetailContent.tsx
 │   │   │   │   ├── brand/            # 品牌专页
 │   │   │   │   │   └── [brand]/
 │   │   │   │   │       └── page.tsx
@@ -123,9 +119,12 @@ charge-spec/
 │   │   │   │           ├── route.ts
 │   │   │   │           └── [id]/
 │   │   │   │               └── route.ts
-│   │   │   └── components/    # React 组件
-│   │   │       ├── Header.tsx
-│   │   │       └── Footer.tsx
+│   │   │   ├── components/    # React 组件
+│   │   │   │   ├── Header.tsx
+│   │   │   │   └── Footer.tsx
+│   │   │   └── lib/           # 工具库
+│   │   │       ├── mongodb.ts   # MongoDB 连接
+│   │   │       └── db.ts       # 数据库操作
 │   │   ├── public/            # 静态资源
 │   │   ├── next.config.ts     # Next.js 配置
 │   │   ├── tailwind.config.ts # Tailwind 配置
@@ -142,9 +141,8 @@ charge-spec/
 │   └── extensions.json        # 推荐扩展
 │
 ├── eslint.config.mjs          # ESLint 配置
-├── prettier.config.js         # Prettier 配置
-├── fix-basepath.js            # 静态导出路径修复脚本
-└── package.json               # Workspace 根配置
+├── prettier.config.js        # Prettier 配置
+└── package.json              # Workspace 根配置
 ```
 
 ## 核心功能
@@ -158,6 +156,7 @@ charge-spec/
 - **详情页面** - 完整的规格参数展示
 - **响应式设计** - 完美适配桌面、平板、手机
 - **SEO 优化** - 动态 sitemap.xml、语义化 HTML
+- **动态数据** - 从 MongoDB 实时查询充电器数据
 
 ### 支持的充电协议
 
@@ -178,6 +177,7 @@ interface Charger {
   brand: Brand
   model: string
   displayName: string
+  description?: string
   power: {
     maxPower: number
     configurations: PowerConfiguration[]
@@ -188,7 +188,13 @@ interface Charger {
   isGaN?: boolean
   hasFoldingPlug?: boolean
   price?: { msrp?: number; current?: number }
-  // ... 更多字段
+  purchaseUrls?: { official?: string; amazon?: string }
+  features?: string[]
+  certifications?: string[]
+  releaseYear?: number
+  manufacturedIn?: string
+  notes?: string
+  officialUrl?: string
 }
 ```
 
@@ -199,23 +205,21 @@ sequenceDiagram
     participant User as 用户
     participant Browser as 浏览器
     participant NextJS as Next.js
-    participant Page as 页面组件
-    participant Shared as Shared 包
+    participant API as API 路由
+    participant MongoDB as MongoDB
 
     User->>Browser: 访问 /chargers
     Browser->>NextJS: 请求页面
 
-    alt 静态生成 (SSG)
-        NextJS->>Page: 调用页面组件
-        Page->>Shared: 获取充电器数据
-        Shared-->>Page: 返回数据
-        Page-->>NextJS: 返回 HTML
-        NextJS-->>Browser: 返回静态 HTML
-    else 客户端交互
-        Browser->>NextJS: 筛选/排序请求
-        NextJS->>Shared: 处理筛选逻辑
-        Shared-->>NextJS: 返回筛选结果
-        NextJS-->>Browser: 返回 JSON
+    alt 服务端渲染 (SSR)
+        NextJS->>MongoDB: 查询充电器数据
+        MongoDB-->>NextJS: 返回数据
+        NextJS-->>Browser: 返回 HTML
+    else 客户端筛选
+        Browser->>API: 筛选/排序请求
+        API->>MongoDB: 查询数据
+        MongoDB-->>API: 返回结果
+        API-->>Browser: 返回 JSON
         Browser->>Browser: React 更新 DOM
     end
 
@@ -227,47 +231,67 @@ sequenceDiagram
 ### 环境要求
 
 - Node.js >= 18.0.0
-- Yarn >= 4.0.0
+- npm >= 10.0.0
+- MongoDB Atlas（本地开发需要连接字符串）
 
-### 安装依赖
+### 本地开发配置
+
+1. **创建 `.env.local` 文件**
+
+在 `packages/web/` 目录下创建 `.env.local` 文件：
 
 ```bash
-yarn install
+# MongoDB 连接字符串（从 MongoDB Atlas 获取）
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/charge-spec?retryWrites=true&w=majority
+```
+
+2. **获取 MongoDB 连接字符串**
+
+- 注册 [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+- 创建免费集群（512MB 存储）
+- 在 Database Access 创建数据库用户
+- 在 Network Access 添加 IP 地址（开发环境可用 `0.0.0.0/0`）
+- 点击 "Connect" → "Drivers" 获取连接字符串
+
+3. **安装依赖**
+
+```bash
+npm install
 ```
 
 ### 开发命令
 
 ```bash
 # 启动开发服务器 (http://localhost:3000)
-yarn dev
+npm run dev
 
 # 构建生产版本
-yarn build
+npm run build
 
-# 构建并修复静态导出路径（用于 GitHub Pages）
-yarn build:fix
+# 启动生产服务器
+npm start
 
 # 类型检查
-yarn type-check
+npm run type-check
 
 # 代码检查
-yarn lint
+npm run lint
 
 # 代码格式化
-yarn format
+npm run format
 ```
 
 ### Monorepo 工作流
 
 ```bash
 # 为 web 包添加依赖
-cd packages/web && yarn add <package>
+cd packages/web && npm install <package>
 
 # 为 shared 包添加依赖
-cd packages/shared && yarn add -D <package>
+cd packages/shared && npm install -D <package>
 
 # 运行所有包的类型检查
-yarn workspaces foreach -Ap run type-check
+npm run type-check
 ```
 
 ## API 接口
@@ -278,12 +302,49 @@ yarn workspaces foreach -Ap run type-check
 GET /api/chargers?search=&brand=&minPower=&maxPower=&protocol=
 ```
 
+**查询参数：**
+
+| 参数 | 类型 | 说明 |
+|------|------|------|
+| search | string | 搜索关键词（品牌、型号、功率） |
+| brand | string | 品牌筛选 |
+| minPower | number | 最小功率（W） |
+| maxPower | number | 最大功率（W） |
+| protocol | string | 充电协议筛选 |
+
 **响应示例：**
 
 ```json
 {
-  "chargers": [...],
-  "total": 10,
+  "chargers": [
+    {
+      "id": "apple-30w-usb-c",
+      "brand": "Apple",
+      "model": "A2347",
+      "displayName": "Apple 30W USB-C 电源适配器",
+      "power": {
+        "maxPower": 30,
+        "configurations": [
+          { "voltage": "5V", "current": "3A", "power": "15W" },
+          { "voltage": "9V", "current": "3A", "power": "27W" },
+          { "voltage": "20V", "current": "1.5A", "power": "30W" }
+        ]
+      },
+      "protocols": ["USB PD 2.0"],
+      "ports": [
+        {
+          "type": "USB-C",
+          "count": 1,
+          "maxPower": 30,
+          "protocols": ["USB PD 2.0"],
+          "color": "无色"
+        }
+      ],
+      "isGaN": false,
+      "releaseYear": 2022
+    }
+  ],
+  "total": 124,
   "filters": {
     "search": null,
     "brand": null,
@@ -300,6 +361,27 @@ GET /api/chargers?search=&brand=&minPower=&maxPower=&protocol=
 GET /api/chargers/[id]
 ```
 
+**路径参数：**
+
+| 参数 | 类型 | 说明 |
+|------|------|------|
+| id | string | 充电器 ID（如 `apple-30w-usb-c`） |
+
+**响应示例：**
+
+```json
+{
+  "charger": {
+    "id": "apple-30w-usb-c",
+    "brand": "Apple",
+    "model": "A2347",
+    "displayName": "Apple 30W USB-C 电源适配器",
+    "description": "适用于 iPad Air 和 iPhone 机型，支持快速充电。",
+    ...
+  }
+}
+```
+
 ## 部署
 
 ### 部署架构
@@ -312,39 +394,64 @@ flowchart LR
 
     subgraph GitHub["GitHub"]
         MainBranch["main 分支"]
-        GHActions["GitHub Actions<br/>构建工作流"]
-        GHPagesBranch["gh-pages 分支"]
     end
 
-    subgraph GHPages["GitHub Pages"]
-        StaticSite["静态网站<br/>HTML/CSS/JS"]
+    subgraph Vercel["Vercel 平台"]
+        NextJS["Next.js 应用<br/>SSR/SSG"]
+    end
+
+    subgraph MongoDBAtlas["MongoDB Atlas"]
+        Database["充电器数据库<br/>124+ 款充电器"]
     end
 
     DevCode -->|push| MainBranch
-    MainBranch -->|触发| GHActions
-    GHActions -->|构建输出| GHPagesBranch
-    GHPagesBranch -->|托管| StaticSite
-    StaticSite -->|访问| Users["用户浏览器"]
+    MainBranch -->|自动部署| NextJS
+    NextJS -->|查询| Database
+    NextJS -->|访问| Users["用户浏览器"]
 
-    style GHActions fill:#ffe0b2
-    style StaticSite fill:#c8e6c9
+    style Vercel fill:#e1f5fe
+    style Database fill:#47A248
 ```
 
-### 部署流程
+### 部署到 Vercel
 
-本项目使用 **GitHub Pages** 部署：
+本项目使用 **Vercel** 平台部署：
 
-1. 代码推送到 `main` 分支
-2. GitHub Actions 自动执行构建流程
-3. 静态文件部署到 `gh-pages` 分支
-4. 通过 https://melchior-voidwolf.github.io/charge-spec/ 访问
+1. **连接 Git 仓库**
 
-### 本地构建预览
+   - 登录 [Vercel Dashboard](https://vercel.com/dashboard)
+   - 点击 "Add New Project"
+   - 导入 GitHub 仓库 `melchior-voidwolf/charge-spec`
+
+2. **配置环境变量**
+
+   在 Vercel 项目设置中添加以下环境变量：
+
+   ```bash
+   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/charge-spec?retryWrites=true&w=majority
+   ```
+
+3. **自动部署**
+
+   - 每次推送到 `main` 分支，Vercel 自动触发部署
+   - 部署完成后获得预览 URL（如 `charge-spec.vercel.app`）
+
+4. **自定义域名**（可选）
+
+   - 在 Vercel 项目设置中添加自定义域名
+   - 配置 DNS 记录指向 Vercel
+
+### 数据迁移
+
+首次部署时需要导入充电器数据到 MongoDB：
 
 ```bash
-yarn build:fix
-# 输出目录: packages/web/out
+# 运行数据迁移脚本
+cd packages/web
+npm run migrate:db
 ```
+
+该脚本会将 `packages/shared/src/crawled-chargers.ts` 中的 124+ 款充电器数据批量导入到 MongoDB。
 
 ## 代码规范
 
@@ -368,5 +475,3 @@ MIT
 ---
 
 **项目链接**: [https://github.com/melchior-voidwolf/charge-spec](https://github.com/melchior-voidwolf/charge-spec)
-
-**在线演示**: [https://melchior-voidwolf.github.io/charge-spec/](https://melchior-voidwolf.github.io/charge-spec/)

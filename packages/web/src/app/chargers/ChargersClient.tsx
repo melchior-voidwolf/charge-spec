@@ -39,7 +39,7 @@ export default function ChargersClient({ chargers: allChargers }: ChargersClient
   const uniqueProtocols = useMemo(() => {
     const protocols = new Set<string>()
     allChargers.forEach((charger) => {
-      charger.protocols.forEach((p) => protocols.add(p))
+      charger.protocols.forEach((p: string) => protocols.add(p))
     })
     return Array.from(protocols).sort()
   }, [allChargers])
@@ -63,7 +63,7 @@ export default function ChargersClient({ chargers: allChargers }: ChargersClient
         if (charger.power.maxPower.toString().includes(query)) return true
         if (charger.model.toLowerCase().includes(query)) return true
         if (charger.displayName.toLowerCase().includes(query)) return true
-        if (charger.protocols.some((p) => p.toLowerCase().includes(query))) return true
+        if (charger.protocols.some((p: string) => p.toLowerCase().includes(query))) return true
         return false
       })
     }
@@ -90,7 +90,7 @@ export default function ChargersClient({ chargers: allChargers }: ChargersClient
     if (filters.selectedProtocols.length > 0) {
       results = results.filter((charger) => {
         return filters.selectedProtocols.some((selectedProtocol) =>
-          charger.protocols.some((p) => p === selectedProtocol)
+          charger.protocols.some((p: string) => p === selectedProtocol)
         )
       })
     }
@@ -380,7 +380,7 @@ export default function ChargersClient({ chargers: allChargers }: ChargersClient
 
                 {/* Protocols */}
                 <div className="flex flex-wrap gap-1 mb-3">
-                  {charger.protocols.slice(0, 4).map((protocol) => (
+                  {charger.protocols.slice(0, 4).map((protocol: string) => (
                     <span
                       key={protocol}
                       className="inline-block px-1.5 py-0.5 bg-sidebar text-text-secondary text-[10px] rounded"
@@ -397,7 +397,7 @@ export default function ChargersClient({ chargers: allChargers }: ChargersClient
 
                 {/* Ports */}
                 <div className="flex items-center gap-2 text-[12px] text-text-secondary pt-3 border-t border-gray-100">
-                  {charger.ports.map((port, index) => (
+                  {charger.ports.map((port: any, index: number) => (
                     <span key={index} className="flex items-center gap-1">
                       <svg
                         className="w-3 h-3 text-text-tertiary"

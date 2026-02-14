@@ -11,6 +11,7 @@ import {
   setChargers,
   clearAllChargers,
   getChargerIds,
+  createIndexes,
 } from '../src/lib/db'
 
 async function main() {
@@ -30,6 +31,10 @@ async function main() {
   console.log('🔍 验证数据...')
   const ids = await getChargerIds()
   console.log(`✅ 共导入 ${ids.length} 条记录\n`)
+
+  // 4. 创建索引
+  console.log('📇 创建数据库索引...')
+  await createIndexes()
 
   // 4. 显示示例数据
   console.log('📋 示例数据 (前 3 条):')

@@ -5,7 +5,6 @@
 
 import { getCharger } from '@/lib/db'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
 import ChargerDetailContent from './ChargerDetailContent'
 
 interface PageProps {
