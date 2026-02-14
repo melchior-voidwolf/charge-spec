@@ -5,6 +5,7 @@ if (!process.env.MONGODB_URI) {
 }
 
 const uri = process.env.MONGODB_URI
+const dbName = process.env.MONGODB_DB || 'charge-spec'
 const options = {}
 
 let client: MongoClient
@@ -32,7 +33,7 @@ if (process.env.NODE_ENV === 'development') {
  */
 export async function getDb(): Promise<Db> {
   const client = await clientPromise
-  return client.db()
+  return client.db(dbName)
 }
 
 /**

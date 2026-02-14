@@ -243,6 +243,9 @@ sequenceDiagram
 ```bash
 # MongoDB 连接字符串（从 MongoDB Atlas 获取）
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/charge-spec?retryWrites=true&w=majority
+
+# MongoDB 数据库名称（可选，默认为 charge-spec）
+MONGODB_DB=charge-spec
 ```
 
 2. **获取 MongoDB 连接字符串**
