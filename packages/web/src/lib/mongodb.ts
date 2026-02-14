@@ -5,7 +5,7 @@ if (!process.env.MONGODB_URI) {
 }
 
 const uri = process.env.MONGODB_URI
-const dbName = process.env.MONGODB_DB || 'charge-spec'
+const dbName = 'charge-spec' // 数据库名称明确写死，不依赖环境变量
 const options = {}
 
 let client: MongoClient

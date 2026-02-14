@@ -250,10 +250,11 @@ git commit -m "docs: 更新 README"
 
 **必须**：
 - `MONGODB_URI` - MongoDB Atlas 连接字符串
-- `MONGODB_DB` - MongoDB 数据库名称（默认：`charge-spec`）
 
 **可选**：
 - `NODE_ENV` - 环境模式（development/production）
+
+**注意**：数据库名称 `charge-spec` 已在代码中写死（`mongodb.ts`），无需额外配置。
 
 **获取 MongoDB 连接字符串**：
 1. 注册 [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
@@ -326,7 +327,6 @@ git commit -m "docs: 更新 README"
 cd packages/web
 cat > .env.local << EOF
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/charge-spec?retryWrites=true&w=majority
-MONGODB_DB=charge-spec
 EOF
 
 # 2. 运行数据迁移（导入 124+ 款充电器数据）
