@@ -45,6 +45,22 @@ charge-spec/
 
 ## 常用命令
 
+### 全流程检查（重要！）
+
+**当用户说"全流程"时，必须执行以下步骤：**
+
+1. `npm run lint` - ESLint 代码检查
+2. `npm run type-check` - TypeScript 类型检查
+3. `npm run build` - 构建生产版本
+4. 处理所有错误（修复所有 lint、type、build 错误）
+5. `git commit` - 提交代码
+6. `git push` - 推送到远程仓库
+
+**注意**：
+- 所有步骤必须成功，不能有任何错误或警告
+- 只有在所有检查通过后才能 commit
+- commit 后立即 push
+
 ### 开发相关
 
 ```bash
