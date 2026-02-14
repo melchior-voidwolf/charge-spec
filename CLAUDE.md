@@ -209,3 +209,7 @@ git commit -m "docs: 更新 README"
 - 充电器列表：`packages/web/src/app/chargers/page.tsx`
 - 充电器详情：`packages/web/src/app/chargers/[id]/page.tsx`
 - API 路由：`packages/web/src/app/api/chargers/route.ts`
+
+## Claude 回复语言配置
+
+**重要：所有回复必须使用中文（简体中文）**。这是项目要求，无论用户输入语言为何，Claude 都应以中文进行回复。

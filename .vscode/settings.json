@@ -6,10 +6,8 @@
   "editor.formatOnType": true,
   // 粘贴时自动格式化
   "editor.formatOnPaste": true,
-
   // ========== 默认格式化工具 ==========
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-
   // 针对特定语言的配置
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -29,22 +27,18 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
   // ========== ESLint 自动修复 ==========
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-
   // ========== 自动保存配置（可选） ==========
   // 延迟自动保存，配合 formatOnSave 实现自动格式化
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-
   // ========== 编辑器行为 ==========
   // 确保在文件内容变更时格式化
   "editor.trimAutoWhitespace": true,
   "editor.trimTrailingWhitespace": true,
-
   // ========== ESLint 工作区配置 ==========
   "eslint.workingDirectories": [
     {
@@ -57,11 +51,9 @@
     "typescript",
     "typescriptreact"
   ],
-
   // ========== Prettier 配置 ==========
   "prettier.ignorePath": ".prettierignore",
   "prettier.configPath": ".prettierrc",
-
   // ========== 文件排除 ==========
   "files.exclude": {
     "**/.next": true,
@@ -71,8 +63,13 @@
     "**/.pnp.*": true,
     "**/node_modules": true
   },
-
   // ========== TypeScript 配置 ==========
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs"
 }

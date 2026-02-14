@@ -2,18 +2,15 @@
   "recommendations": [
     // 必装 - 代码格式化
     "esbenp.prettier-vscode",
-
     // 必装 - ESLint 支持
     "dbaeumer.vscode-eslint",
-
     // 推荐 - Tailwind CSS 智能提示
     "bradlc.vscode-tailwindcss",
-
     // 推荐 - TypeScript 支持
     "ms-vscode.vscode-typescript-next",
-
     // 推荐 - 代码片段
     "formulahendry.auto-rename-tag",
-    "christian-kohler.path-intellisense"
+    "christian-kohler.path-intellisense",
+    "arcanis.vscode-zipfs"
   ]
 }

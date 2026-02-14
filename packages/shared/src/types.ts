@@ -47,6 +47,7 @@ export enum ConnectorType {
   MAGSAFE = 'MagSafe',
   MAGSAFE_2 = 'MagSafe 2',
   PROPRIETARY = 'Proprietary',
+  DC = 'DC',
 }
 
 /**

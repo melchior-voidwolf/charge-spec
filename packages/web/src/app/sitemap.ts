@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { sampleChargers } from '@charge-spec/shared'
+import { allChargers } from '@charge-spec/shared'
 
 export const dynamic = 'force-static'
 
@@ -19,13 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Charger detail pages
-  const chargerPages = sampleChargers.map((charger) => ({
+  const chargerPages = allChargers.map((charger) => ({
     url: `${baseUrl}/chargers/${charger.id}`,
     lastModified: new Date(),
   }))
 
   // Brand pages
-  const uniqueBrands = Array.from(new Set(sampleChargers.map((c) => c.brand)))
+  const uniqueBrands = Array.from(new Set(allChargers.map((c) => c.brand)))
   const brandPages = uniqueBrands.map((brand) => ({
     url: `${baseUrl}/brand/${encodeURIComponent(brand)}`,
     lastModified: new Date(),
