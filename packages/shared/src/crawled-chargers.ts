@@ -12,7 +12,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-0-unknown-240w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '抢占AI快充风口！雅晶源240W氮化镓重磅发布',
+    displayName: '雅晶源 240W 氮化镓充电器',
     power: {
       maxPower: 240,
       configurations: [
@@ -33,7 +33,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '抢占AI快充风口！雅晶源240W氮化镓重磅发布 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 抢占AI快充风口！雅晶源240W氮化镓重磅发布 ',
+    description: '雅晶源科技推出的PD3.2大功率240W氮化镓充电器，专为英伟达DGX Spark GB10等高端AI算力平台量身定制，具备超高功率密度与DoE能效认证。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -48,7 +48,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-1----140w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '小米 140W 桌面充实测iPhone17 Pro Max：19分钟即可充至50% ！',
+    displayName: '小米 140W 桌面充电站',
     power: {
       maxPower: 140,
       configurations: [
@@ -69,7 +69,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '小米 140W 桌面充实测iPhone17 Pro Max：19分钟即可充至50% ！ - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 小米 1',
+    description: '小米140W桌面充电站，配备双USB-C接口，支持PD3.1和小米澎湃快充协议，可为iPhone、iPad和MacBook提供快速充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -84,7 +84,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-2----67w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '小米桌面充选购攻略，67W到140W一次选对不踩坑',
+    displayName: '小米 67W 桌面充电站',
     power: {
       maxPower: 67,
       configurations: [
@@ -103,7 +103,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '小米桌面充选购攻略，67W到140W一次选对不踩坑 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 小米桌面充选购攻略，67W到140W一次选对',
+    description: '小米67W桌面充电站，双USB-C接口设计，支持PD快充和小米私有协议，适合桌面办公环境使用。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -118,7 +118,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-3----140w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '充电早报：倍思140W 3C1A四口氮化镓充电器拆解；OPPO 100W线条小狗款评测；小米桌面充插线板选购攻略',
+    displayName: '倍思 140W 3C1A 氮化镓充电器',
     power: {
       maxPower: 140,
       configurations: [
@@ -139,7 +139,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.VOOC],
       },
     ],
-    description: '充电早报：倍思140W 3C1A四口氮化镓充电器拆解；OPPO 100W线条小狗款评测；小米桌面充插线板选购攻略 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB',
+    description: '倍思140W氮化镓充电器，采用3C1A四口设计，支持PD3.1、PPS等多种快充协议，可同时为笔记本、手机等多设备充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -154,7 +154,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-4-----65w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '视频拆解：倍仕达65W USB-C氮化镓快充充电器K50',
+    displayName: '倍仕达 65W USB-C 氮化镓充电器 K50',
     power: {
       maxPower: 65,
       configurations: [
@@ -174,7 +174,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '视频拆解：倍仕达65W USB-C氮化镓快充充电器K50 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 视频拆解：倍仕达65W USB-C氮化',
+    description: '倍仕达65W氮化镓快充充电器，采用单USB-C接口设计，支持PD、QC等多种快充协议，适用于手机、平板和笔记本电脑充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -189,7 +189,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-5----78w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '峰值 78W！16分钟即可充至50%，小米140W桌面充电站澎湃快充测试',
+    displayName: '小米 140W 桌面充电站 澎湃快充版',
     power: {
       maxPower: 78,
       configurations: [
@@ -209,7 +209,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '峰值 78W！16分钟即可充至50%，小米140W桌面充电站澎湃快充测试 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 峰值 78W！16分钟',
+    description: '小米140W桌面充电站，支持小米澎湃快充协议，可为iPhone 17 Pro Max等 devices 提供快速充电，16分钟即可充至50%。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -260,7 +260,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-7-unknown-67w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '双C口！Llab推出全新超小67W氮化镓快充',
+    displayName: 'Llab 67W 双C口氮化镓充电器',
     power: {
       maxPower: 67,
       configurations: [
@@ -279,7 +279,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '双C口！Llab推出全新超小67W氮化镓快充 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 双C口！Llab推出全新超小67W氮化镓快充 小妖',
+    description: 'Llab 67W氮化镓充电器，采用超小体积设计，双USB-C接口，支持多种快充协议，便于随身携带。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -294,7 +294,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-8-unknown-140w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '140W加持！Xinspower氮化镓快充新品曝光',
+    displayName: 'Xinspower 140W 氮化镓充电器',
     power: {
       maxPower: 140,
       configurations: [
@@ -315,7 +315,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '140W加持！Xinspower氮化镓快充新品曝光 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 140W加持！Xinspower氮化镓快充新',
+    description: 'Xinspower 140W氮化镓充电器，支持PD3.1快充协议，为笔记本、平板和手机提供高效充电解决方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -330,7 +330,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-9-unknown-140w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '支持澎湃闪充！MIIIW米物140W智显充电器米系设备充电兼容性测试',
+    displayName: 'MIIIW 米物 140W 智显充电器',
     power: {
       maxPower: 140,
       configurations: [
@@ -351,7 +351,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '支持澎湃闪充！MIIIW米物140W智显充电器米系设备充电兼容性测试 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 支持澎湃闪充！MIIIW米',
+    description: 'MIIIW米物140W智显充电器，配备数字显示屏可实时查看充电功率，支持小米澎湃闪充协议，兼容多种设备。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -365,8 +365,8 @@ export const crawledChargers: Charger[] = [
   {
     id: 'cdt-10----265w',
     brand: Brand.YOOBAO,
-    model: 'unknown',
-    displayName: '充电早报：联想265W USB-C电源适配器拆解；羽博LY10移动电源评测；PD3.2 SPR AVS 充电器新品全汇总',
+    model: 'LY10',
+    displayName: '羽博 LY10 移动电源',
     power: {
       maxPower: 265,
       configurations: [
@@ -387,7 +387,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：联想265W USB-C电源适配器拆解；羽博LY10移动电源评测；PD3.2 SPR AVS 充电器新品全汇总 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 Charge',
+    description: '羽博LY10移动电源评测，来自充电头网充电早报专栏，同时涵盖联想265W USB-C电源适配器拆解及PD3.2 SPR AVS充电器新品汇总等内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -402,7 +402,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-11----40w',
     brand: Brand.APPLE,
     model: 'unknown',
-    displayName: '四大品牌重磅跟进，PD3.2 SPR AVS 充电器新品全汇总',
+    displayName: '苹果 40W 动态电源适配器 (PD3.2 SPR AVS)',
     power: {
       maxPower: 40,
       configurations: [
@@ -421,7 +421,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '四大品牌重磅跟进，PD3.2 SPR AVS 充电器新品全汇总 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 四大品牌重磅跟进，PD3.2 S',
+    description: '苹果40W动态电源适配器，支持最新PD 3.2 SPR AVS技术，可在9-20V范围内以100mV步进精细调节电压，与iPhone 17系列完美配合，实现高效快充并降低发热。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -436,7 +436,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-12-----100w',
     brand: Brand.TORRAS,
     model: 'unknown',
-    displayName: '充电早报：图拉斯USB-C高速车载充气泵拆解；睿元100W 2C1A氮化镓快充充电器拆解；WiWU 超薄磁吸移动电源评测',
+    displayName: '图拉斯 USB-C 高速车载充气泵',
     power: {
       maxPower: 100,
       configurations: [
@@ -456,7 +456,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '充电早报：图拉斯USB-C高速车载充气泵拆解；睿元100W 2C1A氮化镓快充充电器拆解；WiWU 超薄磁吸移动电源评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 Charge',
+    description: '图拉斯USB-C高速车载充气泵拆解，支持USB-C接口供电，同时文章还包含睿元100W 2C1A氮化镓快充充电器及WiWU超薄磁吸移动电源的评测内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -471,7 +471,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-13-----unknownw',
     brand: Brand.CUKTECH,
     model: 'unknown',
-    displayName: '一图看完酷态科16款充电器的差别',
+    displayName: '酷态科 16款充电器产品对比导购',
     power: {
       maxPower: 20,
       configurations: [
@@ -490,7 +490,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '一图看完酷态科16款充电器的差别 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 一图看完酷态科16款充电器的差别 我爱开心呢 2026-02-',
+    description: '酷态科16款充电器全系列对比导购，涵盖30号、15号、10号系列桌面充电站及二合一充电器，功率覆盖20W至300W，支持PD、QC、小米澎湃秒充、UFCS融合快充等多种协议。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: false,
@@ -505,7 +505,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-14-unknown-65w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '视频拆解：XIHUIDA希辉达65W 3C1A拉拉线氮化镓充电器',
+    displayName: '希辉达 65W 3C1A 拉拉线氮化镓充电器',
     power: {
       maxPower: 65,
       configurations: [
@@ -525,7 +525,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0],
       },
     ],
-    description: '视频拆解：XIHUIDA希辉达65W 3C1A拉拉线氮化镓充电器 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 视频拆解：XIHUIDA希辉达',
+    description: '希辉达65W 3C1A拉拉线氮化镓充电器，采用必易微KP22086+KP4060高集成合封氮化镓电源方案，配备富满XPD911独立降压协议芯片，实现多口智能快充，带有独特的拉拉线设计。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -540,7 +540,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-15----500w',
     brand: Brand.UGREEN,
     model: 'unknown',
-    displayName: '兼容100挑战赛：绿联500W氮化镓充电器充电兼容性如何？实测百款终端设备告诉你',
+    displayName: '绿联 500W 氮化镓充电器 (5C1A)',
     power: {
       maxPower: 500,
       configurations: [
@@ -561,7 +561,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '兼容100挑战赛：绿联500W氮化镓充电器充电兼容性如何？实测百款终端设备告诉你 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 兼容100挑战',
+    description: '绿联首款500W王者级氮化镓充电器，采用5C1A六口设计，单口支持PD3.1 240W满血输出，可同时满足5台笔记本电脑快充，充电头网实测百款终端设备兼容性测试。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -576,7 +576,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-16----30w',
     brand: Brand.ANKER,
     model: 'unknown',
-    displayName: '视频拆解：ANKER安克Nano 30W氮化镓快充充电器',
+    displayName: 'ANKER 安克 Nano 30W 氮化镓快充充电器',
     power: {
       maxPower: 30,
       configurations: [
@@ -596,7 +596,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0],
       },
     ],
-    description: '视频拆解：ANKER安克Nano 30W氮化镓快充充电器 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 视频拆解：ANKER安克Nano 30',
+    description: 'ANKER安克Nano 30W氮化镓快充充电器，采用智融SW1121P合封氮化镓芯片搭配华源智信HYC935A同步整流协议芯片的高集成电源方案，两颗芯片实现传统五颗芯片功能，体积小巧。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -611,7 +611,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-17----140w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '小米桌面充电站140W开箱：双C口PD3.1功率盲插，120W澎湃协议加持',
+    displayName: '小米 140W 桌面充电站 (2C2A+4AC)',
     power: {
       maxPower: 140,
       configurations: [
@@ -632,7 +632,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '小米桌面充电站140W开箱：双C口PD3.1功率盲插，120W澎湃协议加持 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 小米桌面充电站140',
+    description: '小米桌面充电站140W，配备4AC+2C2A八接口设计，USB-C端口支持140W PD3.1输出和小米120W私有澎湃协议，适合大功率多设备用户使用。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -647,7 +647,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-18----100w',
     brand: Brand.SAMSUNG,
     model: 'A10020',
-    displayName: '拆解报告：SAMSUNG三星100W USB-C氮化镓充电器A10020_DPN',
+    displayName: '三星 100W USB-C 氮化镓充电器 (A10020)',
     power: {
       maxPower: 100,
       configurations: [
@@ -667,7 +667,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '拆解报告：SAMSUNG三星100W USB-C氮化镓充电器A10020_DPN - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：SA',
+    description: '三星100W氮化镓快充充电器（韩版），型号A10020_DPN，支持100-240V全球宽电压输入，单USB-C接口支持PD3.0协议，20V5A 100W输出，通过KC与VI级能效认证。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -682,7 +682,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-19-unknown-100w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '充电早报：威森100W 2C1A智能数显氮化镓充电器拆解；雅晶源科技 PD3.2 240W 氮化镓充电器评测；13款芯片方案斩获技术创新奖',
+    displayName: '威森 100W 2C1A 智能数显氮化镓充电器',
     power: {
       maxPower: 100,
       configurations: [
@@ -702,7 +702,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '充电早报：威森100W 2C1A智能数显氮化镓充电器拆解；雅晶源科技 PD3.2 240W 氮化镓充电器评测；13款芯片方案斩获技术创新奖 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实',
+    description: '威森100W 2C1A智能数显氮化镓充电器拆解，配备数字显示屏实时查看充电功率，同时文章还包含雅晶源科技PD3.2 240W氮化镓充电器评测及13款获奖芯片方案介绍。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -717,7 +717,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-20-unknown-240w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '雅晶源科技 PD3.2 240W 氮化镓充电器评测：英伟达 GB10 算力平台专属适配 + 7级能效天花板！',
+    displayName: '雅晶源 PD3.2 240W 氮化镓充电器 (英伟达GB10专属适配)',
     power: {
       maxPower: 240,
       configurations: [
@@ -738,7 +738,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '雅晶源科技 PD3.2 240W 氮化镓充电器评测：英伟达 GB10 算力平台专属适配 + 7级能效天花板！ - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB P',
+    description: '雅晶源240W氮化镓充电器，专为英伟达DGX Spark GB10算力平台定制，首批支持PD3.2 240W输出，采用AHB拓扑与数字化设计，通过7级能效认证，为AI PC、智能机器人等设备提供高效供电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -753,7 +753,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-21-unknown-100w',
     brand: Brand.OTHER,
     model: 'X100Pro',
-    displayName: '拆解报告：VERYSUN威森100W 2C1A智能数显氮化镓充电器X100Pro',
+    displayName: '威森 100W 2C1A 智能数显氮化镓充电器 X100Pro',
     power: {
       maxPower: 100,
       configurations: [
@@ -773,7 +773,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：VERYSUN威森100W 2C1A智能数显氮化镓充电器X100Pro - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：VE',
+    description: '威森100W 2C1A智能数显氮化镓充电器X100Pro，配备数字显示屏，支持PD、PPS、QC、SCP、FCP等多种快充协议。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -788,7 +788,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-22----150w',
     brand: Brand.DJI,
     model: 'unknown',
-    displayName: '充电早报：thinkplus150W锋行者氮化镓桌面充电站拆解；大疆POWER1000Mini户外电源快充测试；乐得瑞推出移动电源新国标PD传输电池信息方案',
+    displayName: '大疆 POWER 1000 Mini 户外电源',
     power: {
       maxPower: 150,
       configurations: [
@@ -809,7 +809,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '充电早报：thinkplus150W锋行者氮化镓桌面充电站拆解；大疆POWER1000Mini户外电源快充测试；乐得瑞推出移动电源新国标PD传输电池信息方案 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 ',
+    description: '大疆POWER 1000 Mini户外电源快充测试，支持150W输出，同时文章还包含thinkplus 150W氮化镓桌面充电站拆解及乐得瑞移动电源新国标方案介绍。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -824,7 +824,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-23----140w',
     brand: Brand.BASEUS,
     model: 'E0120K',
-    displayName: '拆解报告：Baseus倍思140W 3C1A四口氮化镓充电器E0120K',
+    displayName: '倍思 140W 3C1A 四口氮化镓充电器 E0120K',
     power: {
       maxPower: 140,
       configurations: [
@@ -845,7 +845,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：Baseus倍思140W 3C1A四口氮化镓充电器E0120K - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：Baseus',
+    description: '倍思140W四口氮化镓充电器，配置3C1A接口，其中两个USB-C支持PD3.1 140W输出，另一组C+A支持30W快充，兼容UFCS、PPS、QC等多种协议，体积比苹果原厂140W更紧凑。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -860,7 +860,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-24-unknown-unknownw',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '英诺赛科氮化镓导入谷歌AI数据中心平台！',
+    displayName: '英诺赛科氮化镓技术 (谷歌AI数据中心应用)',
     power: {
       maxPower: 20,
       configurations: [
@@ -879,7 +879,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '英诺赛科氮化镓导入谷歌AI数据中心平台！ - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 英诺赛科氮化镓导入谷歌AI数据中心平台！ 凌 2026',
+    description: '英诺赛科氮化镓技术成功导入谷歌AI数据中心平台，展示氮化镓技术在高效能数据中心供电领域的应用前景。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -894,7 +894,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-25----unknownw',
     brand: Brand.HUNTKEY,
     model: 'SSA307',
-    displayName: '七口合一，强弱电分区，航嘉充吧高能W100氮化镓桌面充电站评测',
+    displayName: '航嘉 充吧高能 W100 氮化镓桌面充电站',
     power: {
       maxPower: 20,
       configurations: [
@@ -913,7 +913,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '七口合一，强弱电分区，航嘉充吧高能W100氮化镓桌面充电站评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 七口合一，强弱电分区，航嘉充吧高',
+    description: '航嘉充吧高能W100氮化镓桌面充电站，七口合一设计，强弱电分区，支持PD、PPS、QC、SCP、FCP等多种快充协议。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -928,7 +928,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-26----112w',
     brand: Brand.APPLE,
     model: 'WCH017yz',
-    displayName: '评测贝尔金112W氮化镓充电器：iPhone 17 Pro Max充电50%仅需20分钟',
+    displayName: '贝尔金 112W 氮化镓充电器',
     power: {
       maxPower: 112,
       configurations: [
@@ -949,7 +949,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '评测贝尔金112W氮化镓充电器：iPhone 17 Pro Max充电50%仅需20分钟 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 评测贝',
+    description: '贝尔金112W氮化镓充电器，支持PD、PPS协议，可为iPhone 17 Pro Max在20分钟内充至50%，品牌为Apple（苹果官方合作伙伴）。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -964,7 +964,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-27-unknown-unknownw',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '慧能泰发布PD控制器，面向AI智能充电器市场',
+    displayName: '慧能泰 PD控制器 (AI智能充电器方案)',
     power: {
       maxPower: 20,
       configurations: [
@@ -983,7 +983,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '慧能泰发布PD控制器，面向AI智能充电器市场 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 慧能泰发布PD控制器，面向AI智能充电器市场 凌 ',
+    description: '慧能泰发布面向AI智能充电器市场的PD控制器，支持PD、PPS协议，为下一代智能充电设备提供控制方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -998,7 +998,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-28----160w',
     brand: Brand.ANKER,
     model: 'unknown',
-    displayName: '这家特色电感被安克明星充电器采用！',
+    displayName: '安克明星充电器采用特色电感方案',
     power: {
       maxPower: 160,
       configurations: [
@@ -1019,7 +1019,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '这家特色电感被安克明星充电器采用！ - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 这家特色电感被安克明星充电器采用！ 凌 2026-02-04',
+    description: '安克明星充电器采用的特色电感技术方案，展示高性能充电器的元器件选型与技术创新。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1034,7 +1034,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-29----140w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '视频拆解：MI小米140W 8合1氮化镓桌面充电站',
+    displayName: '小米 140W 8合1氮化镓桌面充电站',
     power: {
       maxPower: 140,
       configurations: [
@@ -1055,7 +1055,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '视频拆解：MI小米140W 8合1氮化镓桌面充电站 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 视频拆解：MI小米140W 8合1氮化镓桌面',
+    description: '小米140W 8合1氮化镓桌面充电站，视频拆解展示内部设计与用料，支持PD协议，为大功率多设备充电提供解决方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1070,7 +1070,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-30-unknown-65w',
     brand: Brand.OTHER,
     model: 'RCE-6506ACCL',
-    displayName: '拆解报告：瑞吉达65W 2C1A氮化镓充电器',
+    displayName: '瑞吉达 65W 2C1A 氮化镓充电器',
     power: {
       maxPower: 65,
       configurations: [
@@ -1090,7 +1090,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：瑞吉达65W 2C1A氮化镓充电器 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：瑞吉达65W 2C1A氮化镓充电器 凌 ',
+    description: '瑞吉达65W 2C1A氮化镓充电器，支持PD、PPS、QC、SCP、FCP等多种快充协议，2C1A三接口设计，满足多设备同时充电需求。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1105,7 +1105,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-31-unknown-100w',
     brand: Brand.OTHER,
     model: 'RY-U101A-ACC',
-    displayName: '拆解报告：RuiYuan睿元100W 2C1A氮化镓快充充电器RY-U101A-ACC',
+    displayName: '睿元 100W 2C1A 氮化镓快充充电器',
     power: {
       maxPower: 100,
       configurations: [
@@ -1125,7 +1125,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：RuiYuan睿元100W 2C1A氮化镓快充充电器RY-U101A-ACC - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告',
+    description: '睿元100W 2C1A氮化镓快充充电器，支持PD、PPS、QC、SCP、FCP等多种协议，2C1A三接口设计，适用于笔记本、手机、平板等多设备充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1140,7 +1140,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-32-redmi-3200w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '充电早报：奥海科技3200W钛金牌服务器电源拆解；瑞吉达65W 2C1A氮化镓充电器拆解；REDMI Turbo 5 Max通过3050快充测试',
+    displayName: '奥海科技 3200W 钛金牌服务器电源',
     power: {
       maxPower: 3200,
       configurations: [
@@ -1161,7 +1161,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '充电早报：奥海科技3200W钛金牌服务器电源拆解；瑞吉达65W 2C1A氮化镓充电器拆解；REDMI Turbo 5 Max通过3050快充测试 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 ',
+    description: '奥海科技3200W钛金牌服务器电源拆解，钛金级能效认证，同时文章还包含瑞吉达65W氮化镓充电器及REDMI Turbo 5 Max 3050快充测试内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1176,7 +1176,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-33----120w',
     brand: Brand.ONEPLUS,
     model: 'VCBBOACH',
-    displayName: '拆解报告：OnePlus一加Ace 6原装120W超级闪充氮化镓充电器VCBBOACH',
+    displayName: '一加 Ace 6 原装 120W 超级闪充氮化镓充电器',
     power: {
       maxPower: 120,
       configurations: [
@@ -1197,7 +1197,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0, Protocol.SCP, Protocol.VOOC],
       },
     ],
-    description: '拆解报告：OnePlus一加Ace 6原装120W超级闪充氮化镓充电器VCBBOACH - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告',
+    description: '一加Ace 6原装120W超级闪充氮化镓充电器，支持PD、QC、SCP、VOOC等多种协议，为一加手机提供120W超级闪充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1212,7 +1212,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-34-oppo-100w',
     brand: Brand.OPPO,
     model: 'unknown',
-    displayName: '充电早报：OPPO Find X8 Ultra原装100W氮化镓充电器拆解；真我Neo8 3050充电全程实测；必易微四芯齐发，杀入锂电池电量计市场',
+    displayName: 'OPPO Find X8 Ultra 原装 100W 氮化镓充电器',
     power: {
       maxPower: 100,
       configurations: [
@@ -1232,7 +1232,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：OPPO Find X8 Ultra原装100W氮化镓充电器拆解；真我Neo8 3050充电全程实测；必易微四芯齐发，杀入锂电池电量计市场 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电',
+    description: 'OPPO Find X8 Ultra原装100W氮化镓充电器拆解，支持PD、PPS、QC协议，同时文章还包含真我Neo8充电实测及必易微电量计芯片介绍。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1247,7 +1247,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-35----65w',
     brand: Brand.YOOBAO,
     model: 'unknown',
-    displayName: '30元热销5万台，羽博65W氮化镓登百亿补贴',
+    displayName: '羽博 65W 氮化镓充电器',
     power: {
       maxPower: 65,
       configurations: [
@@ -1267,7 +1267,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0],
       },
     ],
-    description: '30元热销5万台，羽博65W氮化镓登百亿补贴 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 30元热销5万台，羽博65W氮化镓登百亿补贴 小妖',
+    description: '羽博65W氮化镓充电器，以高性价比热销，支持PD、QC协议，3C接口设计，在百亿补贴渠道广受欢迎。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1282,7 +1282,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-36----unknownw',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '充电早报：HOTO小猴12V USB-C无刷电钻拆解；十大厂商于半桥氮化镓领域推陈出新，核心优势全解析；黑鲨刀锋3磁吸充电宝评测',
+    displayName: 'HOTO 小猴 12V USB-C 无刷电钻 (含充电方案)',
     power: {
       maxPower: 20,
       configurations: [
@@ -1301,7 +1301,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：HOTO小猴12V USB-C无刷电钻拆解；十大厂商于半桥氮化镓领域推陈出新，核心优势全解析；黑鲨刀锋3磁吸充电宝评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 Ch',
+    description: 'HOTO小猴12V USB-C无刷电钻拆解，采用USB-C接口充电方案，同时文章还包含半桥氮化镓十大厂商技术分析及黑鲨刀锋3磁吸充电宝评测。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1316,7 +1316,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-37-----112w',
     brand: Brand.BELKIN,
     model: 'unknown',
-    displayName: '贝尔金 112W 氮化镓充电器开箱：单口 100W + 折叠插脚！',
+    displayName: '贝尔金 112W 氮化镓充电器',
     power: {
       maxPower: 112,
       configurations: [
@@ -1337,7 +1337,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '贝尔金 112W 氮化镓充电器开箱：单口 100W + 折叠插脚！ - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 贝尔金 112W 氮化镓充电',
+    description: '贝尔金112W氮化镓充电器开箱，单口支持100W输出，配备折叠插脚，支持PD、PPS协议，为苹果设备提供高效快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1352,7 +1352,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-38----66w',
     brand: Brand.HONOR,
     model: 'unknown',
-    displayName: '视频拆解：荣耀66W 1A1C氮化镓快充充电器',
+    displayName: '荣耀 66W 1A1C 氮化镓快充充电器',
     power: {
       maxPower: 66,
       configurations: [
@@ -1372,7 +1372,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '视频拆解：荣耀66W 1A1C氮化镓快充充电器 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 视频拆解：荣耀66W 1A1C氮化镓快充充电器 ',
+    description: '荣耀66W 1A1C氮化镓快充充电器视频拆解，支持PD协议，1A1C双接口设计，为荣耀手机及平板提供66W快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1387,7 +1387,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-39-unknown-150w',
     brand: Brand.OTHER,
     model: 'CSFO150A4',
-    displayName: '拆解报告：thinkplus 150W锋行者氮化镓桌面充电站CSFO150A4',
+    displayName: 'thinkplus 150W 锋行者氮化镓桌面充电站',
     power: {
       maxPower: 150,
       configurations: [
@@ -1408,7 +1408,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：thinkplus 150W锋行者氮化镓桌面充电站CSFO150A4 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：thi',
+    description: 'thinkplus 150W锋行者氮化镓桌面充电站，支持PD、PPS、QC、SCP、FCP等多种协议，3C接口设计，为笔记本、手机等多设备提供150W桌面充电方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1423,7 +1423,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-40-unknown-unknownw',
     brand: Brand.OTHER,
     model: 'GC21',
-    displayName: '拆解报告：Gogoro智慧电动机车电池充电器GoChargerMobile',
+    displayName: 'Gogoro 智慧电动机车电池充电器 GoCharger Mobile',
     power: {
       maxPower: 20,
       configurations: [
@@ -1442,7 +1442,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '拆解报告：Gogoro智慧电动机车电池充电器GoChargerMobile - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：Gogor',
+    description: 'Gogoro智慧电动机车电池充电器GoCharger Mobile拆解，采用USB-C接口PD充电方案，为Gogoro电动车电池提供便捷充电体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1457,7 +1457,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-41-oppo-100w',
     brand: Brand.OPPO,
     model: 'VCBAOBCH',
-    displayName: '拆解报告：OPPO Find X8 Ultra原装100W超级闪充氮化镓充电器VCBAOBCH',
+    displayName: 'OPPO Find X8 Ultra 原装 100W 超级闪充氮化镓充电器',
     power: {
       maxPower: 100,
       configurations: [
@@ -1477,7 +1477,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0, Protocol.SCP, Protocol.VOOC],
       },
     ],
-    description: '拆解报告：OPPO Find X8 Ultra原装100W超级闪充氮化镓充电器VCBAOBCH - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z ',
+    description: 'OPPO Find X8 Ultra原装100W超级闪充氮化镓充电器，支持PD、QC、SCP、VOOC等多种协议，为OPPO手机提供100W超级闪充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1492,7 +1492,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-42----90w',
     brand: Brand.HONOR,
     model: 'HN-200450C02',
-    displayName: '拆解报告：HONOR荣耀Magic8原装90W超级快充充电器HN-200450C02',
+    displayName: '荣耀 Magic8 原装 90W 超级快充充电器',
     power: {
       maxPower: 90,
       configurations: [
@@ -1512,7 +1512,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：HONOR荣耀Magic8原装90W超级快充充电器HN-200450C02 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：',
+    description: '荣耀Magic8原装90W超级快充充电器，支持PD、PPS、SCP、FCP等多种协议，为荣耀Magic8系列手机提供90W超级快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1527,7 +1527,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-43-redmi-unknownw',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '充电早报：Gogoro智慧电动机车电池充电器GoChargerMobile拆解；REDMI Turbo 5 Max 手机充电评测；智融科技推出低成本串口与VDM方案',
+    displayName: 'REDMI Turbo 5 Max 手机充电评测 (含Gogoro充电器拆解)',
     power: {
       maxPower: 20,
       configurations: [
@@ -1546,7 +1546,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：Gogoro智慧电动机车电池充电器GoChargerMobile拆解；REDMI Turbo 5 Max 手机充电评测；智融科技推出低成本串口与VDM方案 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱',
+    description: 'REDMI Turbo 5 Max手机充电评测，同时包含Gogoro智慧电动机车电池充电器拆解及智融科技低成本串口与VDM方案介绍。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1561,7 +1561,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-44----25w',
     brand: Brand.SAMSUNG,
     model: 'unknown',
-    displayName: '支持磁吸无线充，三星Qi2 25W充电器曝光',
+    displayName: '三星 Qi2 25W 磁吸无线充电器',
     power: {
       maxPower: 25,
       configurations: [
@@ -1579,7 +1579,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.SCP],
       },
     ],
-    description: '支持磁吸无线充，三星Qi2 25W充电器曝光 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 支持磁吸无线充，三星Qi2 25W充电器曝光 我爱',
+    description: '三星Qi2 25W磁吸无线充电器，支持磁吸无线充电技术，为三星手机提供便捷的无线充电体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1594,7 +1594,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-45----500w',
     brand: Brand.UGREEN,
     model: 'unknown',
-    displayName: '充电早报：酷态科6号超级电能充mini拆解；绿联500W氮化镓充电器评测；解析德亚充电器热销榜单',
+    displayName: '绿联 500W 氮化镓充电器 (酷态科6号拆解同篇)',
     power: {
       maxPower: 500,
       configurations: [
@@ -1615,7 +1615,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：酷态科6号超级电能充mini拆解；绿联500W氮化镓充电器评测；解析德亚充电器热销榜单 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z',
+    description: '绿联500W氮化镓充电器评测，同时包含酷态科6号超级电能充mini拆解及德亚充电器热销榜单解析。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1630,7 +1630,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-46----unknownw',
     brand: Brand.REALME,
     model: 'VCB8OACH',
-    displayName: '出门忘带充电器也不慌，多协议兼容，真我Neo8 充电评测',
+    displayName: '真我 Neo8 充电评测 (多协议兼容测试)',
     power: {
       maxPower: 20,
       configurations: [
@@ -1649,7 +1649,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.VOOC],
       },
     ],
-    description: '出门忘带充电器也不慌，多协议兼容，真我Neo8 充电评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 出门忘带充电器也不慌，多协议兼容，真我',
+    description: '真我Neo8手机充电评测，展示多协议兼容特性，出门无需担心忘带充电器，支持PD、PPS、QC、SCP、VOOC等多种协议。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: false,
@@ -1664,7 +1664,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-47-unknown-150w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '视频拆解：thinkplus锋行者150W氮化镓桌面充电站',
+    displayName: 'thinkplus 锋行者 150W 氮化镓桌面充电站',
     power: {
       maxPower: 150,
       configurations: [
@@ -1685,7 +1685,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '视频拆解：thinkplus锋行者150W氮化镓桌面充电站 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 视频拆解：thinkplus锋行者1',
+    description: 'thinkplus锋行者150W氮化镓桌面充电站视频拆解，支持PD协议，为笔记本等设备提供150W桌面充电解决方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1700,7 +1700,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-48----140w',
     brand: Brand.XIAOMI,
     model: 'XMCDZ-03QM',
-    displayName: '拆解报告：MI小米140W 8合1氮化镓桌面充电站XMCDZ-03QM',
+    displayName: '小米 140W 8合1氮化镓桌面充电站 XMCDZ-03QM',
     power: {
       maxPower: 140,
       configurations: [
@@ -1721,7 +1721,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：MI小米140W 8合1氮化镓桌面充电站XMCDZ-03QM - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：MI小米140',
+    description: '小米140W 8合1氮化镓桌面充电站XMCDZ-03QM拆解，支持PD、PPS、QC、SCP、FCP等多种协议，8合1设计满足多设备充电需求。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1736,7 +1736,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-49-unknown-65w',
     brand: Brand.OTHER,
     model: 'SMS-Q109',
-    displayName: '拆解报告：SOMOSTEL 65W 2C1A碳化硅快充充电器SMS-Q109',
+    displayName: 'SOMOSTEL 65W 2C1A 碳化硅快充充电器',
     power: {
       maxPower: 65,
       configurations: [
@@ -1756,7 +1756,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：SOMOSTEL 65W 2C1A碳化硅快充充电器SMS-Q109 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：SOMO',
+    description: 'SOMOSTEL 65W 2C1A碳化硅快充充电器，支持PD、PPS、QC、SCP、FCP等多种协议，采用碳化硅技术，2C1A三接口设计。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1771,7 +1771,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-50----140w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '充电早报：小米140W 8合1氮化镓桌面充电站拆解；SOMOSTEL 65W 2C1A碳化硅快充充电器拆解；真我 Neo8 充电评测',
+    displayName: '小米 140W 8合1桌面充电站 (充电早报合集)',
     power: {
       maxPower: 140,
       configurations: [
@@ -1792,7 +1792,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：小米140W 8合1氮化镓桌面充电站拆解；SOMOSTEL 65W 2C1A碳化硅快充充电器拆解；真我 Neo8 充电评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ',
+    description: '小米140W 8合1氮化镓桌面充电站拆解合集，同时包含SOMOSTEL 65W碳化硅充电器拆解及真我Neo8充电评测内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1807,7 +1807,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-51-unknown-45w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '视频拆解：MIIIW米物45W小魔方氮化镓充电器',
+    displayName: '米物 45W 小魔方氮化镓充电器',
     power: {
       maxPower: 45,
       configurations: [
@@ -1827,7 +1827,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '视频拆解：MIIIW米物45W小魔方氮化镓充电器 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 视频拆解：MIIIW米物45W小魔方氮化镓充电',
+    description: '米物45W小魔方氮化镓充电器视频拆解，小巧魔方造型设计，支持PD协议，为手机、平板等设备提供45W快充。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1842,7 +1842,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-52----66w',
     brand: Brand.HONOR,
     model: 'HN-110600CP0',
-    displayName: '拆解报告：HONOR荣耀66W 1A1C氮化镓快充充电器HN-110600CP0',
+    displayName: '荣耀 66W 1A1C 氮化镓快充充电器',
     power: {
       maxPower: 66,
       configurations: [
@@ -1862,7 +1862,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：HONOR荣耀66W 1A1C氮化镓快充充电器HN-110600CP0 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：HO',
+    description: '荣耀66W 1A1C氮化镓快充充电器，支持PD、PPS、SCP、FCP等多种协议，1A1C双接口设计，为荣耀设备提供66W快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1877,7 +1877,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-53-iphone-45w',
     brand: Brand.APPLE,
     model: 'CH-102',
-    displayName: '原厂同级性能，iPhone 17新搭档：Mcdodo 麦多多 45W双C口充电器评测',
+    displayName: '麦多多 45W 双C口氮化镓充电器',
     power: {
       maxPower: 45,
       configurations: [
@@ -1897,7 +1897,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '原厂同级性能，iPhone 17新搭档：Mcdodo 麦多多 45W双C口充电器评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 原厂同级性',
+    description: '麦多多45W双C口氮化镓充电器，支持多种快充协议，为iPhone等设备提供高效充电体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1912,7 +1912,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-54----66w',
     brand: Brand.XIAOMI,
     model: 'unknown',
-    displayName: '充电早报：荣耀66W 1A1C氮化镓快充充电器拆解；宏百纳10000mAh半固态电池移动电源拆解；小米桌面充电站140W评测',
+    displayName: '小米桌面充电站140W评测 (充电早报合集)',
     power: {
       maxPower: 66,
       configurations: [
@@ -1932,7 +1932,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：荣耀66W 1A1C氮化镓快充充电器拆解；宏百纳10000mAh半固态电池移动电源拆解；小米桌面充电站140W评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 Char',
+    description: '小米桌面充电站140W评测，同时包含荣耀66W充电器拆解及宏百纳移动电源拆解内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1947,7 +1947,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-55-unknown-unknownw',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '窥探欧洲用户真实喜好，德亚1月充电器销量榜单分析',
+    displayName: '德亚1月充电器销量榜单分析',
     power: {
       maxPower: 20,
       configurations: [
@@ -1966,7 +1966,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '窥探欧洲用户真实喜好，德亚1月充电器销量榜单分析 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 窥探欧洲用户真实喜好，德亚1月充电器销量榜单分',
+    description: '德亚1月充电器销量榜单分析，了解欧洲市场充电器产品的销售趋势及用户偏好。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1981,7 +1981,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-56----80w',
     brand: Brand.HONOR,
     model: 'Power-W06',
-    displayName: '双线圈+立体风冷散热，荣耀超级快充立式无线充电器（Max 80W）评测',
+    displayName: '荣耀 80W 超级快充立式无线充电器',
     power: {
       maxPower: 80,
       configurations: [
@@ -2001,7 +2001,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PPS],
       },
     ],
-    description: '双线圈+立体风冷散热，荣耀超级快充立式无线充电器（Max 80W）评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 双线圈+立体风冷散热，荣',
+    description: '荣耀80W超级快充立式无线充电器，采用双线圈+立体风冷散热设计，为荣耀手机提供80W无线快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2016,7 +2016,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-57----65w',
     brand: Brand.UGREEN,
     model: 'X605',
-    displayName: '自带伸缩线超省心！绿联 65W 拉拉线氮化镓充电器评测',
+    displayName: '绿联 65W 拉拉线氮化镓充电器',
     power: {
       maxPower: 65,
       configurations: [
@@ -2036,7 +2036,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '自带伸缩线超省心！绿联 65W 拉拉线氮化镓充电器评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 自带伸缩线超省心！绿联 65W 拉拉线氮',
+    description: '绿联65W拉拉线氮化镓充电器，自带伸缩线设计，支持多种快充协议。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2051,7 +2051,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-58-----unknownw',
     brand: Brand.CUKTECH,
     model: 'AD653U',
-    displayName: '酷态科6号Ultra充电器曝光，现已通过3C认证',
+    displayName: '酷态科 6号 Ultra 充电器 (3C认证)',
     power: {
       maxPower: 20,
       configurations: [
@@ -2070,7 +2070,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '酷态科6号Ultra充电器曝光，现已通过3C认证 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 ���案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 酷态科6号Ultra充电器曝光，现已通过3',
+    description: '酷态科6号Ultra充电器已通过3C认证，为笔记本等设备提供高效充电方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2085,7 +2085,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-59----500w',
     brand: Brand.UGREEN,
     model: 'unknown',
-    displayName: '视频拆解：UGREEN绿联500W氮化镓充电器',
+    displayName: '绿联 500W 氮化镓充电器 (视频拆解)',
     power: {
       maxPower: 500,
       configurations: [
@@ -2106,7 +2106,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '视频拆解：UGREEN绿联500W氮化镓充电器 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 视频拆解：UGREEN绿联500W氮化镓充电器 ',
+    description: '绿联500W氮化镓充电器视频拆解，展示内部六颗GaN芯片设计。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2121,7 +2121,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-60----500w',
     brand: Brand.UGREEN,
     model: 'unknown',
-    displayName: '六口500W齐充，内置六颗GaN芯片，绿联500W氮化镓充电器评测',
+    displayName: '绿联 500W 氮化镓充电器 (六口齐充)',
     power: {
       maxPower: 500,
       configurations: [
@@ -2142,7 +2142,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '六口500W齐充，内置六颗GaN芯片，绿联500W氮化镓充电器评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 六口500W齐充，内置六颗G',
+    description: '绿联500W氮化镓充电器，六口齐充设计，内置六颗GaN芯片，支持多种快充协议。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2157,7 +2157,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-61-unknown-140w',
     brand: Brand.OTHER,
     model: 'EZ12',
-    displayName: '拆解报告：EGIOER异泽140W四USB-C口氮化镓充电器EZ12',
+    displayName: '异泽 140W 四USB-C口氮化镓充电器',
     power: {
       maxPower: 140,
       configurations: [
@@ -2178,7 +2178,7 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：EGIOER异泽140W四USB-C口氮化镓充电器EZ12 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：EGIOER异泽',
+    description: '异泽140W四USB-C口氮化镓充电器，四C口设计满足多设备同时充电需求。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2193,7 +2193,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-62-unknown-67w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '视频拆解：飞利浦67W氮化镓延长线插座',
+    displayName: '飞利浦 67W 氮化镓延长线插座',
     power: {
       maxPower: 67,
       configurations: [
@@ -2227,7 +2227,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-63----140w',
     brand: Brand.HONOR,
     model: 'unknown',
-    displayName: '充电早报：异泽140W四USB-C口氮化镓充电器拆解；英诺赛科放大招！SolidGaN 系列氮化镓亮相；荣耀WIN充电兼容性实测',
+    displayName: '荣耀 WIN 充电兼容性实测 (充电早报合集)',
     power: {
       maxPower: 140,
       configurations: [
@@ -2263,7 +2263,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-64-unknown-unknownw',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '英诺赛科放大招！SolidGaN 系列氮化镓亮相',
+    displayName: '英诺赛科 SolidGaN 系列氮化镓新品',
     power: {
       maxPower: 20,
       configurations: [
@@ -2297,7 +2297,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-65----120w',
     brand: Brand.XIAOMI,
     model: 'XMCDZ-03QM',
-    displayName: '米粉用户必备！3口支持120W小米澎湃秒充，小米桌面充电站140W评测',
+    displayName: '小米 140W 桌面充电站 (3口120W澎湃秒充)',
     power: {
       maxPower: 120,
       configurations: [
@@ -2333,7 +2333,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-66----45w',
     brand: Brand.HONOR,
     model: 'unknown',
-    displayName: '充电早报：智融科技SW632x重磅发布；倍思45W PD3.2氮化镓充电器拆解；荣耀 Power2 手机充电评测',
+    displayName: '倍思 45W PD3.2 氮化镓充电器 (充电早报合集)',
     power: {
       maxPower: 45,
       configurations: [
@@ -2368,7 +2368,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-67----45w',
     brand: Brand.BASEUS,
     model: 'E01234',
-    displayName: '拆解报告：Baseus倍思45W PD3.2氮化镓充电器E01234',
+    displayName: '倍思 45W PD3.2 氮化镓充电器',
     power: {
       maxPower: 45,
       configurations: [
@@ -2403,7 +2403,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-68-unknown-45w',
     brand: Brand.OTHER,
     model: 'unknown',
-    displayName: '百事可乐联名Miniduct Japan推出45W快充充电器，预计3月发售',
+    displayName: '百事可乐联名 45W 快充充电器 (Miniduct Japan)',
     power: {
       maxPower: 45,
       configurations: [
@@ -2438,7 +2438,7 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-69----5w',
     brand: Brand.HONOR,
     model: 'unknown',
-    displayName: '充电早报：公牛22.5W 10000mAh半固态电芯移动电源拆解；摩托罗拉68W氮化镓充电器拆解；荣耀WIN手机充电评测',
+    displayName: '摩托罗拉 68W 氮化镓充电器 (充电早报合集)',
     power: {
       maxPower: 5,
       configurations: [
