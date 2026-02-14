@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getCharger } from '@/lib/kv'
+import { getCharger } from '@/lib/db'
 
 /**
  * GET /api/chargers/[id]

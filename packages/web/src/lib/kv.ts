@@ -1,4 +1,4 @@
-import { kv } from '@vercel/kv'
+import { Redis } from '@vercel/kv'
 
 /**
  * 充电器数据键前缀
@@ -7,10 +7,31 @@ const CHARGER_KEY_PREFIX = 'charger:'
 const CHARGERS_LIST_KEY = 'chargers:all'
 
 /**
+ * 获取 Redis 客户端
+ * 支持 Vercel KV 和标准 Redis URL
+ */
+function getRedis() {
+  // 优先使用 Vercel KV 的环境变量
+  if (process.env.KV_REST_API_URL) {
+    const { kv } = require('@vercel/kv')
+    return kv
+  }
+
+  // 回退到标准 Redis URL
+  const redisUrl = process.env.REDIS_URL
+  if (!redisUrl) {
+    throw new Error('Missing KV_REST_API_URL or REDIS_URL environment variable')
+  }
+
+  return new Redis(redisUrl)
+}
+
+/**
  * 获取所有充电器 ID 列表
  */
 export async function getChargerIds(): Promise<string[]> {
-  const ids = await kv.get<string[]>(CHARGERS_LIST_KEY)
+  const redis = getRedis()
+  const ids = await redis.get<string[]>(CHARGERS_LIST_KEY)
   return ids || []
 }
 
@@ -18,7 +39,8 @@ export async function getChargerIds(): Promise<string[]> {
  * 获取单个充电器数据
  */
 export async function getCharger(id: string) {
-  return await kv.get(`${CHARGER_KEY_PREFIX}${id}`)
+  const redis = getRedis()
+  return await redis.get(`${CHARGER_KEY_PREFIX}${id}`)
 }
 
 /**
@@ -39,13 +61,14 @@ export async function getAllChargers(): Promise<any[]> {
  * 设置单个充电器数据
  */
 export async function setCharger(charger: any): Promise<void> {
-  await kv.set(`${CHARGER_KEY_PREFIX}${charger.id}`, charger)
+  const redis = getRedis()
+  await redis.set(`${CHARGER_KEY_PREFIX}${charger.id}`, charger)
 
   // 更新 ID 列表
   const ids = await getChargerIds()
   if (!ids.includes(charger.id)) {
     ids.push(charger.id)
-    await kv.set(CHARGERS_LIST_KEY, ids)
+    await redis.set(CHARGERS_LIST_KEY, ids)
   }
 }
 
@@ -53,7 +76,8 @@ export async function setCharger(charger: any): Promise<void> {
  * 批量设置充电器数据
  */
 export async function setChargers(chargers: any[]): Promise<void> {
-  const pipeline = kv.pipeline()
+  const redis = getRedis()
+  const pipeline = redis.pipeline()
 
   const ids = chargers.map((c) => c.id)
 
@@ -72,12 +96,13 @@ export async function setChargers(chargers: any[]): Promise<void> {
  * 删除单个充电器
  */
 export async function deleteCharger(id: string): Promise<void> {
-  await kv.del(`${CHARGER_KEY_PREFIX}${id}`)
+  const redis = getRedis()
+  await redis.del(`${CHARGER_KEY_PREFIX}${id}`)
 
   // 更新 ID 列表
   const ids = await getChargerIds()
   const newIds = ids.filter((i) => i !== id)
-  await kv.set(CHARGERS_LIST_KEY, newIds)
+  await redis.set(CHARGERS_LIST_KEY, newIds)
 }
 
 /**
@@ -87,7 +112,8 @@ export async function clearAllChargers(): Promise<void> {
   const ids = await getChargerIds()
 
   if (ids.length > 0) {
-    const pipeline = kv.pipeline()
+    const redis = getRedis()
+    const pipeline = redis.pipeline()
     for (const id of ids) {
       pipeline.del(`${CHARGER_KEY_PREFIX}${id}`)
     }
