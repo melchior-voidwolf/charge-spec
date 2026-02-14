@@ -1,5 +1,5 @@
 {
   "buildCommand": "yarn build",
   "outputDirectory": "packages/web/.next",
-  "installCommand": "corepack enable && yarn install"
+  "installCommand": "npm install -g yarn@4 && yarn install"
 }
