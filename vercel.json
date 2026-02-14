@@ -1,5 +1,4 @@
 {
   "buildCommand": "yarn build",
-  "outputDirectory": "packages/web/.next",
-  "installCommand": "npm install -g yarn@latest && yarn install"
+  "outputDirectory": "packages/web/.next"
 }
