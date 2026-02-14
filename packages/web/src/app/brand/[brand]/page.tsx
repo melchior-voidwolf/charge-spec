@@ -1,4 +1,4 @@
-import { sampleChargers } from '@charge-spec/shared'
+import { allChargers } from '@charge-spec/shared'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -8,7 +8,7 @@ interface BrandPageProps {
 
 // Generate static params for all brands
 export async function generateStaticParams() {
-  const brands = Array.from(new Set(sampleChargers.map((c) => c.brand)))
+  const brands = Array.from(new Set(allChargers.map((c) => c.brand)))
   return brands.map((brand) => ({
     brand: encodeURIComponent(brand),
   }))
@@ -29,12 +29,12 @@ export default async function BrandPage({ params }: BrandPageProps) {
   const decodedBrand = decodeURIComponent(brand)
 
   // Filter chargers by brand
-  const brandChargers = sampleChargers.filter(
+  const brandChargers = allChargers.filter(
     (charger) => charger.brand.toLowerCase() === decodedBrand.toLowerCase()
   )
 
   // Check if brand exists
-  const allBrands = Array.from(new Set(sampleChargers.map((c) => c.brand)))
+  const allBrands = Array.from(new Set(allChargers.map((c) => c.brand)))
   const brandExists = allBrands.some((b) => b.toLowerCase() === decodedBrand.toLowerCase())
 
   if (!brandExists) {

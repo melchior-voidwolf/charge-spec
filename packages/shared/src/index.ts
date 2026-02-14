@@ -9,3 +9,6 @@ export * from './types'
 
 // Export sample data
 export * from './sample-data'
+
+// Export crawled charger data
+export * from './crawled-chargers'

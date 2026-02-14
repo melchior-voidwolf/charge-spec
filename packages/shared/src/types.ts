@@ -71,6 +71,21 @@ export enum Brand {
   LG = 'LG',
   CUKTECH = 'CUKTECH',
   HONOR = 'HONOR',
+  // 从充电头网数据添加的品牌
+  PISEN = '品胜',
+  TORRAS = '图拉斯',
+  AOHI = '奥海',
+  REALME = 'realme',
+  HUNTKEY = '航嘉',
+  YOOBAO = '羽博',
+  JD = '京东',
+  DJI = 'DJI',
+  LENOVO = 'Lenovo',
+  PHILIPS = 'Philips',
+  NUBIA = 'nubia',
+  REDMAGIC = '红魔',
+  SHARGE = '闪极',
+  ZMI = 'ZMI',
   OTHER = 'Other',
 }
 

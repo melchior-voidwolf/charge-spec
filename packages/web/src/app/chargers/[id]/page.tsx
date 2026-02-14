@@ -3,7 +3,7 @@
  * Shows full specifications and details for a specific charger
  */
 
-import { sampleChargers } from '@charge-spec/shared'
+import { allChargers } from '@charge-spec/shared'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -15,7 +15,7 @@ interface PageProps {
 
 // Generate static params for all chargers
 export async function generateStaticParams() {
-  return sampleChargers.map((charger) => ({
+  return allChargers.map((charger) => ({
     id: charger.id,
   }))
 }
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps) {
   const { id } = await params
-  const charger = sampleChargers.find((c) => c.id === id)
+  const charger = allChargers.find((c) => c.id === id)
 
   if (!charger) {
     return {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function ChargerDetailPage({ params }: PageProps) {
   const { id } = await params
-  const charger = sampleChargers.find((c) => c.id === id)
+  const charger = allChargers.find((c) => c.id === id)
 
   if (!charger) {
     notFound()

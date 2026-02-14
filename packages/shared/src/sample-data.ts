@@ -5,6 +5,7 @@
  */
 
 import { Charger, Brand, Protocol, ConnectorType } from './types'
+import { crawledChargers } from './crawled-chargers'
 
 export const sampleChargers: Charger[] = [
   {
@@ -822,3 +823,10 @@ export const sampleChargers: Charger[] = [
     updatedAt: new Date('2025-01-01'),
   },
 ]
+
+/**
+ * 所有充电器数据
+ * 数据来源：充电头网评测频道 (chongdiantou.com)
+ */
+export const allChargers: Charger[] = crawledChargers
+

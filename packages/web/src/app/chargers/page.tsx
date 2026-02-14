@@ -5,7 +5,7 @@
 
 'use client'
 
-import { sampleChargers } from '@charge-spec/shared'
+import { allChargers } from '@charge-spec/shared'
 import Link from 'next/link'
 import { useState, useMemo } from 'react'
 
@@ -29,13 +29,13 @@ export default function ChargersPage() {
 
   // Extract unique values for filters
   const uniqueBrands = useMemo(() => {
-    const brands = new Set(sampleChargers.map((c) => c.brand))
+    const brands = new Set(allChargers.map((c) => c.brand))
     return Array.from(brands).sort()
   }, [])
 
   const uniqueProtocols = useMemo(() => {
     const protocols = new Set<string>()
-    sampleChargers.forEach((charger) => {
+    allChargers.forEach((charger) => {
       charger.protocols.forEach((p) => protocols.add(p))
     })
     return Array.from(protocols).sort()
@@ -50,7 +50,7 @@ export default function ChargersPage() {
 
   // Filter chargers based on search query and filters
   const filteredChargers = useMemo(() => {
-    let results = sampleChargers
+    let results = allChargers
 
     // Apply search query
     if (searchQuery.trim()) {
@@ -254,7 +254,7 @@ export default function ChargersPage() {
                 ) : (
                   <>
                     共{' '}
-                    <span className="font-medium text-text-primary">{sampleChargers.length}</span>{' '}
+                    <span className="font-medium text-text-primary">{allChargers.length}</span>{' '}
                     款充电器
                   </>
                 )}
