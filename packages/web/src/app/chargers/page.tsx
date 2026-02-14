@@ -6,12 +6,27 @@
 import { getAllChargers } from '@/lib/db'
 import ChargersClient from './ChargersClient'
 
+// 安全序列化，移除不可序列化的字段（如 Buffer、ObjectId）
+function serializeData<T>(data: T): T {
+  return JSON.parse(JSON.stringify(data, (key, value) => {
+    // 跳过 MongoDB 特殊字段
+    if (key === '_id' || key === '__v') {
+      return undefined
+    }
+    // 跳过 Buffer 类型
+    if (value && typeof value === 'object' && (value as any).type === 'Buffer') {
+      return undefined
+    }
+    return value
+  }))
+}
+
 export default async function ChargersPage() {
   // 从 MongoDB 获取所有充电器数据
   const chargersData = await getAllChargers()
 
-  // 序列化处理，移除 Buffer 等不可序列化的字段
-  const serializedChargers = JSON.parse(JSON.stringify(chargersData))
+  // 序列化处理
+  const serializedChargers = serializeData(chargersData)
 
   return <ChargersClient chargers={serializedChargers} />
 }

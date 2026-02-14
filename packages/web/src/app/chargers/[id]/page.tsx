@@ -39,8 +39,18 @@ export default async function ChargerDetailPage({ params }: PageProps) {
     notFound()
   }
 
-  // 序列化处理，移除 Buffer 字段
-  const serializedCharger = JSON.parse(JSON.stringify(charger))
+  // 安全序列化，移除不可序列化的字段
+  const serializedCharger = JSON.parse(JSON.stringify(charger, (key, value) => {
+    // 跳过 MongoDB 特殊字段
+    if (key === '_id' || key === '__v') {
+      return undefined
+    }
+    // 跳过 Buffer 类型
+    if (value && typeof value === 'object' && (value as any).type === 'Buffer') {
+      return undefined
+    }
+    return value
+  }))
 
   return <ChargerDetailContent charger={serializedCharger} />
 }
