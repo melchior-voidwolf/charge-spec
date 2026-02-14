@@ -42,6 +42,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:9.39.2"],\
           ["eslint-config-prettier", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:10.1.8"],\
           ["prettier", "npm:3.8.1"],\
+          ["tailwindcss", "npm:4.1.18"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
@@ -2010,6 +2011,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:9.39.2"],\
           ["eslint-config-prettier", "virtual:e5f2f4629d87589bcf1a2ef4fe7ea7ee9ed0546dfee96475bb73cfa1485a5b71a35a39c33bd886e9a2055d1dfcb2175593128b28341324286a01de514ab5f0e9#npm:10.1.8"],\
           ["prettier", "npm:3.8.1"],\
+          ["tailwindcss", "npm:4.1.18"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
@@ -5487,6 +5489,13 @@ const RAW_RUNTIME_STATE =
           ["resolve", "patch:resolve@npm%3A1.22.11#optional!builtin<compat/resolve>::version=1.22.11&hash=c3c19d"],\
           ["sucrase", "npm:3.35.1"],\
           ["tailwindcss", "npm:3.4.19"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.1.18", {\
+        "packageLocation": "../../.yarn/berry/cache/tailwindcss-npm-4.1.18-b313baa0de-10c0.zip/node_modules/tailwindcss/",\
+        "packageDependencies": [\
+          ["tailwindcss", "npm:4.1.18"]\
         ],\
         "linkType": "HARD"\
       }]\

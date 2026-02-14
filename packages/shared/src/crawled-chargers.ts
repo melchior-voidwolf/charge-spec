@@ -33,7 +33,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '雅晶源科技推出的PD3.2大功率240W氮化镓充电器，专为英伟达DGX Spark GB10等高端AI算力平台量身定制，具备超高功率密度与DoE能效认证。',
+    description:
+      '雅晶源科技推出的PD3.2大功率240W氮化镓充电器，专为英伟达DGX Spark GB10等高端AI算力平台量身定制，具备超高功率密度与DoE能效认证。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -69,7 +70,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '小米140W桌面充电站，配备双USB-C接口，支持PD3.1和小米澎湃快充协议，可为iPhone、iPad和MacBook提供快速充电。',
+    description:
+      '小米140W桌面充电站，配备双USB-C接口，支持PD3.1和小米澎湃快充协议，可为iPhone、iPad和MacBook提供快速充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -80,7 +82,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.379Z'),
     updatedAt: new Date('2026-02-14T02:45:16.379Z'),
   },
-  ,
   {
     id: 'cdt-3----140w',
     brand: Brand.XIAOMI,
@@ -106,7 +107,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.VOOC],
       },
     ],
-    description: '倍思140W氮化镓充电器，采用3C1A四口设计，支持PD3.1、PPS等多种快充协议，可同时为笔记本、手机等多设备充电。',
+    description:
+      '倍思140W氮化镓充电器，采用3C1A四口设计，支持PD3.1、PPS等多种快充协议，可同时为笔记本、手机等多设备充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -141,7 +143,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '倍仕达65W氮化镓快充充电器，采用单USB-C接口设计，支持PD、QC等多种快充协议，适用于手机、平板和笔记本电脑充电。',
+    description:
+      '倍仕达65W氮化镓快充充电器，采用单USB-C接口设计，支持PD、QC等多种快充协议，适用于手机、平板和笔记本电脑充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -176,7 +179,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '小米140W桌面充电站，支持小米澎湃快充协议，可为iPhone 17 Pro Max等 devices 提供快速充电，16分钟即可充至50%。',
+    description:
+      '小米140W桌面充电站，支持小米澎湃快充协议，可为iPhone 17 Pro Max等 devices 提供快速充电，16分钟即可充至50%。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -191,7 +195,8 @@ export const crawledChargers: Charger[] = [
     id: 'cdt-6-----288w',
     brand: Brand.BELKIN,
     model: 'unknown',
-    displayName: '充电早报：电小二288Wh 300W户外电源300D拆解；贝尔金112W氮化镓充电器评测；1月新增Qi2认证产品超260款品牌规格分布盘点',
+    displayName:
+      '充电早报：电小二288Wh 300W户外电源300D拆解；贝尔金112W氮化镓充电器评测；1月新增Qi2认证产品超260款品牌规格分布盘点',
     power: {
       maxPower: 288,
       configurations: [
@@ -212,7 +217,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '充电早报：电小二288Wh 300W户外电源300D拆解；贝尔金112W氮化镓充电器评测；1月新增Qi2认证产品超260款品牌规格分布盘点 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实',
+    description:
+      '充电早报：电小二288Wh 300W户外电源300D拆解；贝尔金112W氮化镓充电器评测；1月新增Qi2认证产品超260款品牌规格分布盘点 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -246,7 +252,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: 'Llab 67W氮化镓充电器，采用超小体积设计，双USB-C接口，支持多种快充协议，便于随身携带。',
+    description:
+      'Llab 67W氮化镓充电器，采用超小体积设计，双USB-C接口，支持多种快充协议，便于随身携带。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -282,7 +289,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: 'Xinspower 140W氮化镓充电器，支持PD3.1快充协议，为笔记本、平板和手机提供高效充电解决方案。',
+    description:
+      'Xinspower 140W氮化镓充电器，支持PD3.1快充协议，为笔记本、平板和手机提供高效充电解决方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -318,7 +326,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: 'MIIIW米物140W智显充电器，配备数字显示屏可实时查看充电功率，支持小米澎湃闪充协议，兼容多种设备。',
+    description:
+      'MIIIW米物140W智显充电器，配备数字显示屏可实时查看充电功率，支持小米澎湃闪充协议，兼容多种设备。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -329,7 +338,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.379Z'),
     updatedAt: new Date('2026-02-14T02:45:16.379Z'),
   },
-  ,
   {
     id: 'cdt-11----40w',
     brand: Brand.APPLE,
@@ -353,7 +361,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '苹果40W动态电源适配器，支持最新PD 3.2 SPR AVS技术，可在9-20V范围内以100mV步进精细调节电压，与iPhone 17系列完美配合，实现高效快充并降低发热。',
+    description:
+      '苹果40W动态电源适配器，支持最新PD 3.2 SPR AVS技术，可在9-20V范围内以100mV步进精细调节电压，与iPhone 17系列完美配合，实现高效快充并降低发热。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -388,7 +397,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '图拉斯USB-C高速车载充气泵拆解，支持USB-C接口供电，同时文章还包含睿元100W 2C1A氮化镓快充充电器及WiWU超薄磁吸移动电源的评测内容。',
+    description:
+      '图拉斯USB-C高速车载充气泵拆解，支持USB-C接口供电，同时文章还包含睿元100W 2C1A氮化镓快充充电器及WiWU超薄磁吸移动电源的评测内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -422,7 +432,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '酷态科16款充电器全系列对比导购，涵盖30号、15号、10号系列桌面充电站及二合一充电器，功率覆盖20W至300W，支持PD、QC、小米澎湃秒充、UFCS融合快充等多种协议。',
+    description:
+      '酷态科16款充电器全系列对比导购，涵盖30号、15号、10号系列桌面充电站及二合一充电器，功率覆盖20W至300W，支持PD、QC、小米澎湃秒充、UFCS融合快充等多种协议。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: false,
@@ -457,7 +468,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0],
       },
     ],
-    description: '希辉达65W 3C1A拉拉线氮化镓充电器，采用必易微KP22086+KP4060高集成合封氮化镓电源方案，配备富满XPD911独立降压协议芯片，实现多口智能快充，带有独特的拉拉线设计。',
+    description:
+      '希辉达65W 3C1A拉拉线氮化镓充电器，采用必易微KP22086+KP4060高集成合封氮化镓电源方案，配备富满XPD911独立降压协议芯片，实现多口智能快充，带有独特的拉拉线设计。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -493,7 +505,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '绿联首款500W王者级氮化镓充电器，采用5C1A六口设计，单口支持PD3.1 240W满血输出，可同时满足5台笔记本电脑快充，充电头网实测百款终端设备兼容性测试。',
+    description:
+      '绿联首款500W王者级氮化镓充电器，采用5C1A六口设计，单口支持PD3.1 240W满血输出，可同时满足5台笔记本电脑快充，充电头网实测百款终端设备兼容性测试。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -528,7 +541,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0],
       },
     ],
-    description: 'ANKER安克Nano 30W氮化镓快充充电器，采用智融SW1121P合封氮化镓芯片搭配华源智信HYC935A同步整流协议芯片的高集成电源方案，两颗芯片实现传统五颗芯片功能，体积小巧。',
+    description:
+      'ANKER安克Nano 30W氮化镓快充充电器，采用智融SW1121P合封氮化镓芯片搭配华源智信HYC935A同步整流协议芯片的高集成电源方案，两颗芯片实现传统五颗芯片功能，体积小巧。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -564,7 +578,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '小米桌面充电站140W，配备4AC+2C2A八接口设计，USB-C端口支持140W PD3.1输出和小米120W私有澎湃协议，适合大功率多设备用户使用。',
+    description:
+      '小米桌面充电站140W，配备4AC+2C2A八接口设计，USB-C端口支持140W PD3.1输出和小米120W私有澎湃协议，适合大功率多设备用户使用。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -599,7 +614,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '三星100W氮化镓快充充电器（韩版），型号A10020_DPN，支持100-240V全球宽电压输入，单USB-C接口支持PD3.0协议，20V5A 100W输出，通过KC与VI级能效认证。',
+    description:
+      '三星100W氮化镓快充充电器（韩版），型号A10020_DPN，支持100-240V全球宽电压输入，单USB-C接口支持PD3.0协议，20V5A 100W输出，通过KC与VI级能效认证。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -610,7 +626,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.379Z'),
     updatedAt: new Date('2026-02-14T02:45:16.379Z'),
   },
-  ,
   {
     id: 'cdt-20-unknown-240w',
     brand: Brand.OTHER,
@@ -636,7 +651,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '雅晶源240W氮化镓充电器，专为英伟达DGX Spark GB10算力平台定制，首批支持PD3.2 240W输出，采用AHB拓扑与数字化设计，通过7级能效认证，为AI PC、智能机器人等设备提供高效供电。',
+    description:
+      '雅晶源240W氮化镓充电器，专为英伟达DGX Spark GB10算力平台定制，首批支持PD3.2 240W输出，采用AHB拓扑与数字化设计，通过7级能效认证，为AI PC、智能机器人等设备提供高效供电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -647,7 +663,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.379Z'),
     updatedAt: new Date('2026-02-14T02:45:16.379Z'),
   },
-  ,
   {
     id: 'cdt-22----150w',
     brand: Brand.DJI,
@@ -673,7 +688,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '大疆POWER 1000 Mini户外电源快充测试，支持150W输出，同时文章还包含thinkplus 150W氮化镓桌面充电站拆解及乐得瑞移动电源新国标方案介绍。',
+    description:
+      '大疆POWER 1000 Mini户外电源快充测试，支持150W输出，同时文章还包含thinkplus 150W氮化镓桌面充电站拆解及乐得瑞移动电源新国标方案介绍。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -709,7 +725,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '倍思140W四口氮化镓充电器，配置3C1A接口，其中两个USB-C支持PD3.1 140W输出，另一组C+A支持30W快充，兼容UFCS、PPS、QC等多种协议，体积比苹果原厂140W更紧凑。',
+    description:
+      '倍思140W四口氮化镓充电器，配置3C1A接口，其中两个USB-C支持PD3.1 140W输出，另一组C+A支持30W快充，兼容UFCS、PPS、QC等多种协议，体积比苹果原厂140W更紧凑。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -743,7 +760,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '英诺赛科氮化镓技术成功导入谷歌AI数据中心平台，展示氮化镓技术在高效能数据中心供电领域的应用前景。',
+    description:
+      '英诺赛科氮化镓技术成功导入谷歌AI数据中心平台，展示氮化镓技术在高效能数据中心供电领域的应用前景。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -777,7 +795,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '航嘉充吧高能W100氮化镓桌面充电站，七口合一设计，强弱电分区，支持PD、PPS、QC、SCP、FCP等多种快充协议。',
+    description:
+      '航嘉充吧高能W100氮化镓桌面充电站，七口合一设计，强弱电分区，支持PD、PPS、QC、SCP、FCP等多种快充协议。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -813,7 +832,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '贝尔金112W氮化镓充电器，支持PD、PPS协议，可为iPhone 17 Pro Max在20分钟内充至50%，品牌为Apple（苹果官方合作伙伴）。',
+    description:
+      '贝尔金112W氮化镓充电器，支持PD、PPS协议，可为iPhone 17 Pro Max在20分钟内充至50%，品牌为Apple（苹果官方合作伙伴）。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -847,7 +867,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '慧能泰发布面向AI智能充电器市场的PD控制器，支持PD、PPS协议，为下一代智能充电设备提供控制方案。',
+    description:
+      '慧能泰发布面向AI智能充电器市场的PD控制器，支持PD、PPS协议，为下一代智能充电设备提供控制方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -919,7 +940,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '小米140W 8合1氮化镓桌面充电站，视频拆解展示内部设计与用料，支持PD协议，为大功率多设备充电提供解决方案。',
+    description:
+      '小米140W 8合1氮化镓桌面充电站，视频拆解展示内部设计与用料，支持PD协议，为大功率多设备充电提供解决方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -954,7 +976,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '瑞吉达65W 2C1A氮化镓充电器，支持PD、PPS、QC、SCP、FCP等多种快充协议，2C1A三接口设计，满足多设备同时充电需求。',
+    description:
+      '瑞吉达65W 2C1A氮化镓充电器，支持PD、PPS、QC、SCP、FCP等多种快充协议，2C1A三接口设计，满足多设备同时充电需求。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -989,7 +1012,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '睿元100W 2C1A氮化镓快充充电器，支持PD、PPS、QC、SCP、FCP等多种协议，2C1A三接口设计，适用于笔记本、手机、平板等多设备充电。',
+    description:
+      '睿元100W 2C1A氮化镓快充充电器，支持PD、PPS、QC、SCP、FCP等多种协议，2C1A三接口设计，适用于笔记本、手机、平板等多设备充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1025,7 +1049,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '奥海科技3200W钛金牌服务器电源拆解，钛金级能效认证，同时文章还包含瑞吉达65W氮化镓充电器及REDMI Turbo 5 Max 3050快充测试内容。',
+    description:
+      '奥海科技3200W钛金牌服务器电源拆解，钛金级能效认证，同时文章还包含瑞吉达65W氮化镓充电器及REDMI Turbo 5 Max 3050快充测试内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1061,7 +1086,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0, Protocol.SCP, Protocol.VOOC],
       },
     ],
-    description: '一加Ace 6原装120W超级闪充氮化镓充电器，支持PD、QC、SCP、VOOC等多种协议，为一加手机提供120W超级闪充体验。',
+    description:
+      '一加Ace 6原装120W超级闪充氮化镓充电器，支持PD、QC、SCP、VOOC等多种协议，为一加手机提供120W超级闪充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1096,7 +1122,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: 'OPPO Find X8 Ultra原装100W氮化镓充电器拆解，支持PD、PPS、QC协议，同时文章还包含真我Neo8充电实测及必易微电量计芯片介绍。',
+    description:
+      'OPPO Find X8 Ultra原装100W氮化镓充电器拆解，支持PD、PPS、QC协议，同时文章还包含真我Neo8充电实测及必易微电量计芯片介绍。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1131,7 +1158,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0],
       },
     ],
-    description: '羽博65W氮化镓充电器，以高性价比热销，支持PD、QC协议，3C接口设计，在百亿补贴渠道广受欢迎。',
+    description:
+      '羽博65W氮化镓充电器，以高性价比热销，支持PD、QC协议，3C接口设计，在百亿补贴渠道广受欢迎。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1165,7 +1193,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: 'HOTO小猴12V USB-C无刷电钻拆解，采用USB-C接口充电方案，同时文章还包含半桥氮化镓十大厂商技术分析及黑鲨刀锋3磁吸充电宝评测。',
+    description:
+      'HOTO小猴12V USB-C无刷电钻拆解，采用USB-C接口充电方案，同时文章还包含半桥氮化镓十大厂商技术分析及黑鲨刀锋3磁吸充电宝评测。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1201,7 +1230,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '贝尔金112W氮化镓充电器开箱，单口支持100W输出，配备折叠插脚，支持PD、PPS协议，为苹果设备提供高效快充体验。',
+    description:
+      '贝尔金112W氮化镓充电器开箱，单口支持100W输出，配备折叠插脚，支持PD、PPS协议，为苹果设备提供高效快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1212,7 +1242,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.380Z'),
     updatedAt: new Date('2026-02-14T02:45:16.380Z'),
   },
-  ,
   {
     id: 'cdt-39-unknown-150w',
     brand: Brand.OTHER,
@@ -1238,7 +1267,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: 'thinkplus 150W锋行者氮化镓桌面充电站，支持PD、PPS、QC、SCP、FCP等多种协议，3C接口设计，为笔记本、手机等多设备提供150W桌面充电方案。',
+    description:
+      'thinkplus 150W锋行者氮化镓桌面充电站，支持PD、PPS、QC、SCP、FCP等多种协议，3C接口设计，为笔记本、手机等多设备提供150W桌面充电方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1272,7 +1302,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: 'Gogoro智慧电动机车电池充电器GoCharger Mobile拆解，采用USB-C接口PD充电方案，为Gogoro电动车电池提供便捷充电体验。',
+    description:
+      'Gogoro智慧电动机车电池充电器GoCharger Mobile拆解，采用USB-C接口PD充电方案，为Gogoro电动车电池提供便捷充电体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1307,7 +1338,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0, Protocol.SCP, Protocol.VOOC],
       },
     ],
-    description: 'OPPO Find X8 Ultra原装100W超级闪充氮化镓充电器，支持PD、QC、SCP、VOOC等多种协议，为OPPO手机提供100W超级闪充体验。',
+    description:
+      'OPPO Find X8 Ultra原装100W超级闪充氮化镓充电器，支持PD、QC、SCP、VOOC等多种协议，为OPPO手机提供100W超级闪充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1342,7 +1374,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '荣耀Magic8原装90W超级快充充电器，支持PD、PPS、SCP、FCP等多种协议，为荣耀Magic8系列手机提供90W超级快充体验。',
+    description:
+      '荣耀Magic8原装90W超级快充充电器，支持PD、PPS、SCP、FCP等多种协议，为荣耀Magic8系列手机提供90W超级快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1376,7 +1409,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: 'REDMI Turbo 5 Max手机充电评测，同时包含Gogoro智慧电动机车电池充电器拆解及智融科技低成本串口与VDM方案介绍。',
+    description:
+      'REDMI Turbo 5 Max手机充电评测，同时包含Gogoro智慧电动机车电池充电器拆解及智融科技低成本串口与VDM方案介绍。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1409,7 +1443,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.SCP],
       },
     ],
-    description: '三星Qi2 25W磁吸无线充电器，支持磁吸无线充电技术，为三星手机提供便捷的无线充电体验。',
+    description:
+      '三星Qi2 25W磁吸无线充电器，支持磁吸无线充电技术，为三星手机提供便捷的无线充电体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1445,7 +1480,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '绿联500W氮化镓充电器评测，同时包含酷态科6号超级电能充mini拆解及德亚充电器热销榜单解析。',
+    description:
+      '绿联500W氮化镓充电器评测，同时包含酷态科6号超级电能充mini拆解及德亚充电器热销榜单解析。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1456,7 +1492,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.380Z'),
     updatedAt: new Date('2026-02-14T02:45:16.380Z'),
   },
-  ,
   {
     id: 'cdt-47-unknown-150w',
     brand: Brand.OTHER,
@@ -1482,7 +1517,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: 'thinkplus锋行者150W氮化镓桌面充电站视频拆解，支持PD协议，为笔记本等设备提供150W桌面充电解决方案。',
+    description:
+      'thinkplus锋行者150W氮化镓桌面充电站视频拆解，支持PD协议，为笔记本等设备提供150W桌面充电解决方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1518,7 +1554,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '小米140W 8合1氮化镓桌面充电站XMCDZ-03QM拆解，支持PD、PPS、QC、SCP、FCP等多种协议，8合1设计满足多设备充电需求。',
+    description:
+      '小米140W 8合1氮化镓桌面充电站XMCDZ-03QM拆解，支持PD、PPS、QC、SCP、FCP等多种协议，8合1设计满足多设备充电需求。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1529,7 +1566,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.380Z'),
     updatedAt: new Date('2026-02-14T02:45:16.380Z'),
   },
-  ,
   {
     id: 'cdt-50----140w',
     brand: Brand.XIAOMI,
@@ -1555,7 +1591,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '小米140W 8合1氮化镓桌面充电站拆解合集，同时包含SOMOSTEL 65W碳化硅充电器拆解及真我Neo8充电评测内容。',
+    description:
+      '小米140W 8合1氮化镓桌面充电站拆解合集，同时包含SOMOSTEL 65W碳化硅充电器拆解及真我Neo8充电评测内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1590,7 +1627,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '米物45W小魔方氮化镓充电器视频拆解，小巧魔方造型设计，支持PD协议，为手机、平板等设备提供45W快充。',
+    description:
+      '米物45W小魔方氮化镓充电器视频拆解，小巧魔方造型设计，支持PD协议，为手机、平板等设备提供45W快充。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1625,7 +1663,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '荣耀66W 1A1C氮化镓快充充电器，支持PD、PPS、SCP、FCP等多种协议，1A1C双接口设计，为荣耀设备提供66W快充体验。',
+    description:
+      '荣耀66W 1A1C氮化镓快充充电器，支持PD、PPS、SCP、FCP等多种协议，1A1C双接口设计，为荣耀设备提供66W快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1764,7 +1803,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PPS],
       },
     ],
-    description: '荣耀80W超级快充立式无线充电器，采用双线圈+立体风冷散热设计，为荣耀手机提供80W无线快充体验。',
+    description:
+      '荣耀80W超级快充立式无线充电器，采用双线圈+立体风冷散热设计，为荣耀手机提供80W无线快充体验。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1916,8 +1956,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.380Z'),
     updatedAt: new Date('2026-02-14T02:45:16.380Z'),
   },
-  ,
-  ,
   {
     id: 'cdt-63----140w',
     brand: Brand.HONOR,
@@ -1943,7 +1981,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：异泽140W四USB-C口氮化镓充电器拆解；英诺赛科放大招！SolidGaN 系列氮化镓亮相；荣耀WIN充电兼容性实测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 Ch',
+    description:
+      '充电早报：异泽140W四USB-C口氮化镓充电器拆解；英诺赛科放大招！SolidGaN 系列氮化镓亮相；荣耀WIN充电兼容性实测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 Ch',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -1977,7 +2016,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '英诺赛科放大招！SolidGaN 系列氮化镓亮相 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 英诺赛科放大招！SolidGaN 系列氮化镓亮',
+    description:
+      '英诺赛科放大招！SolidGaN 系列氮化镓亮相 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 英诺赛科放大招！SolidGaN 系列氮化镓亮',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2013,7 +2053,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '米粉用户必备！3口支持120W小米澎湃秒充，小米桌面充电站140W评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 米粉用户必备！3口支持1',
+    description:
+      '米粉用户必备！3口支持120W小米澎湃秒充，小米桌面充电站140W评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 米粉用户必备！3口支持1',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2048,7 +2089,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.FCP, Protocol.QC_3_0],
       },
     ],
-    description: '充电早报：智融科技SW632x重磅发布；倍思45W PD3.2氮化镓充电器拆解；荣耀 Power2 手机充电评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB',
+    description:
+      '充电早报：智融科技SW632x重磅发布；倍思45W PD3.2氮化镓充电器拆解；荣耀 Power2 手机充电评测 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2083,7 +2125,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '拆解报告：Baseus倍思45W PD3.2氮化镓充电器E01234 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：Baseus倍思',
+    description:
+      '拆解报告：Baseus倍思45W PD3.2氮化镓充电器E01234 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 拆解报告：Baseus倍思',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2118,7 +2161,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '百事可乐联名Miniduct Japan推出45W快充充电器，预计3月发售 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 百事可乐联名Mini',
+    description:
+      '百事可乐联名Miniduct Japan推出45W快充充电器，预计3月发售 - 充电头网 - 我们只谈充电 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 首页 新闻 拆解 评测 方案 活动 学堂 企业 工厂 芯片 电容 电芯 POWER-Z 快速访问 电池交易网 我爱音频网 亚洲充电展 阅真实验室 ChargerLAB POWER-Z 百事可乐联名Mini',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2129,7 +2173,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.380Z'),
     updatedAt: new Date('2026-02-14T02:45:16.380Z'),
   },
-  ,
   {
     id: 'cdt-70-unknown-100w',
     brand: Brand.OTHER,
@@ -2154,7 +2197,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '联想100W原装充电器端头损坏修复指南，同时支持PD、PPS协议，适合为笔记本等设备充电。',
+    description:
+      '联想100W原装充电器端头损坏修复指南，同时支持PD、PPS协议，适合为笔记本等设备充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: false,
@@ -2188,7 +2232,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '三家氮化镓企业在服务器电源市场取得技术突破，展示氮化镓技术在高压大功率领域的应用前景。',
+    description:
+      '三家氮化镓企业在服务器电源市场取得技术突破，展示氮化镓技术在高压大功率领域的应用前景。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2222,7 +2267,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.SCP],
       },
     ],
-    description: '219款新国标电动车充电器深度解析，分析品牌、地域、规格、类型分布规律，了解电动车充电市场现状。',
+    description:
+      '219款新国标电动车充电器深度解析，分析品牌、地域、规格、类型分布规律，了解电动车充电市场现状。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: false,
@@ -2248,16 +2294,31 @@ export const crawledChargers: Charger[] = [
         { voltage: 20, current: 3.4, power: 68 },
       ],
     },
-    protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.QC_4_0, Protocol.SCP, Protocol.FCP],
+    protocols: [
+      Protocol.PD,
+      Protocol.PPS,
+      Protocol.QC_3_0,
+      Protocol.QC_4_0,
+      Protocol.SCP,
+      Protocol.FCP,
+    ],
     ports: [
       {
         type: ConnectorType.USB_C,
         count: 3370,
         maxPower: 68,
-        protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.QC_4_0, Protocol.SCP, Protocol.FCP],
+        protocols: [
+          Protocol.PD,
+          Protocol.PPS,
+          Protocol.QC_3_0,
+          Protocol.QC_4_0,
+          Protocol.SCP,
+          Protocol.FCP,
+        ],
       },
     ],
-    description: '摩托罗拉68W氮化镓充电器MC-684，支持PD、PPS、QC3.0/4.0、SCP、FCP等多种协议，满足多设备快充需求。',
+    description:
+      '摩托罗拉68W氮化镓充电器MC-684，支持PD、PPS、QC3.0/4.0、SCP、FCP等多种协议，满足多设备快充需求。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2327,7 +2388,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '倍思100W七合一超薄充电站，视频拆解展示超薄设计，支持QC3.0协议，为桌面充电提供解决方案。',
+    description:
+      '倍思100W七合一超薄充电站，视频拆解展示超薄设计，支持QC3.0协议，为桌面充电提供解决方案。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2338,8 +2400,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.380Z'),
     updatedAt: new Date('2026-02-14T02:45:16.380Z'),
   },
-  ,
-  ,
   {
     id: 'cdt-78-unknown-2200w',
     brand: Brand.OTHER,
@@ -2365,7 +2425,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '高斯宝电气2200W钛金牌碳化硅服务器电源拆解，同时包含十家氮化镓企业技术突破及POWER-Z C240 Pro开箱内容。',
+    description:
+      '高斯宝电气2200W钛金牌碳化硅服务器电源拆解，同时包含十家氮化镓企业技术突破及POWER-Z C240 Pro开箱内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2399,7 +2460,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '航嘉充吧高能W100氮化镓桌面充电站评测，支持PD、PPS协议，同时包含氮化镓/碳化硅市场突破及精勤贴片元件案例分析',
+    description:
+      '航嘉充吧高能W100氮化镓桌面充电站评测，支持PD、PPS协议，同时包含氮化镓/碳化硅市场突破及精勤贴片元件案例分析',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2434,7 +2496,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0],
       },
     ],
-    description: '航嘉S140 Pro氮化镓充电器，支持小米澎湃90W协议，通过5000米高海拔极限3C认证，支持PD、PPS、QC协议',
+    description:
+      '航嘉S140 Pro氮化镓充电器，支持小米澎湃90W协议，通过5000米高海拔极限3C认证，支持PD、PPS、QC协议',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2469,7 +2532,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '荣耀80W立式无线充电器评测合集，同时包含米物45W小魔方和图拉斯45W拉拉线充电器拆解内容',
+    description:
+      '荣耀80W立式无线充电器评测合集，同时包含米物45W小魔方和图拉斯45W拉拉线充电器拆解内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2503,7 +2567,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: '徕芬15W磁吸无线充电器，附带于徕芬扫振电动牙刷i2不锈钢款，可为智能手机提供无线充电。',
+    description:
+      '徕芬15W磁吸无线充电器，附带于徕芬扫振电动牙刷i2不锈钢款，可为智能手机提供无线充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: false,
@@ -2539,7 +2604,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '航嘉S140 Pro实测iPhone 17全家桶兼容性，同时包含奥海170W车充和旗航创世65W充电器拆解内容。',
+    description:
+      '航嘉S140 Pro实测iPhone 17全家桶兼容性，同时包含奥海170W车充和旗航创世65W充电器拆解内容。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2550,8 +2616,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.380Z'),
     updatedAt: new Date('2026-02-14T02:45:16.380Z'),
   },
-  ,
-  ,
   {
     id: 'cdt-86----100w',
     brand: Brand.HUAWEI,
@@ -2576,7 +2640,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '倍思100W七合一超薄充电站E0307A拆解，支持PD、PPS、QC、SCP、FCP等多种协议，七合一设计满足多设备充电。',
+    description:
+      '倍思100W七合一超薄充电站E0307A拆解，支持PD、PPS、QC、SCP、FCP等多种协议，七合一设计满足多设备充电。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2602,13 +2667,27 @@ export const crawledChargers: Charger[] = [
         { voltage: 20, current: 2.25, power: 45 },
       ],
     },
-    protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.QC_4_0, Protocol.SCP, Protocol.FCP],
+    protocols: [
+      Protocol.PD,
+      Protocol.PPS,
+      Protocol.QC_3_0,
+      Protocol.QC_4_0,
+      Protocol.SCP,
+      Protocol.FCP,
+    ],
     ports: [
       {
         type: ConnectorType.USB_C,
         count: 104,
         maxPower: 45,
-        protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.QC_4_0, Protocol.SCP, Protocol.FCP],
+        protocols: [
+          Protocol.PD,
+          Protocol.PPS,
+          Protocol.QC_3_0,
+          Protocol.QC_4_0,
+          Protocol.SCP,
+          Protocol.FCP,
+        ],
       },
     ],
     description: '米物45W小魔方氮化镓充电器iCA4501拆解，小巧魔方造型，支持PD、PPS、SCP协议。',
@@ -2715,7 +2794,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: 'Anker Prime智显充Pro充电器评测，同时包含贝尔金13款氮化镓快充盘点及Empower垂直供电方案介绍。',
+    description:
+      'Anker Prime智显充Pro充电器评测，同时包含贝尔金13款氮化镓快充盘点及Empower垂直供电方案介绍。',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2820,7 +2900,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.QC_3_0],
       },
     ],
-    description: '京东京造140W 3C1A氮化镓充电器拆解报告，支持PD3.1快充协议，配备3个USB-C接口和1个USB-A接口，采用氮化镓技术实现高功率输出',
+    description:
+      '京东京造140W 3C1A氮化镓充电器拆解报告，支持PD3.1快充协议，配备3个USB-C接口和1个USB-A接口，采用氮化镓技术实现高功率输出',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2831,7 +2912,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-95----65w',
     brand: Brand.PISEN,
@@ -2847,16 +2927,31 @@ export const crawledChargers: Charger[] = [
         { voltage: 20, current: 3.25, power: 65 },
       ],
     },
-    protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP, Protocol.VOOC],
+    protocols: [
+      Protocol.PD,
+      Protocol.PPS,
+      Protocol.QC_3_0,
+      Protocol.SCP,
+      Protocol.FCP,
+      Protocol.VOOC,
+    ],
     ports: [
       {
         type: ConnectorType.USB_C,
         count: 66,
         maxPower: 65,
-        protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP, Protocol.VOOC],
+        protocols: [
+          Protocol.PD,
+          Protocol.PPS,
+          Protocol.QC_3_0,
+          Protocol.SCP,
+          Protocol.FCP,
+          Protocol.VOOC,
+        ],
       },
     ],
-    description: '品胜65W拉拉线氮化镓充电器LT-C05拆解，配备可伸缩充电线设计，支持PD、PPS、QC3.0、SCP、FCP、VOOC等多种快充协议',
+    description:
+      '品胜65W拉拉线氮化镓充电器LT-C05拆解，配备可伸缩充电线设计，支持PD、PPS、QC3.0、SCP、FCP、VOOC等多种快充协议',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2892,7 +2987,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: 'Anker Prime智显充Pro 160W氮化镓充电器评测，配备3个USB-C接口，支持PD、PPS、QC3.0、SCP、FCP等多种快充协议，最大功率160W，具备智能显示屏实时显示充电功率',
+    description:
+      'Anker Prime智显充Pro 160W氮化镓充电器评测，配备3个USB-C接口，支持PD、PPS、QC3.0、SCP、FCP等多种快充协议，最大功率160W，具备智能显示屏实时显示充电功率',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2927,7 +3023,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '旗航创世65W 2C1A拉拉线数显氮化镓充电器拆解，配备可伸缩充电线和功率数显功能，支持PD、PPS、QC3.0等多种快充协议',
+    description:
+      '旗航创世65W 2C1A拉拉线数显氮化镓充电器拆解，配备可伸缩充电线和功率数显功能，支持PD、PPS、QC3.0等多种快充协议',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2961,7 +3058,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP],
       },
     ],
-    description: '图拉斯67W拉拉线氮化镓充电器CQ10拆解，创新拉拉线设计，支持PD、PPS、QC3.0、SCP等多种快充协议，最大功率67W',
+    description:
+      '图拉斯67W拉拉线氮化镓充电器CQ10拆解，创新拉拉线设计，支持PD、PPS、QC3.0、SCP等多种快充协议，最大功率67W',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -2972,7 +3070,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-100----300w',
     brand: Brand.UGREEN,
@@ -2998,7 +3095,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.SCP],
       },
     ],
-    description: '绿联Nexode Pro 300W桌面充电工作站，支持APP智能控制，配备多个USB-C接口，支持PD3.1快充协议，最大功率300W，适用于多设备同时充电',
+    description:
+      '绿联Nexode Pro 300W桌面充电工作站，支持APP智能控制，配备多个USB-C接口，支持PD3.1快充协议，最大功率300W，适用于多设备同时充电',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3009,10 +3107,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
-  ,
-  {
-    ,
   {
     id: 'cdt-104-----unknownw',
     brand: Brand.CUKTECH,
@@ -3043,7 +3137,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.SCP, Protocol.QC_3_0],
       },
     ],
-    description: '酷态科10号Ultra充电器，专为小米用户设计，3C1A接口配置，支持PD、PPS、SCP、QC3.0等多种快充协议，最大功率100W',
+    description:
+      '酷态科10号Ultra充电器，专为小米用户设计，3C1A接口配置，支持PD、PPS、SCP、QC3.0等多种快充协议，最大功率100W',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3085,7 +3180,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.SCP],
       },
     ],
-    description: '联想thinkplus锋行者桌面充电站150W，配备3个AC插座、3个USB-C接口和1个USB-A接口，支持PD和SCP快充协议，以一抵七满足多种供电需求',
+    description:
+      '联想thinkplus锋行者桌面充电站150W，配备3个AC插座、3个USB-C接口和1个USB-A接口，支持PD和SCP快充协议，以一抵七满足多种供电需求',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3121,7 +3217,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: 'Anker Prime智显充Pro 160W氮化镓充电器视频拆解，配备3个USB-C接口，支持PD3.1、PPS、QC3.0等多种快充协议，具备智能功率显示功能',
+    description:
+      'Anker Prime智显充Pro 160W氮化镓充电器视频拆解，配备3个USB-C接口，支持PD3.1、PPS、QC3.0等多种快充协议，具备智能功率显示功能',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3132,7 +3229,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-108----160w',
     brand: Brand.HONOR,
@@ -3155,7 +3251,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.SCP],
       },
     ],
-    description: '充电早报合集，包含安克Prime智显充Pro 160W氮化镓充电器拆解、三星25W充电器待机零功耗实测、荣耀WIN系列机型变革历程等内容',
+    description:
+      '充电早报合集，包含安克Prime智显充Pro 160W氮化镓充电器拆解、三星25W充电器待机零功耗实测、荣耀WIN系列机型变革历程等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3191,7 +3288,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: 'Anker Prime智显充Pro 160W氮化镓充电器详细拆解，型号A2687，配备3个USB-C接口，支持PD3.1、PPS、QC3.0、SCP、FCP等多种快充协议，具备智能功率显示屏',
+    description:
+      'Anker Prime智显充Pro 160W氮化镓充电器详细拆解，型号A2687，配备3个USB-C接口，支持PD3.1、PPS、QC3.0、SCP、FCP等多种快充协议，具备智能功率显示屏',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3223,7 +3321,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '三星25W充电器EP-T2510待机零功耗实测，双电压平台功耗均低于5mW，支持PD和PPS快充协议，超节能设计一年电费不足1毛钱',
+    description:
+      '三星25W充电器EP-T2510待机零功耗实测，双电压平台功耗均低于5mW，支持PD和PPS快充协议，超节能设计一年电费不足1毛钱',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3234,7 +3333,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-112-unknown-unknownw',
     brand: Brand.OTHER,
@@ -3257,7 +3355,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '英诺赛科氮化镓技术行业资讯，氮化镓器件在消费电子、数据中心、新能源汽车、光伏储能等多个重要领域获得应用突破',
+    description:
+      '英诺赛科氮化镓技术行业资讯，氮化镓器件在消费电子、数据中心、新能源汽车、光伏储能等多个重要领域获得应用突破',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3290,7 +3389,8 @@ export const crawledChargers: Charger[] = [
         protocols: [],
       },
     ],
-    description: '博兰得千瓦级电动车充电器DZL483005，专为极核、九号、小牛等高端锂电车型设计，支持1000W大功率快充',
+    description:
+      '博兰得千瓦级电动车充电器DZL483005，专为极核、九号、小牛等高端锂电车型设计，支持1000W大功率快充',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3326,7 +3426,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_4_0],
       },
     ],
-    description: 'Anker Prime智显充Pro 160W充电器，2026年旗舰产品，配备3个USB-C接口，支持PD3.1、PPS、QC4等多种快充协议，具备智能功率显示屏，实时显示充电功率',
+    description:
+      'Anker Prime智显充Pro 160W充电器，2026年旗舰产品，配备3个USB-C接口，支持PD3.1、PPS、QC4等多种快充协议，具备智能功率显示屏，实时显示充电功率',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: false,
@@ -3367,7 +3468,8 @@ export const crawledChargers: Charger[] = [
         protocols: [],
       },
     ],
-    description: '贝尔金氮化镓快充产品盘点，介绍13款贝尔金氮化镓充电器，涵盖不同功率和接口配置，支持PD、PPS快充协议，适配苹果设备及多品牌产品',
+    description:
+      '贝尔金氮化镓快充产品盘点，介绍13款贝尔金氮化镓充电器，涵盖不同功率和接口配置，支持PD、PPS快充协议，适配苹果设备及多品牌产品',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3378,7 +3480,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-117-unknown-unknownw',
     brand: Brand.OTHER,
@@ -3400,7 +3501,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '宏果智能小月亮无线充电器C31拆解，圆形简约设计，支持最高15W无线充电功率，兼容苹果、安卓等多种设备的无线充电',
+    description:
+      '宏果智能小月亮无线充电器C31拆解，圆形简约设计，支持最高15W无线充电功率，兼容苹果、安卓等多种设备的无线充电',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3418,9 +3520,7 @@ export const crawledChargers: Charger[] = [
     displayName: '徕芬扫振电动牙刷i2磁吸充电底座 LETB02-S',
     power: {
       maxPower: 5,
-      configurations: [
-        { voltage: 5, current: 1, power: 5 },
-      ],
+      configurations: [{ voltage: 5, current: 1, power: 5 }],
     },
     protocols: [Protocol.PD],
     ports: [
@@ -3431,7 +3531,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '徕芬扫振电动牙刷i2配套磁吸充电底座评测，型号LETB02-S，采用磁吸充电设计，同时兼容苹果和安卓手机充电，一物多用',
+    description:
+      '徕芬扫振电动牙刷i2配套磁吸充电底座评测，型号LETB02-S，采用磁吸充电设计，同时兼容苹果和安卓手机充电，一物多用',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: false,
@@ -3472,7 +3573,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: 'Aohi 65W 2C1A模块化氮化镓快充充电器视频拆解，采用模块化设计，2个USB-C接口和1个USB-A接口，支持PD、PPS、QC3.0快充协议，最大功率65W',
+    description:
+      'Aohi 65W 2C1A模块化氮化镓快充充电器视频拆解，采用模块化设计，2个USB-C接口和1个USB-A接口，支持PD、PPS、QC3.0快充协议，最大功率65W',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3514,7 +3616,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '充电早报合集，包含安克Prime 150W 2C1A充电底座拆解、thinkplus锋行者氮化镓桌面充150W评测、小米140W桌面充电站新品发布等内容',
+    description:
+      '充电早报合集，包含安克Prime 150W 2C1A充电底座拆解、thinkplus锋行者氮化镓桌面充150W评测、小米140W桌面充电站新品发布等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3556,7 +3659,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '海赛力140W 3C1A智显超级充电器C1 Pro视频拆解，配备智能功率显示屏，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0快充协议，最大功率140W',
+    description:
+      '海赛力140W 3C1A智显超级充电器C1 Pro视频拆解，配备智能功率显示屏，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0快充协议，最大功率140W',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3567,7 +3671,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-123-iphone-unknownw',
     brand: Brand.APPLE,
@@ -3599,7 +3702,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '航嘉高能S140 Pro快充充电器，专为iPhone17全系列设计，支持PD3.1、PPS、QC3.0快充协议，最大功率140W，2C1A接口配置',
+    description:
+      '航嘉高能S140 Pro快充充电器，专为iPhone17全系列设计，支持PD3.1、PPS、QC3.0快充协议，最大功率140W，2C1A接口配置',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3641,7 +3745,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '小米140W桌面充电站，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0快充协议，最大功率140W，适用于桌面多设备充电',
+    description:
+      '小米140W桌面充电站，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0快充协议，最大功率140W，适用于桌面多设备充电',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3668,13 +3773,27 @@ export const crawledChargers: Charger[] = [
         { voltage: 28, current: 5.36, power: 150 },
       ],
     },
-    protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.QC_4_0, Protocol.SCP, Protocol.FCP],
+    protocols: [
+      Protocol.PD,
+      Protocol.PPS,
+      Protocol.QC_3_0,
+      Protocol.QC_4_0,
+      Protocol.SCP,
+      Protocol.FCP,
+    ],
     ports: [
       {
         type: ConnectorType.USB_C,
         count: 3,
         maxPower: 150,
-        protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.QC_4_0, Protocol.SCP, Protocol.FCP],
+        protocols: [
+          Protocol.PD,
+          Protocol.PPS,
+          Protocol.QC_3_0,
+          Protocol.QC_4_0,
+          Protocol.SCP,
+          Protocol.FCP,
+        ],
       },
       {
         type: ConnectorType.USB_A,
@@ -3683,7 +3802,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.SCP],
       },
     ],
-    description: '联想thinkplus锋行者氮化镓桌面充电站150W，3个USB-C接口和1个USB-A接口，支持PD、PPS、QC、SCP等多种快充协议，支持7个设备同时充电',
+    description:
+      '联想thinkplus锋行者氮化镓桌面充电站150W，3个USB-C接口和1个USB-A接口，支持PD、PPS、QC、SCP等多种快充协议，支持7个设备同时充电',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3719,7 +3839,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.QC_3_0, Protocol.SCP, Protocol.FCP],
       },
     ],
-    description: '品胜160W 4USB-C口氮化镓充电器TP-C81拆解，配备4个USB-C接口，采用氮化镓技术，支持PD3.1、PPS、QC3.0、SCP、FCP等多种快充协议',
+    description:
+      '品胜160W 4USB-C口氮化镓充电器TP-C81拆解，配备4个USB-C接口，采用氮化镓技术，支持PD3.1、PPS、QC3.0、SCP、FCP等多种快充协议',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3751,7 +3872,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '充电早报合集，包含品胜160W氮化镓充电器拆解、航嘉S140 Pro让iPhone 17 Pro Max 19分钟回血50%测试、闪极300W充电宝全极耳电芯揭秘等内容',
+    description:
+      '充电早报合集，包含品胜160W氮化镓充电器拆解、航嘉S140 Pro让iPhone 17 Pro Max 19分钟回血50%测试、闪极300W充电宝全极耳电芯揭秘等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3793,7 +3915,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '航嘉高能S140 Pro氮化镓充电器评测，2C1A三口独立输出，支持PD3.1、PPS、QC3.0快充协议，适配小米90W澎湃协议，最大功率140W',
+    description:
+      '航嘉高能S140 Pro氮化镓充电器评测，2C1A三口独立输出，支持PD3.1、PPS、QC3.0快充协议，适配小米90W澎湃协议，最大功率140W',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3825,7 +3948,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '充电早报合集，包含海赛力140W智显超级充电器拆解、机械师曙光16S Ultra长江存储PC411评测、安克Nano 22.5W胶囊充电宝拆解等内容',
+    description:
+      '充电早报合集，包含海赛力140W智显超级充电器拆解、机械师曙光16S Ultra长江存储PC411评测、安克Nano 22.5W胶囊充电宝拆解等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3858,7 +3982,8 @@ export const crawledChargers: Charger[] = [
         protocols: [],
       },
     ],
-    description: '长城SPARK 850W氮化镓金牌全模组电源视频拆解，采用氮化镓技术，80Plus金牌认证，全模组设计，额定功率850W',
+    description:
+      '长城SPARK 850W氮化镓金牌全模组电源视频拆解，采用氮化镓技术，80Plus金牌认证，全模组设计，额定功率850W',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3900,7 +4025,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '海赛力140W 3C1A智显超级充电器C1 Pro拆解，配备智能功率显示屏，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0、SCP、FCP等多种快充协议',
+    description:
+      '海赛力140W 3C1A智显超级充电器C1 Pro拆解，配备智能功率显示屏，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0、SCP、FCP等多种快充协议',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3934,7 +4060,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '图拉斯大眼仔二合一充电器，45W适配iPhone17，同时配备Apple Watch无线充电位，支持PD和PPS快充协议，一站式解决苹果设备充电需求',
+    description:
+      '图拉斯大眼仔二合一充电器，45W适配iPhone17，同时配备Apple Watch无线充电位，支持PD和PPS快充协议，一站式解决苹果设备充电需求',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -3945,7 +4072,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-134----45w',
     brand: Brand.UGREEN,
@@ -3969,7 +4095,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '绿联45W氮化镓快充充电器视频拆解，2个USB-C接口，采用氮化镓技术，支持PD3.1、PPS、QC3.0快充协议，小巧便携',
+    description:
+      '绿联45W氮化镓快充充电器视频拆解，2个USB-C接口，采用氮化镓技术，支持PD3.1、PPS、QC3.0快充协议，小巧便携',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4005,7 +4132,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD],
       },
     ],
-    description: '充电早报合集，包含贝尔金140W一拖二编织快充数据线拆解、航嘉高能S140 Pro深度评测、thinkplus锋行者桌面充电站发布等内容',
+    description:
+      '充电早报合集，包含贝尔金140W一拖二编织快充数据线拆解、航嘉高能S140 Pro深度评测、thinkplus锋行者桌面充电站发布等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4040,7 +4168,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '充电早报合集，包含三星Galaxy Ring无线充电保护盒拆解、华为66W冰糖氮化镓充电器拆解、小米100W GaN充电器零待机功耗实测等内容',
+    description:
+      '充电早报合集，包含三星Galaxy Ring无线充电保护盒拆解、华为66W冰糖氮化镓充电器拆解、小米100W GaN充电器零待机功耗实测等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4081,7 +4210,8 @@ export const crawledChargers: Charger[] = [
         protocols: [],
       },
     ],
-    description: '充电早报合集，包含摩尔线程MTT S80独立显卡拆解、贝尔金70W 2C1A氮化镓充电器拆解、奥海170W AI动画屏智能车充评测等内容',
+    description:
+      '充电早报合集，包含摩尔线程MTT S80独立显卡拆解、贝尔金70W 2C1A氮化镓充电器拆解、奥海170W AI动画屏智能车充评测等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4117,7 +4247,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS],
       },
     ],
-    description: '绿联160W氮化镓充电器搭配iPhone17系列充电全程测试，4个USB-C接口，支持PD3.1和PPS快充协议，测试显示充电速度快，功率稳定',
+    description:
+      '绿联160W氮化镓充电器搭配iPhone17系列充电全程测试，4个USB-C接口，支持PD3.1和PPS快充协议，测试显示充电速度快，功率稳定',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4128,7 +4259,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-140----140w',
     brand: Brand.BASEUS,
@@ -4160,7 +4290,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '倍思140W 3C1A智能数显氮化镓充电器视频拆解，配备智能功率显示屏，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0快充协议',
+    description:
+      '倍思140W 3C1A智能数显氮化镓充电器视频拆解，配备智能功率显示屏，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0快充协议',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4171,7 +4302,6 @@ export const crawledChargers: Charger[] = [
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
   },
-  ,
   {
     id: 'cdt-142-unknown-441w',
     brand: Brand.OTHER,
@@ -4194,7 +4324,8 @@ export const crawledChargers: Charger[] = [
         protocols: [],
       },
     ],
-    description: '爱玛441W电动摩托车铅酸电池新国标充电器视频拆解，符合新国标标准，额定功率441W，专为爱玛电动摩托车设计',
+    description:
+      '爱玛441W电动摩托车铅酸电池新国标充电器视频拆解，符合新国标标准，额定功率441W，专为爱玛电动摩托车设计',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4228,7 +4359,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.SCP],
       },
     ],
-    description: '充电早报合集，包含倍思140W 3C1A智能数显氮化镓充电器拆解、华为Mate80 Pro充电评测、thinkplus灵迅自带线移动电源评测等内容',
+    description:
+      '充电早报合集，包含倍思140W 3C1A智能数显氮化镓充电器拆解、华为Mate80 Pro充电评测、thinkplus灵迅自带线移动电源评测等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4270,7 +4402,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '倍思140W 3C1A智能数显氮化镓充电器E01207拆解，配备智能功率显示屏，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0、SCP快充协议',
+    description:
+      '倍思140W 3C1A智能数显氮化镓充电器E01207拆解，配备智能功率显示屏，3个USB-C接口和1个USB-A接口，支持PD3.1、PPS、QC3.0、SCP快充协议',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4306,7 +4439,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.PPS, Protocol.SCP],
       },
     ],
-    description: 'PD3.1充电器新品盘点，介绍磁吸充电、功率数显、App互联等创新功能的充电器产品，展示新一代充电技术发展趋势',
+    description:
+      'PD3.1充电器新品盘点，介绍磁吸充电、功率数显、App互联等创新功能的充电器产品，展示新一代充电技术发展趋势',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4348,7 +4482,8 @@ export const crawledChargers: Charger[] = [
         protocols: [],
       },
     ],
-    description: '极客桌搭必备充电站盘点，介绍自带DC接口与功率数显屏的硬核桌面充电站，支持PD、SCP、QC等多种快充协议，满足多设备充电需求',
+    description:
+      '极客桌搭必备充电站盘点，介绍自带DC接口与功率数显屏的硬核桌面充电站，支持PD、SCP、QC等多种快充协议，满足多设备充电需求',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4390,7 +4525,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0],
       },
     ],
-    description: '航嘉10款热门充电器型号横向对比评测，涵盖不同功率和接口配置，支持PD、PPS、SCP、QC等多种快充协议，提供选购建议',
+    description:
+      '航嘉10款热门充电器型号横向对比评测，涵盖不同功率和接口配置，支持PD、PPS、SCP、QC等多种快充协议，提供选购建议',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4423,7 +4559,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.PD, Protocol.SCP],
       },
     ],
-    description: '充电早报合集，包含华为Mate70Air不同功率原厂充电器充电性能对比、永铭固态电容解决方案、华为Mate70Air充电兼容性实测等内容',
+    description:
+      '充电早报合集，包含华为Mate70Air不同功率原厂充电器充电性能对比、永铭固态电容解决方案、华为Mate70Air充电兼容性实测等内容',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4464,7 +4601,8 @@ export const crawledChargers: Charger[] = [
         protocols: [Protocol.QC_3_0, Protocol.SCP],
       },
     ],
-    description: '品胜UltraCharge Station桌面充电站，获Qi2.2无线充电认证，支持多种快充方式，打造全场景桌面充电新体验，配备USB-C、USB-A和无线充电位',
+    description:
+      '品胜UltraCharge Station桌面充电站，获Qi2.2无线充电认证，支持多种快充方式，打造全场景桌面充电新体验，配备USB-C、USB-A和无线充电位',
     features: ['从充电头网评测数据导入'],
     releaseYear: 2024,
     isGaN: true,
@@ -4474,5 +4612,5 @@ export const crawledChargers: Charger[] = [
     officialUrl: 'https://www.chongdiantou.com/archives/1766308582210.html',
     createdAt: new Date('2026-02-14T02:45:16.381Z'),
     updatedAt: new Date('2026-02-14T02:45:16.381Z'),
-  }
+  },
 ]
