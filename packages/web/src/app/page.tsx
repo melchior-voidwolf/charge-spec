@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 // basePath from next.config.ts
-const BASE_PATH = '/charge-spec'
+const BASE_PATH = ''
 
 export default function HomePage() {
   return (

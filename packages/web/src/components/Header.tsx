@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 // basePath from next.config.ts
-const BASE_PATH = '/charge-spec'
+const BASE_PATH = ''
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
