@@ -6,14 +6,14 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@4.5.3",
+  "packageManager": "npm@10.0.0",
   "scripts": {
-    "dev": "yarn workspace @charge-spec/web dev",
-    "build": "yarn workspace @charge-spec/web build",
-    "build:fix": "yarn workspace @charge-spec/web build && node fix-basepath.js && cp -r packages/web/out .",
-    "start": "yarn workspace @charge-spec/web start",
-    "lint": "yarn workspaces foreach -Ap run lint",
-    "type-check": "yarn workspaces foreach -Ap run type-check",
+    "dev": "npm run dev --workspace=@charge-spec/web",
+    "build": "npm run build --workspace=@charge-spec/web",
+    "build:fix": "npm run build --workspace=@charge-spec/web && node fix-basepath.js && cp -r packages/web/out .",
+    "start": "npm run start --workspace=@charge-spec/web",
+    "lint": "npm run lint --workspaces --if-present",
+    "type-check": "npm run type-check --workspaces --if-present",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\""
   },
