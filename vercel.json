@@ -2,5 +2,8 @@
   "buildCommand": "yarn build",
   "outputDirectory": "packages/web/.next",
   "framework": null,
-  "installCommand": "corepack enable && yarn install"
+  "installCommand": "corepack enable && yarn install",
+  "settings": {
+    "nodeVersion": "20"
+  }
 }
